@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 
 //CURRENT PATH
-var currentPath = 'landing-last';
+var currentPath = 'swedavia';
 
 var path = {
     build: {
@@ -28,7 +28,7 @@ var path = {
     },
     src: { //Пути откуда брать исходники
         html: 'src/' + currentPath + '/*.html',
-        js: 'src/' + currentPath + '/js/common/*.js',
+        js: 'src/' + currentPath + '/js/*.js',
         styles: 'src/' + currentPath + '/styles/**/*.scss',
         img: 'src/' + currentPath + '/img/**/*.*'
     },
@@ -85,10 +85,8 @@ gulp.task('webserver', function () {
 gulp.task('styles:build', function () {
     gulp.src(path.src.styles)
         .pipe(plumber())
-        .pipe(sass({
-            includePaths: require('node-reset-scss').includePath,
-        })) //Скомпилируем
-        .pipe(prefixer()) //Добавим вендорные префиксы
+        .pipe(sass()) //Скомпилируем
+        .pipe(prefixer({browsers:['> 1%, Last 2 versions, iOS 8']})) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
         .pipe(rename({suffix: '.min'})).pipe(gulp.dest(path.build.css)) //И в build
         .pipe(reload({stream: true}));
@@ -103,7 +101,7 @@ gulp.task('clean', function (cb) {
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
         .pipe(imagemin({
-            progressive: true,
+            // progressive: true,
             svgoPlugins: [{removeViewBox: false}],
             interlaced: true,
         })).pipe(gulp.dest(path.build.img))
