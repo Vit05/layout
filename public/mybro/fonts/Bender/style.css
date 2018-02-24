@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "Bender";
+    src: url("BenderRegular/BenderRegular.eot");
+    src: url("BenderRegular/BenderRegular.eot?#iefix")format("embedded-opentype"),
+    url("BenderRegular/BenderRegular.woff") format("woff"),
+    url("BenderRegular/BenderRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Bender";
+    src: url("BenderBold/BenderBold.eot");
+    src: url("BenderBold/BenderBold.eot?#iefix")format("embedded-opentype"),
+    url("BenderBold/BenderBold.woff") format("woff"),
+    url("BenderBold/BenderBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+/*@font-face {*/
+    /*font-family: "BenderItalic";*/
+    /*src: url("BenderItalic/BenderItalic.eot");*/
+    /*src: url("BenderItalic/BenderItalic.eot?#iefix")format("embedded-opentype"),*/
+    /*url("BenderItalic/BenderItalic.woff") format("woff"),*/
+    /*url("BenderItalic/BenderItalic.ttf") format("truetype");*/
+    /*font-style: normal;*/
+    /*font-weight: normal;*/
+/*}*/
+
+/*@font-face {*/
+    /*font-family: "BenderBoldItalic";*/
+    /*src: url("BenderBoldItalic/BenderBoldItalic.eot");*/
+    /*src: url("BenderBoldItalic/BenderBoldItalic.eot?#iefix")format("embedded-opentype"),*/
+    /*url("BenderBoldItalic/BenderBoldItalic.woff") format("woff"),*/
+    /*url("BenderBoldItalic/BenderBoldItalic.ttf") format("truetype");*/
+    /*font-style: normal;*/
+    /*font-weight: normal;*/
+/*}*/
+
+@font-face {
+    font-family: "Bender";
+    src: url("BenderBlack/BenderBlack.eot");
+    src: url("BenderBlack/BenderBlack.eot?#iefix")format("embedded-opentype"),
+    url("BenderBlack/BenderBlack.woff") format("woff"),
+    url("BenderBlack/BenderBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 900;
+}
+
+/*@font-face {*/
+    /*font-family: "BenderBlackItalic";*/
+    /*src: url("BenderBlackItalic/BenderBlackItalic.eot");*/
+    /*src: url("BenderBlackItalic/BenderBlackItalic.eot?#iefix")format("embedded-opentype"),*/
+    /*url("BenderBlackItalic/BenderBlackItalic.woff") format("woff"),*/
+    /*url("BenderBlackItalic/BenderBlackItalic.ttf") format("truetype");*/
+    /*font-style: normal;*/
+    /*font-weight: normal;*/
+/*}*/
+
+@font-face {
+    font-family: "Bender";
+    src: url("BenderLight/BenderLight.eot");
+    src: url("BenderLight/BenderLight.eot?#iefix")format("embedded-opentype"),
+    url("BenderLight/BenderLight.woff") format("woff"),
+    url("BenderLight/BenderLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+/*@font-face {*/
+    /*font-family: "BenderLightItalic";*/
+    /*src: url("BenderLightItalic/BenderLightItalic.eot");*/
+    /*src: url("BenderLightItalic/BenderLightItalic.eot?#iefix")format("embedded-opentype"),*/
+    /*url("BenderLightItalic/BenderLightItalic.woff") format("woff"),*/
+    /*url("BenderLightItalic/BenderLightItalic.ttf") format("truetype");*/
+    /*font-style: normal;*/
+    /*font-weight: normal;*/
+/*}*/

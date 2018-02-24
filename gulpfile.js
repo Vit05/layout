@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 
 //CURRENT PATH
-var currentPath = 'landing-last';
+var currentPath = 'mybro';
 
 var path = {
     build: {
@@ -28,7 +28,7 @@ var path = {
     },
     src: { //Пути откуда брать исходники
         html: 'src/' + currentPath + '/*.html',
-        js: 'src/' + currentPath + '/js/common/*.js',
+        js: 'src/' + currentPath + '/js/*.js',
         styles: 'src/' + currentPath + '/styles/**/*.scss',
         img: 'src/' + currentPath + '/img/**/*.*'
     },
