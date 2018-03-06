@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 
 //CURRENT PATH
-var currentPath = 'landing-last';
+var currentPath = 'true-a';
 
 var path = {
     build: {
