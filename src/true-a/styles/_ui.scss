@@ -1,0 +1,158 @@
+$ff: 'Montserrat', sans-serif;
+
+$white: #fff;
+body {
+  font-family: $ff;
+  * {
+    box-sizing: border-box;
+  }
+}
+button{
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  &:focus{
+    outline: 0;
+  }
+}
+.container-footer{
+  background-color: var(--container-footer-color);
+  position: relative;
+  width: 100%;
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.container-full{
+  width: 100%;
+  //outline: 1px solid blue;
+}
+.container {
+  max-width: 960px;
+  width: 100%;
+  margin: auto;
+}
+
+.btn {
+  max-width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  outline: 0;
+  border: 1px solid transparent;
+}
+
+.input-field {
+  input {
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    //text-align: left;
+    color: $white;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 2px $white;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: transparent;
+    &:focus {
+      outline: 0;
+      //border: 0;
+    }
+
+  }
+  @include placeholder {
+    color: $white;
+  }
+}
+
+//TITLES
+.block-quote {
+  //outline: 1px solid green;
+  max-width: 650px;
+  min-width: 400px;
+  width: 100%;
+  margin: auto;
+  position: relative;
+  &.dark {
+    .q_bg {
+      fill: rgb(255, 255, 255);
+    }
+    h2 {
+      color: rgb(238, 108, 77);;
+    }
+  }
+  .q_bg {
+    opacity: 0.3;
+    fill: rgb(238, 108, 77);
+  }
+  .q_right {
+    position: absolute;
+    right: -25px;
+    top: 25px;
+  }
+  .q_left {
+
+    @extend .q_right;
+    top: 0;
+    left: -35px;
+    right: auto;
+    transform: rotate(180deg);
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: 2.1px;
+    text-align: center;
+    color: rgb(74, 74, 74);
+  }
+}
+
+.block-try {
+  max-width: 666px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(163, 163, 163, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 27px;
+
+  .input-field {
+    flex-basis: 350px;
+  }
+  .go-email-btn {
+    text-transform: uppercase;
+    width: 70px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(238, 108, 77);
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: $white;
+  }
+  span {
+    font-size: 18px;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: $white;
+  }
+  .go-github-btn {
+    //display: block;
+    width: 70px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+}
