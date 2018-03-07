@@ -7,16 +7,18 @@ body {
     box-sizing: border-box;
   }
 }
-button{
+
+button {
   background-color: transparent;
   outline: 0;
   border: 0;
   cursor: pointer;
-  &:focus{
+  &:focus {
     outline: 0;
   }
 }
-.container-footer{
+
+.container-footer {
   background-color: var(--container-footer-color);
   position: relative;
   width: 100%;
@@ -26,11 +28,11 @@ button{
   justify-content: center;
 }
 
-
-.container-full{
+.container-full {
   width: 100%;
   //outline: 1px solid blue;
 }
+
 .container {
   max-width: 960px;
   width: 100%;
@@ -72,7 +74,7 @@ button{
 .block-quote {
   //outline: 1px solid green;
   max-width: 650px;
-  min-width: 400px;
+  //min-width: 400px;
   width: 100%;
   margin: auto;
   position: relative;
@@ -103,6 +105,7 @@ button{
   }
 
   h2 {
+    margin: 0;
     font-size: 30px;
     font-weight: 600;
     line-height: 42px;
@@ -136,6 +139,11 @@ button{
     letter-spacing: 0.5px;
     text-align: center;
     color: $white;
+    @include transition();
+    &:hover{
+      background-color: $white;
+      color: rgb(238, 108, 77);
+    }
   }
   span {
     font-size: 18px;
@@ -152,6 +160,15 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+    @include transition();
+    .github__btn{
+      @include transition();
+    }
+    &:hover{
+      .github__btn{
+        fill: rgb(238, 108, 77);
+      }
+    }
 
   }
 
