@@ -193,7 +193,6 @@ button {
 
     @include rt(p6plus){
       margin-left: 20px;
-      color: blue;
       -webkit-appearance: none;
     }
   }
@@ -224,7 +223,7 @@ button {
     }
 
     @include rt(p6plus){
-      //margin-right: 20px;
+      margin-right: 20px;
     }
 
   }
