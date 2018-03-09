@@ -75,7 +75,7 @@ var serverConfig = {
     },
     tunnel: true,
     host: 'localhost',
-    port: 5000
+    port: 7000
 };
 gulp.task('webserver', function () {
     browserSync(serverConfig);
