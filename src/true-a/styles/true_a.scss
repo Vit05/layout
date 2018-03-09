@@ -608,7 +608,9 @@
           top: -150px;
           left: 0;
           right: 0;
-          background-position: -150px center;
+          background-position: -150px 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
         }
       }
       .arrow-layer {
