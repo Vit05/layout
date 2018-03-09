@@ -13,6 +13,7 @@ button {
   outline: 0;
   border: 0;
   cursor: pointer;
+  display: block;
   &:focus {
     outline: 0;
   }
@@ -189,7 +190,7 @@ button {
 
     @include rt(p6plus){
       //margin-left: 20px;
-      color: green;
+      color: blue;
     }
   }
   span {
