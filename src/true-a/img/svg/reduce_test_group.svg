@@ -381,25 +381,25 @@
         <circle cx="115" cy="325" r="35" fill="#4A4A4A"/>
         <circle cx="35" cy="230" r="35" fill="#4A4A4A"/>
         <circle cx="50" cy="102" r="35" fill="#4A4A4A"/>
-        <text fill="#FFF" font-family="Montserrat-Bold, Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
+        <text fill="#FFF" font-family="Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
             <tspan x="292.359" y="103">Attribute</tspan> <tspan x="318.953" y="118">1</tspan>
         </text>
-        <text fill="#FFF" font-family="Montserrat-Bold, Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
+        <text fill="#FFF" font-family="Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
             <tspan x="156.359" y="35">Attribute</tspan> <tspan x="181.741" y="50">2</tspan>
         </text>
-        <text fill="#FFF" font-family="Montserrat-Bold, Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
+        <text fill="#FFF" font-family="Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
             <tspan x="21.359" y="102">Attribute</tspan> <tspan x="46.825" y="117">3</tspan>
         </text>
-        <text fill="#FFF" font-family="Montserrat-Bold, Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
+        <text fill="#FFF" font-family="Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
             <tspan x="328.161" y="235">ID</tspan>
         </text>
-        <text fill="#FFF" font-family="Montserrat-Bold, Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
+        <text fill="#FFF" font-family="Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
             <tspan x="238.409" y="324">Class</tspan> <tspan x="237.482" y="339">name</tspan>
         </text>
-        <text fill="#FFF" font-family="Montserrat-Bold, Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
+        <text fill="#FFF" font-family="Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
             <tspan x="86.359" y="325">Attribute</tspan> <tspan x="111.795" y="340">5</tspan>
         </text>
-        <text fill="#FFF" font-family="Montserrat-Bold, Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
+        <text fill="#FFF" font-family="Montserrat" font-size="12" font-weight="bold" letter-spacing=".257">
             <tspan x="6.359" y="230">Attribute</tspan> <tspan x="31.843" y="245">4</tspan>
         </text>
     </g>

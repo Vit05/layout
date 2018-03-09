@@ -1,4 +1,4 @@
-//@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
 @import "normalize.css";
 @import "mixin";
 @import "ui";
@@ -25,27 +25,44 @@
   @include bg-img-retina('../img/jpg/main_img', 'jpg');
   background-repeat: no-repeat;
   background-position: center center;
+  @include rt(p6plus) {
+    background-position: left top;
+  }
   .container {
     min-height: 760px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    @include rt(p6plus) {
+      min-height: 600px;
+      padding-bottom: 50px;
+      //background-color: rgba(255,0,255, 0.1);
+    }
   }
   .main-block-description {
     position: relative;
+    @include rt(p6plus) {
+      max-width: 280px;
+    }
     .arrow {
       position: absolute;
       top: calc(100% + 30px);
       right: 0;
+      @include rt(p6plus) {
+        display: none;
+      }
     }
     h1 {
       text-transform: uppercase;
       font-size: 40px;
-      font-weight: 700;
+      font-weight: bold;
       letter-spacing: 0.9px;
       text-align: center;
       color: $white;
+      @include rt(p6plus) {
+        font-size: 36px;
+      }
     }
     p {
       font-size: 20px;
@@ -53,26 +70,42 @@
       text-align: center;
       color: $white;
       margin-bottom: 85px;
+      @include rt(p6plus) {
+        font-size: 18px;
+        margin-bottom: 50px;
+      }
     }
   }
   .to-bottom {
     margin: 190px 0 50px 0;
+    @include rt(p6plus) {
+      display: none;
+    }
   }
 }
 
 .concentrate-block {
   padding-top: 70px;
   --left-quote-left-pos: -40px;
-  //--left-quote-top-pos:0;
   --right-quote-right-pos: -30px;
   --right-quote-top-pos: 25px;
-
+  @include rt(p6plus) {
+    --left-quote-left-pos: 0;
+    --left-quote-top-pos: -34px;
+    --right-quote-right-pos: 0;
+    --right-quote-top-pos: 100%;
+  }
   .concentrate-list-item {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 70px;
     margin-bottom: 80px;
+    @include rt(p6plus) {
+      align-items: center;
+      flex-direction: column;
+      //background-color: rgba(255, 255, 0, 0.5);
+    }
     .description-item {
       position: relative;
       width: 220px;
@@ -80,38 +113,71 @@
       flex-direction: column;
       align-items: center;
       text-align: center;
+      @include rt(p6plus) {
+
+        margin-bottom: 170px;
+        &:last-of-type {
+          margin-bottom: 50px;
+        }
+      }
       &:first-of-type {
         .arrow-item {
-          margin-top: 50px;
+          top: 50px;
+          @include rt(p6plus) {
+            top: calc(100% + 100px);
+            left: calc(50% - 35px);
+            transform: rotate(90deg) translateX(-50%);
+          }
         }
+
       }
       &:nth-of-type(2) {
         .arrow-item {
-          margin-top: 65px;
+          top: 65px;
+          @include rt(p6plus) {
+            top: calc(100% + 100px);
+            left: calc(50% - 35px);
+            transform: rotate(90deg) translateX(-50%);
+          }
         }
       }
 
       .arrow-item {
         position: absolute;
         left: calc(100% - 25px);
-        margin-top: 25px;
+        top: 25px;
+        @include rt(p6plus) {
+          top: calc(100% + 50px);
+          left: calc(50%);
+          transform: translateX(-50%);
+        }
 
       }
       h3 {
         white-space: pre-line;
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 500;
         letter-spacing: 1px;
         text-align: center;
         color: rgb(238, 108, 77);
+        margin: 25px 0 30px 0;
+        @include rt(p6plus) {
+          font-size: 18px;
+          letter-spacing: 0.8px;
+          margin: 25px 0 20px 0;
+        }
       }
       p {
         font-size: 16px;
-        font-weight: 500;
+        font-weight: 400;
         line-height: 22px;
         letter-spacing: 0.4px;
         text-align: center;
         color: rgb(155, 155, 155);
+        margin: 0 0 15px 0;
+        @include rt(p6plus) {
+          margin: 0;
+        }
       }
     }
 
@@ -145,15 +211,30 @@
   --left-quote-left-pos: -50px;
   --right-quote-right-pos: -40px;
   --right-quote-top-pos: 25px;
-
   padding-top: 70px;
   background-color: rgb(51, 51, 51);
+  @include rt(p6plus) {
+    --left-quote-left-pos: 0;
+    --left-quote-top-pos: -34px;
+    --right-quote-right-pos: 0;
+    --right-quote-top-pos: calc(100% - 20px);
+    .to-bottom {
+      display: none;
+    }
+  }
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 35px;
 
+  }
+  .reduces-main-img {
+    width: 370px;
+    @include rt(tp) {
+      width: 100%;
+      margin-bottom: 80px;
+    }
   }
   .reduces-test-list-item {
     margin-top: 70px;
@@ -162,8 +243,15 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    @include rt(p6plus) {
+      flex-direction: column;
+    }
     .reduces-test-item {
       width: 50%;
+      @include rt(p6plus) {
+        width: 100%;
+
+      }
       &:nth-of-type(3) {
         max-width: 500px;
         width: 100%;
@@ -171,21 +259,29 @@
         background-color: rgba(163, 163, 163, 0.3);
         padding: 25px 50px;
         margin-top: 70px;
+        @include rt(p6plus) {
+          padding: 20px;
+        }
       }
       h3 {
         margin: 0 0 30px 0;
         font-size: 24px;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: 0.5px;
         text-align: left;
         color: $white;
         text-transform: uppercase;
+        @include rt(p6plus) {
+          font-size: 20px;
+          letter-spacing: 0.4px;
+          padding: 0 10px;
+        }
       }
       h4 {
         margin: 0 0 20px 0;
         text-transform: uppercase;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: 0.4px;
         text-align: left;
         color: rgb(238, 108, 77);
@@ -196,6 +292,7 @@
       }
       .reduces-list {
         margin-bottom: 60px;
+        padding: 0 10px;
         li {
           list-style: none;
           font-size: 16px;
@@ -221,6 +318,13 @@
               bottom: 10px;
               background-image: url("../img/svg/reducers_arrow.svg");
               background-repeat: no-repeat;
+              @include rt(p6plus) {
+                width: 29px;
+                height: 51px;
+                top: -38px;
+                left: -25px;
+                background-size: cover;
+              }
             }
             &:after {
               content: '';
@@ -232,6 +336,11 @@
               bottom: 30px;
               background-image: url("../img/svg/reducers_arrow_02.svg");
               background-repeat: no-repeat;
+              @include rt(p6plus) {
+
+                top: -23px;
+                right: 45px;
+              }
 
             }
           }
@@ -243,10 +352,12 @@
         line-height: 24px;
         letter-spacing: 0.3px;
         text-align: left;
+        font-weight: 400;
         color: $white;
 
       }
       p {
+        font-weight: 400;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.3px;
@@ -257,17 +368,24 @@
 
   }
   --container-footer-color: rgb(238, 108, 77);
-
   .container-footer {
     p {
       margin: 0;
       font-size: 24px;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 42px;
       letter-spacing: 1.6px;
       text-align: left;
       color: $white;
       margin-right: 30px;
+      @include rt(p6plus) {
+        text-align: center;
+        font-size: 18px;
+        line-height: 25px;
+        letter-spacing: 1.2px;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
     }
 
   }
@@ -278,19 +396,53 @@
   --left-quote-left-pos: -80px;
   --right-quote-right-pos: -80px;
   --right-quote-top-pos: 20px;
+  max-width: 1020px;
+  margin: auto;
   padding-top: 70px;
   padding-bottom: 100px;
+  @include rt(p6plus) {
+    padding-left: 20px;
+    padding-right: 20px;
+    --left-quote-left-pos: 0;
+    --left-quote-top-pos: -34px;
+    --right-quote-right-pos: 0;
+    --right-quote-top-pos: 100%;
+  }
   .pipline-img {
     margin-top: 70px;
-    max-width: 100%;
+    @include rt(p6plus) {
+      display: none;
+    }
   }
   .pipline-list-item {
     display: flex;
     justify-content: space-between;
     padding-left: 50px;
+    @include rt(p6plus) {
+      background: url('../img/svg/pipline_img_moile.svg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      min-height: 1020px;
+      flex-direction: column;
+      //background-color: rgba(0, 0, 255, 0.3);
+      padding-top: 100px;
+      max-width: 280px;
+      margin: auto;
+      margin-top: 40px;
+    }
+
+    /*@include rt(p6plus){
+      display: none;
+    }*/
     .pipline-item {
       width: 150px;
       margin-left: 80px;
+      @include rt(p6plus) {
+        margin-top: 60px;
+        margin-left: 70px;
+        margin-bottom: 10px;
+        //background-color: #faf;
+      }
       h3 {
         margin: 0;
         font-size: 18px;
@@ -317,33 +469,40 @@
   padding-top: 70px;
   background-color: rgb(51, 51, 51);
   padding-bottom: 130px;
+  @include rt(p6plus) {
+    --left-quote-left-pos: 0;
+    --left-quote-top-pos: -34px;
+    --right-quote-right-pos: 0;
+    --right-quote-top-pos: 100%;
+  }
   .what-we-do-list-item {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 70px;
+    @include rt(p6plus) {
+      flex-direction: column;
+      align-items: center;
+    }
     .what-we-do-item {
       display: flex;
       align-items: center;
       flex-direction: column;
       flex-basis: 250px;
-
+      @include rt(p6plus) {
+        flex-basis: auto;
+        max-width: 250px;
+        margin: 50px 0;
+      }
       h3 {
         text-transform: uppercase;
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 500;
         letter-spacing: 0.5px;
         text-align: center;
         color: $white;
         margin: 0 0 35px 0;
         border-bottom: 3px solid rgb(238, 108, 77);
-
-      }
-
-      span {
-        color: rgb(238, 108, 77);
-        font-size: 30px;
-        font-weight: 100;
       }
       p {
         font-size: 16px;
@@ -353,7 +512,6 @@
         color: rgb(155, 155, 155);
         margin-bottom: 25px;
       }
-
       .btn-what-we-do {
         margin-top: 25px;
         width: 100%;
@@ -368,6 +526,11 @@
         font-size: 18px;
         font-weight: 500;
         letter-spacing: 0.2px;
+        @include transition();
+        &:hover {
+          background-color: $white;
+          color: rgb(51, 51, 51);
+        }
       }
 
     }
@@ -379,22 +542,40 @@
   --right-quote-right-pos: -80px;
   --right-quote-top-pos: 10px;
   background-color: $white;
+  @include rt(p6plus) {
+    --left-quote-left-pos: 0;
+    --left-quote-top-pos: -34px;
+    --right-quote-right-pos: 0;
+    --right-quote-top-pos: 100%;
+  }
   > .container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 70px 0 50px 0;
+    @include rt(p6plus) {
+      padding: 100px 20px 200px 20px;
+    }
     .block-quote {
       position: relative;
-      h2{
+      h2 {
         margin-left: 180px;
+        @include rt(p6plus) {
+          margin-left: 0;
+          width: 100%;
+        }
       }
       .img-layer {
         position: absolute;
         left: calc(50% - 20px);
         transform: translateX(50%);
-        bottom: calc(100% + 30px)
+        bottom: calc(100% + 30px);
+        @include rt(p6plus) {
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: calc(100% + 70px);
+        }
       }
     }
   }
@@ -407,16 +588,36 @@
       display: flex;
       justify-content: flex-end;
       align-items: flex-start;
+      @include rt(p6plus) {
+        min-height: 550px;
+        padding-top: 320px;
+        padding-bottom: 60px;
+        //overflow: hidden;
+      }
       .img-layer {
         position: absolute;
         bottom: 20px;
         left: -150px;
+        width: 496px;
+        height: 411px;
+        @include bg-img-retina('../img/png/ot_134_c_1', 'png');
+        background-position: center center;
+        @include rt(p6plus) {
+          width: 100%;
+          bottom: auto;
+          top: -150px;
+          left: 0;
+          right: 0;
+          background-position: -150px center;
+        }
       }
       .arrow-layer {
         position: absolute;
-
         right: 100px;
         bottom: 30px;
+        @include rt(p6plus) {
+          display: none;
+        }
       }
     }
 
@@ -431,10 +632,26 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    @include rt(p6plus) {
+      align-items: center;
+      flex-direction: column;
+    }
     .footer-item {
+      @include rt(p6plus) {
+        margin-bottom: 40px;
+        &:first-of-type {
+          order: 2;
+          margin-bottom: 0;
+        }
+        &:last-of-type {
+          order: 1;
+          text-align: center;
+        }
+      }
       ul {
         list-style: none;
         margin: 0;
+        padding: 0;
       }
       li {
         font-size: 12px;
@@ -442,6 +659,9 @@
         letter-spacing: 0.6px;
         text-align: left;
         color: $white;
+        @include rt(p6plus) {
+          text-align: center;
+        }
 
         a {
           color: $white;
@@ -455,6 +675,9 @@
             letter-spacing: 0.4px;
             text-align: left;
             color: $white;
+            @include rt(p6plus) {
+              padding: 0 30px;
+            }
           }
         }
         .join {
@@ -468,6 +691,9 @@
           text-align: center;
           color: $white;
           display: block;
+          @include rt(p6plus) {
+            width: 250px;
+          }
         }
       }
 

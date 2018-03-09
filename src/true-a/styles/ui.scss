@@ -26,17 +26,30 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include rt(tp){
+    padding-left:20px;
+    padding-right: 20px;
+    flex-direction: column;
+  }
+
 }
 
 .container-full {
   width: 100%;
-  //outline: 1px solid blue;
+
 }
 
 .container {
   max-width: 960px;
   width: 100%;
   margin: auto;
+  @include rt(tp){
+    padding-left: 20px;
+    padding-right: 20px;
+    //outline: 1px solid blue;
+  }
+
 }
 
 .btn {
@@ -51,7 +64,6 @@ button {
   input {
     font-size: 18px;
     letter-spacing: 0.4px;
-    //text-align: left;
     color: $white;
     height: 50px;
     border-radius: 10px;
@@ -61,13 +73,16 @@ button {
     background-color: transparent;
     &:focus {
       outline: 0;
-      //border: 0;
+    }
+    @include rt(p6plus){
+      font-size: 16px;
     }
 
   }
   @include placeholder {
     color: $white;
   }
+
 }
 
 //TITLES
@@ -76,13 +91,14 @@ button {
   justify-content: center;
   width: 100%;
   margin: auto;
+
   h2 {
     white-space: pre-line;
     z-index: 50;
     position: relative;
     margin: 0;
     font-size: 30px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 42px;
     letter-spacing: 2.1px;
     text-align: center;
@@ -97,7 +113,6 @@ button {
     }
     &.dark-quote {
       color: rgb(238, 108, 77);
-
       &:before {
         background-image: url("../img/svg/invalid_name_grey.svg");
       }
@@ -126,7 +141,11 @@ button {
       top: var(--right-quote-top-pos, 0);
 
     }
-
+    @include rt(p6plus){
+      font-size: 24px;
+      line-height: 33px;
+      letter-spacing: 1.6px;
+    }
   }
 }
 
@@ -139,9 +158,17 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 20px 27px;
-
+  @include rt(p6plus){
+    flex-wrap: wrap;
+    padding: 20px 10px;
+  }
   .input-field {
     flex-basis: 350px;
+    @include rt(p6plus){
+      flex-basis: 100%;
+      margin-bottom: 30px;
+
+    }
   }
   .go-email-btn {
     text-transform: uppercase;
@@ -159,6 +186,10 @@ button {
       background-color: $white;
       color: rgb(238, 108, 77);
     }
+
+    @include rt(p6plus){
+      margin-left: 20px;
+    }
   }
   span {
     font-size: 18px;
@@ -167,7 +198,6 @@ button {
     color: $white;
   }
   .go-github-btn {
-    //display: block;
     width: 70px;
     height: 50px;
     border-radius: 10px;
@@ -180,9 +210,15 @@ button {
       @include transition();
     }
     &:hover {
+      background-color: transparent;
+      border-color:$white;
       .github__btn {
-        fill: rgb(238, 108, 77);
+        fill: rgb(255, 255, 255);
       }
+    }
+
+    @include rt(p6plus){
+      margin-right: 20px;
     }
 
   }

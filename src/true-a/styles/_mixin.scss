@@ -1,8 +1,16 @@
 @mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
+  ::-webkit-input-placeholder {
+    @content
+  }
+  :-moz-placeholder {
+    @content
+  }
+  ::-moz-placeholder {
+    @content
+  }
+  :-ms-input-placeholder {
+    @content
+  }
 }
 
 @mixin bg-img-retina($file, $type, $width:100%, $height:100%) {
@@ -16,9 +24,106 @@
   }
 }
 
-@mixin transition($property: all, $duration: .3s, $ease: linear){
+@mixin transition($property: all, $duration: .3s, $ease: linear) {
   -webkit-transition: $property $duration $ease;
   -moz-transition: $property $duration $ease;
   -o-transition: $property $duration $ease;
   transition: $property $duration $ease;
 }
+
+/*@mixin rt($media) {
+
+
+  !* Smartphones (portrait and landscape) ----------- *!
+  @if $media == smartphone {
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      @content
+    }
+  }
+
+
+  !* iPhone 5 ----------- *!
+  @else if $media == p5 {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+      @content;
+    }
+  }
+  @else if $media == p5_l {
+    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+      @content;
+    }
+  }
+
+
+
+  !* iPhone 6 ----------- *!
+  @else if $media == p6 {
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+      @content
+    }
+  }
+  @else if $media == p6_l {
+    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+      @content
+    }
+  }
+
+
+
+
+  !* iPhone 6+ ----------- *!
+  @else if $media == p6plus {
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2) {
+      @content
+    }
+  }
+  @else if $media == p6plus_l {
+    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+      @content
+    }
+  }
+
+  !* iPads (portrait and landscape) ----------- *!
+  @else if $media == iPads_pl {
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+      @content
+    }
+  }
+
+}*/
+
+
+$tp: 768px;
+$p6plus: 414px;
+$p6: 375px;
+$p5: 320px;
+
+$p_land: 736px;
+$landscape: landscape;
+@mixin rt($media) {
+  @if $media == p5 {
+    @media only screen and (max-width: $p5) {
+      @content;
+    }
+  } @else if $media == p6 {
+    @media only screen and (max-width: $p6) {
+      @content;
+    }
+  } @else if $media == p6plus {
+    @media only screen and (max-width: $p6plus) {
+      @content;
+    }
+  } @else if $media == tp {
+    @media only screen and (max-width: $tp) {
+      @content;
+    }
+  }
+
+  @if $media == landscape_orient {
+    @media only screen and (max-width: $p_land) and (orientation: $landscape) {
+      @content;
+    }
+  }
+}
+
+//https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
