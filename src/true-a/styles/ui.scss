@@ -183,6 +183,8 @@ button {
     text-align: center;
     color: $white;
     cursor: pointer;
+    margin: 0;
+    padding: 0;
     @include transition();
     &:hover {
       background-color: $white;
@@ -190,8 +192,8 @@ button {
     }
 
     @include rt(p6plus){
-      //margin-left: 20px;
-      //color: blue;
+      margin-left: 20px;
+      color: blue;
       -webkit-appearance: none;
     }
   }
