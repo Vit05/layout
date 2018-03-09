@@ -14,10 +14,24 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .logo {
+      width: 150px;
 
+      @include rt(p6plus){
+        width: 120px;
+      }
+    }
   }
   .navigation {
     cursor: pointer;
+    svg{
+      width: 30px;
+      @include rt(p6plus){
+        width: 25px;
+      }
+    }
+
+
   }
 }
 
@@ -36,7 +50,8 @@
     justify-content: flex-end;
     @include rt(p6plus) {
       min-height: 600px;
-      padding-bottom: 50px;
+      padding-top: 90px;
+      justify-content: flex-start;
       //background-color: rgba(255,0,255, 0.1);
     }
   }
@@ -56,12 +71,14 @@
     h1 {
       text-transform: uppercase;
       font-size: 40px;
-      font-weight: bold;
+      font-weight: 600;
       letter-spacing: 0.9px;
       text-align: center;
       color: $white;
       @include rt(p6plus) {
         font-size: 36px;
+        margin: 0 0 20px 0;
+        line-height: 48px;
       }
     }
     p {
@@ -70,8 +87,10 @@
       text-align: center;
       color: $white;
       margin-bottom: 85px;
+      font-weight: 400;
       @include rt(p6plus) {
         font-size: 18px;
+        line-height: 25px;
         margin-bottom: 50px;
       }
     }
@@ -94,6 +113,7 @@
     --left-quote-top-pos: -34px;
     --right-quote-right-pos: 0;
     --right-quote-top-pos: 100%;
+    padding-top: 80px;
   }
   .concentrate-list-item {
     display: flex;
@@ -102,6 +122,7 @@
     margin-top: 70px;
     margin-bottom: 80px;
     @include rt(p6plus) {
+      margin-top: 90px;
       align-items: center;
       flex-direction: column;
       //background-color: rgba(255, 255, 0, 0.5);
@@ -220,6 +241,7 @@
     --left-quote-top-pos: -34px;
     --right-quote-right-pos: 0;
     --right-quote-top-pos: calc(100% - 20px);
+    padding-top: 80px;
     .to-bottom {
       display: none;
     }
@@ -228,7 +250,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 35px;
+    padding-bottom: 20px;
 
   }
   .reduces-main-img {
@@ -400,7 +422,7 @@
   --right-quote-top-pos: 20px;
   max-width: 1020px;
   margin: auto;
-  padding-top: 70px;
+  padding-top: 90px;
   padding-bottom: 100px;
   @include rt(p6plus) {
     padding-left: 20px;
@@ -468,7 +490,7 @@
   --left-quote-left-pos: -80px;
   --right-quote-right-pos: -80px;
   --right-quote-top-pos: 25px;
-  padding-top: 70px;
+  padding-top: 80px;
   background-color: rgb(51, 51, 51);
   padding-bottom: 130px;
   @include rt(p6plus) {
@@ -476,6 +498,7 @@
     --left-quote-top-pos: -34px;
     --right-quote-right-pos: 0;
     --right-quote-top-pos: 100%;
+    padding-bottom: 100px;
   }
   .what-we-do-list-item {
     display: flex;
@@ -485,6 +508,7 @@
     @include rt(p6plus) {
       flex-direction: column;
       align-items: center;
+      margin-top: 60px;
     }
     .what-we-do-item {
       display: flex;
@@ -499,7 +523,7 @@
       h3 {
         text-transform: uppercase;
         font-size: 24px;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: 0.5px;
         text-align: center;
         color: $white;
@@ -526,7 +550,7 @@
         border-radius: 10px;
         border: solid 2px $white;
         font-size: 18px;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: 0.2px;
         @include transition();
         &:hover {
@@ -632,6 +656,9 @@
 .footer {
   background-color: rgb(74, 74, 74);
   padding: 65px 0;
+  @include rt(p6plus){
+    padding: 45px 0;
+  }
   .container {
     display: flex;
     align-items: flex-start;
@@ -642,7 +669,7 @@
     }
     .footer-item {
       @include rt(p6plus) {
-        margin-bottom: 40px;
+        margin-bottom: 35px;
         &:first-of-type {
           order: 2;
           margin-bottom: 0;
@@ -675,7 +702,7 @@
           justify-content: space-between;
           &.mail-to {
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 400;
             letter-spacing: 0.4px;
             text-align: left;
             color: $white;
@@ -697,6 +724,8 @@
           display: block;
           @include rt(p6plus) {
             width: 250px;
+            height: 40px;
+            line-height: 40px;
           }
         }
       }
