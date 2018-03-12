@@ -1,7 +1,6 @@
 @import 'mixines';
 
 .product-main-block {
-  outline: 1px solid blue;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -107,6 +106,7 @@
   }
 
   .more-photo {
+    padding-top: 10px;
     font-family: $Helv;
     display: flex;
     align-items: center;
@@ -400,6 +400,120 @@
           color: #ed6600;
           margin: 0 0 5px 0;
         }
+      }
+    }
+  }
+}
+
+.desc-block-1 {
+  background-image: url("../img/product/660.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  .container {
+    box-sizing: border-box;
+    padding: 50px 0;
+    min-height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    @include rt(ls) {
+      min-height: 700px;
+    }
+    h2 {
+      font-size: 40px;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      color: #000000;
+      font-family: $Bender;
+    }
+    p {
+      text-align: center;
+      white-space: pre-line;
+      font-size: 16px;
+      font-family: $Helv;
+      color: $black;
+    }
+  }
+}
+
+.desc-block-2 {
+  background-image: url("../img/product/png/621_2.png"), url("../img/product/658.jpg");
+  background-position: 100px center, center center;
+  background-repeat: no-repeat, no-repeat;
+  background-size: contain, contain;
+  @include rt(ls) {
+    background-position: left 50px, center center;
+    background-repeat: no-repeat, no-repeat;
+  }
+  .container {
+    min-height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    @include rt(ls) {
+      min-height: 700px;
+    }
+    .description {
+      max-width: 650px;
+      @include rt(ls) {
+        max-width: 550px;
+      }
+      h2 {
+        font-size: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #000000;
+        font-family: $Bender;
+        margin-bottom: 30px;
+      }
+      p {
+        line-height: 24px;
+        font-size: 16px;
+        font-family: $Helv;
+        color: $black;
+      }
+    }
+  }
+}
+
+.desc-block-3 {
+  background-image: url("../img/product/659.jpg");
+  background-position: -100px center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  .container {
+    min-height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include rt(ls) {
+      min-height: 700px;
+    }
+    .description {
+      max-width: 650px;
+      @include rt(ls) {
+        max-width: 550px;
+      }
+      h2 {
+        font-size: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #000000;
+        font-family: $Bender;
+        margin-bottom: 30px;
+      }
+      ul {
+        padding-left: 15px;
+      }
+      li {
+        line-height: 24px;
+        font-size: 16px;
+        font-family: $Helv;
+        color: $black;
+        margin-bottom: 20px;
       }
     }
   }
