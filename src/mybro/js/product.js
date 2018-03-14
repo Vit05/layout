@@ -9,20 +9,27 @@
     })
 
     var product_video = $('#product_video')
-    $('.product-slider').flexslider({
-        animation: "slide",
-        controlNav: "thumbnails",
-        before: function (slider) {
-            $("#product_video").each(function () {
-                $(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
-            });
-        }
+    $(window).on('load',function () {
+        $(".se-pre-con").fadeOut("slow");
+        $('.product-slider').flexslider({
+            animation: "slide",
+            controlNav: "thumbnails",
+            animationLoop:false,
+            fadeFirstSlide:false,
+            autoplay:false,
+            video:true,
+            before: function (slider) {
+                $("#product_video").each(function () {
+                    $(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+                });
+            }
 
-    });
-    $('.more-photo').on('click', function () {
-        $(this).toggleClass('show');
-        $('.flex-control-thumbs').toggleClass('show')
-    });
+        });
+        $('.more-photo').on('click', function () {
+            $(this).toggleClass('show');
+            $('.flex-control-thumbs').toggleClass('show')
+        });
+    })
 
     $('#tabs_link').flexslider({
         animation: "slide",
