@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Product</title>
-    <!--<link rel="stylesheet" href="css/reset.css">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="libs/flex/flexslider.css">
     <link rel="stylesheet" href="css/product_mybro.min.css">
 
@@ -290,58 +292,75 @@
         </div>
     </div>
 </div>
+
+<div class="container-full desc-block-rate">
+    <div class="container">
+
+        <div class="rate-list">
+            <div class="rate-item">
+                <img src="img/product/png/icon%201.png" alt="">
+                <div class="botle-cont">
+                    <span style="height: 20px"></span>
+                </div>
+                <button class="rate-btn">awesome</button>
+
+            </div>
+
+
+            <div class="rate-item">
+                <img src="img/product/png/icon%202.png" alt="">
+                <div class="botle-cont">
+                    <span style="height: 57px"></span>
+                </div>
+                <button class="rate-btn">angry</button>
+
+            </div>
+
+
+            <div class="rate-item">
+                <img src="img/product/png/icon%203.png" alt="">
+                <div class="botle-cont">
+                    <span style="height: 7px"></span>
+                </div>
+                <button class="rate-btn">strange</button>
+
+            </div>
+
+            <div class="rate-item">
+                <img src="img/product/png/icon%204.png" alt="">
+                <div class="botle-cont">
+                    <span style="height: 20px"></span>
+                </div>
+                <button class="rate-btn">cool</button>
+
+            </div>
+
+
+            <div class="rate-item">
+                <img src="img/product/png/icon%205.png" alt="">
+                <div class="botle-cont">
+                    <span style="height: 57px"></span>
+                </div>
+                <button class="rate-btn">lol</button>
+
+            </div>
+
+
+            <div class="rate-item">
+                <img src="img/product/png/icon%206.png" alt="">
+                <div class="botle-cont">
+                    <span style="height: 7px"></span>
+                </div>
+                <button class="rate-btn">omg</button>
+
+            </div>
+        </div>
+    </div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- FlexSlider -->
 <script src="libs/flex/jquery.flexslider.js"></script>
-
-<script type="text/javascript">
-    // $(function(){
-    //     SyntaxHighlighter.all();
-    // });
-    $(document).ready(function(){
-
-
-        var product_video = $('#product_video')
-        $('.product-slider').flexslider({
-            animation: "slide",
-            controlNav: "thumbnails",
-            before: function (slider) {
-                $("#product_video").each(function () {
-                    $(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
-                });
-            }
-
-        });
-        $('.more-photo').on('click', function () {
-            $(this).toggleClass('show');
-            $('.flex-control-thumbs').toggleClass('show')
-        });
-
-
-        $('#tabs_link').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-
-            itemWidth: 40,
-            // itemMargin: 5,
-            asNavFor: '#tabs_desccription'
-        });
-
-        $('#tabs_desccription').flexslider({
-            animation: "slide",
-            controlNav: false,
-            animationLoop: false,
-            slideshow: false,
-            smoothHeight: true,
-            sync: "#tabs_link"
-        });
-    });
-</script>
-
-
-
+<script src="js/product.min.js"></script>
 
 </body>
 </html>

@@ -113,7 +113,7 @@ gulp.task('image:build', function () {
 //JAVASCRIPT
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
-        .pipe(concat('common.js'))
+        // .pipe(concat())
         .pipe(uglify())
         .pipe(minifyjs())
         .pipe(rename({suffix: '.min'}))
