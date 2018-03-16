@@ -73,7 +73,7 @@ var serverConfig = {
     server: {
         baseDir: './public/' + currentPath + ''
     },
-    tunnel: true,
+    // tunnel: true,
     host: 'localhost',
     port: 5000
 };

@@ -6,7 +6,7 @@
 .header-block {
   z-index: 100;
   padding: 20px 0;
-  position: fixed;
+  position: absolute;
   left: 0;
   right: 0;
   top: 0;
@@ -17,20 +17,19 @@
     .logo {
       width: 150px;
 
-      @include rt(p6plus){
+      @include rt(p6plus) {
         width: 120px;
       }
     }
   }
   .navigation {
     cursor: pointer;
-    svg{
+    svg {
       width: 30px;
-      @include rt(p6plus){
+      @include rt(p6plus) {
         width: 25px;
       }
     }
-
 
   }
 }
@@ -62,8 +61,8 @@
     }
     .arrow {
       position: absolute;
-      top: calc(100% + 30px);
-      right: 0;
+      top: calc(100% + 25px);
+      right: 25px;
       @include rt(p6plus) {
         display: none;
       }
@@ -75,6 +74,7 @@
       letter-spacing: 0.9px;
       text-align: center;
       color: $white;
+      margin: 10px 0 14px 0;
       @include rt(p6plus) {
         font-size: 36px;
         margin: 0 0 20px 0;
@@ -86,7 +86,7 @@
       letter-spacing: 0.4px;
       text-align: center;
       color: $white;
-      margin-bottom: 85px;
+      margin-bottom: 87px;
       font-weight: 400;
       @include rt(p6plus) {
         font-size: 18px;
@@ -96,16 +96,17 @@
     }
   }
   .to-bottom {
-    margin: 190px 0 50px 0;
+    margin: 190px 0 45px 0;
     @include rt(p6plus) {
       display: none;
     }
   }
+
 }
 
 .concentrate-block {
   padding-top: 70px;
-  --left-quote-left-pos: -40px;
+  --left-quote-left-pos: -45px;
   --right-quote-right-pos: -30px;
   --right-quote-top-pos: 25px;
   @include rt(p6plus) {
@@ -120,12 +121,11 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 70px;
-    margin-bottom: 80px;
+    margin-bottom: 85px;
     @include rt(p6plus) {
       margin-top: 90px;
       align-items: center;
       flex-direction: column;
-      //background-color: rgba(255, 255, 0, 0.5);
     }
     .description-item {
       position: relative;
@@ -181,7 +181,7 @@
         letter-spacing: 1px;
         text-align: center;
         color: rgb(238, 108, 77);
-        margin: 25px 0 30px 0;
+        margin: 25px 0 35px 0;
         @include rt(p6plus) {
           font-size: 18px;
           letter-spacing: 0.8px;
@@ -231,10 +231,12 @@
 }
 
 .reduces-test-block {
-  --left-quote-left-pos: -50px;
+  --left-quote-left-pos: -40px;
   --right-quote-right-pos: -40px;
   --right-quote-top-pos: 25px;
+  --text-letter-spacing: 0.6px;
   padding-top: 70px;
+  //padding-bottom: 20px;
   background-color: rgb(51, 51, 51);
   @include rt(p6plus) {
     --left-quote-left-pos: 0;
@@ -250,7 +252,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 20px;
+    //padding-bottom: 20px;
 
   }
   .reduces-main-img {
@@ -262,7 +264,7 @@
   }
   .reduces-test-list-item {
     margin-top: 70px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -276,99 +278,107 @@
         width: 100%;
 
       }
+      &:nth-of-type(2) {
+
+        padding-right: 40px;
+        h3 {
+          margin: 0 0 35px 10px;
+          font-size: 24px;
+          font-weight: 400;
+          letter-spacing: 0.5px;
+          text-align: left;
+          color: $white;
+          text-transform: uppercase;
+          @include rt(p6plus) {
+            font-size: 20px;
+            letter-spacing: 0.4px;
+            padding: 0 10px;
+          }
+        }
+        .reduces-list {
+          margin-bottom: 60px;
+          padding: 0;
+          li {
+            list-style: none;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.3px;
+            text-align: left;
+            color: rgb(155, 155, 155);
+            &:last-of-type {
+              margin-top: 20px;
+              display: inline-block;
+              position: relative;
+              padding-bottom: 5px;
+              margin-bottom: 5px;
+              border-bottom: 3px solid rgb(238, 108, 77);
+              &:before {
+                content: '';
+                display: block;
+                width: 38px;
+                height: 62px;
+                position: absolute;
+                right: calc(100% + 5px);
+                bottom: 12px;
+                background-image: url("../img/svg/reducers_arrow.svg");
+                background-repeat: no-repeat;
+                @include rt(p6plus) {
+                  width: 29px;
+                  height: 51px;
+                  top: -38px;
+                  left: -25px;
+                  background-size: cover;
+                }
+              }
+              &:after {
+                content: '';
+                display: block;
+                width: 15px;
+                height: 25px;
+                position: absolute;
+                right: 65px;
+                bottom: 25px;
+                background-image: url("../img/svg/reducers_arrow_02.svg");
+                background-repeat: no-repeat;
+                @include rt(p6plus) {
+
+                  top: -23px;
+                  right: 45px;
+                }
+
+              }
+            }
+          }
+        }
+        p {
+          max-width: 450px;
+          width: 100%;
+        }
+      }
       &:nth-of-type(3) {
         max-width: 500px;
         width: 100%;
         border-radius: 10px;
         background-color: rgba(163, 163, 163, 0.3);
         padding: 25px 50px;
-        margin-top: 70px;
+        margin-top: 50px;
+        margin-bottom: 5px;
         @include rt(p6plus) {
           padding: 20px;
         }
-      }
-      h3 {
-        margin: 0 0 30px 0;
-        font-size: 24px;
-        font-weight: 400;
-        letter-spacing: 0.5px;
-        text-align: left;
-        color: $white;
-        text-transform: uppercase;
-        @include rt(p6plus) {
-          font-size: 20px;
+        h4 {
+          margin: 0 0 22px 10px;
+          text-transform: uppercase;
+          font-size: 18px;
+          font-weight: 400;
           letter-spacing: 0.4px;
-          padding: 0 10px;
+          text-align: left;
+          color: rgb(238, 108, 77);
         }
-      }
-      h4 {
-        margin: 0 0 20px 0;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 400;
-        letter-spacing: 0.4px;
-        text-align: left;
-        color: rgb(238, 108, 77);
       }
       ul {
         margin: 0;
         padding: 0;
-      }
-      .reduces-list {
-        margin-bottom: 60px;
-        padding: 0 10px;
-        li {
-          list-style: none;
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: 0.3px;
-          text-align: left;
-          color: rgb(155, 155, 155);
-          &:last-of-type {
-            margin-top: 25px;
-            display: inline-block;
-            position: relative;
-
-            padding-bottom: 5px;
-            border-bottom: 3px solid rgb(238, 108, 77);
-
-            &:before {
-              content: '';
-              display: block;
-              width: 35px;
-              height: 62px;
-              position: absolute;
-              right: calc(100% + 5px);
-              bottom: 10px;
-              background-image: url("../img/svg/reducers_arrow.svg");
-              background-repeat: no-repeat;
-              @include rt(p6plus) {
-                width: 29px;
-                height: 51px;
-                top: -38px;
-                left: -25px;
-                background-size: cover;
-              }
-            }
-            &:after {
-              content: '';
-              display: block;
-              width: 15px;
-              height: 25px;
-              position: absolute;
-              right: 65px;
-              bottom: 30px;
-              background-image: url("../img/svg/reducers_arrow_02.svg");
-              background-repeat: no-repeat;
-              @include rt(p6plus) {
-
-                top: -23px;
-                right: 45px;
-              }
-
-            }
-          }
-        }
       }
       li {
         list-style: none;
@@ -391,17 +401,21 @@
     }
 
   }
+  .to-bottom {
+    margin-bottom: 30px;
+  }
   --container-footer-color: rgb(238, 108, 77);
   .container-footer {
     p {
-      margin: 0;
+      //margin: 0;
       font-size: 24px;
       font-weight: 400;
       line-height: 42px;
       letter-spacing: 1.6px;
       text-align: left;
       color: $white;
-      margin-right: 30px;
+      margin: 0;
+      //margin: 0 35px 0 35px;
       @include rt(p6plus) {
         text-align: center;
         font-size: 18px;
@@ -411,18 +425,21 @@
         margin-bottom: 30px;
       }
     }
+    .btn {
+      margin-left: 30px;
+    }
 
   }
 
 }
 
 .piplines-block {
-  --left-quote-left-pos: -80px;
-  --right-quote-right-pos: -80px;
-  --right-quote-top-pos: 20px;
+  --left-quote-left-pos: -75px;
+  --right-quote-right-pos: -75px;
+  --right-quote-top-pos: 15px;
   max-width: 1020px;
   margin: auto;
-  padding-top: 90px;
+  padding-top: 70px;
   padding-bottom: 100px;
   @include rt(p6plus) {
     padding-left: 20px;
@@ -434,14 +451,14 @@
   }
   .pipline-img {
     margin-top: 70px;
+    margin-bottom: 10px;
     @include rt(p6plus) {
       display: none;
     }
   }
   .pipline-list-item {
     display: flex;
-    justify-content: space-between;
-    padding-left: 50px;
+    padding-left: 30px;
     @include rt(p6plus) {
       background: url('../img/svg/pipline_img_moile.svg');
       background-repeat: no-repeat;
@@ -454,21 +471,21 @@
       margin: auto;
       margin-top: 40px;
     }
-
-    /*@include rt(p6plus){
-      display: none;
-    }*/
     .pipline-item {
       width: 150px;
       margin-left: 80px;
+      &:nth-of-type(1) {
+        margin-left: 120px;
+      }
+
       @include rt(p6plus) {
-        margin-top: 60px;
+        margin-top: 50px;
         margin-left: 70px;
         margin-bottom: 10px;
         //background-color: #faf;
       }
       h3 {
-        margin: 0;
+        margin: 0 0 10px 0;
         font-size: 18px;
         font-weight: 600;
         letter-spacing: 0.4px;
@@ -476,6 +493,7 @@
         color: rgb(74, 74, 74);
       }
       p {
+        margin: 0;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.3px;
@@ -488,9 +506,10 @@
 
 .what-we-done-block {
   --left-quote-left-pos: -80px;
-  --right-quote-right-pos: -80px;
+  --right-quote-right-pos: -75px;
   --right-quote-top-pos: 25px;
-  padding-top: 80px;
+  --text-letter-spacing: 0.6px;
+  padding-top: 70px;
   background-color: rgb(51, 51, 51);
   padding-bottom: 130px;
   @include rt(p6plus) {
@@ -528,6 +547,7 @@
         text-align: center;
         color: $white;
         margin: 0 0 35px 0;
+        padding-bottom: 5px;
         border-bottom: 3px solid rgb(238, 108, 77);
       }
       p {
@@ -539,7 +559,7 @@
         margin-bottom: 25px;
       }
       .btn-what-we-do {
-        margin-top: 25px;
+        margin-top: 20px;
         width: 100%;
         height: 50px;
         line-height: 50px;
@@ -564,9 +584,9 @@
 }
 
 .wanna-try-block {
-  --left-quote-left-pos: -80px;
+  --left-quote-left-pos: -75px;
   --right-quote-right-pos: -80px;
-  --right-quote-top-pos: 10px;
+  --right-quote-top-pos: 5px;
   background-color: $white;
   @include rt(p6plus) {
     --left-quote-left-pos: 0;
@@ -586,7 +606,7 @@
     .block-quote {
       position: relative;
       h2 {
-        margin-left: 180px;
+        margin-left: 200px;
         @include rt(p6plus) {
           margin-left: 0;
           width: 100%;
@@ -594,7 +614,7 @@
       }
       .img-layer {
         position: absolute;
-        left: calc(50% - 20px);
+        left: calc(50% - 10px);
         transform: translateX(50%);
         bottom: calc(100% + 30px);
         @include rt(p6plus) {
@@ -618,12 +638,11 @@
         min-height: 550px;
         padding-top: 320px;
         padding-bottom: 60px;
-        //overflow: hidden;
       }
       .img-layer {
         position: absolute;
-        bottom: 20px;
-        left: -150px;
+        bottom: 33px;
+        left: -155px;
         width: 496px;
         height: 411px;
         @include bg-img-retina('../img/png/ot_134_c_1', 'png');
@@ -641,11 +660,14 @@
       }
       .arrow-layer {
         position: absolute;
-        right: 100px;
-        bottom: 30px;
+        right: 120px;
+        bottom: 35px;
         @include rt(p6plus) {
           display: none;
         }
+      }
+      .block-try {
+        margin: 0;
       }
     }
 
@@ -656,7 +678,7 @@
 .footer {
   background-color: rgb(74, 74, 74);
   padding: 65px 0;
-  @include rt(p6plus){
+  @include rt(p6plus) {
     padding: 45px 0;
   }
   .container {
@@ -700,12 +722,22 @@
           align-items: center;
           text-decoration: none;
           justify-content: space-between;
+          letter-spacing: 0.4px;
           &.mail-to {
             font-size: 16px;
             font-weight: 400;
             letter-spacing: 0.4px;
             text-align: left;
             color: $white;
+            display: flex;
+            align-items: center;
+            padding-top: 5px;
+            img {
+              display: block;
+            }
+            span {
+              display: block;
+            }
             @include rt(p6plus) {
               padding: 0 30px;
             }
