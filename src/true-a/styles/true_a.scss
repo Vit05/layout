@@ -50,9 +50,8 @@
     justify-content: flex-end;
     @include rt(p6plus) {
       min-height: 600px;
-      padding-top: 90px;
+      padding-top: 100px;
       justify-content: flex-start;
-      //background-color: rgba(255,0,255, 0.1);
     }
   }
   .main-block-description {
@@ -63,7 +62,7 @@
     .arrow {
       position: absolute;
       top: calc(100% + 25px);
-      right: 25px;
+      right: 80px;
       @include rt(p6plus) {
         display: none;
       }
@@ -77,9 +76,9 @@
       color: $white;
       margin: 10px 0 14px 0;
       @include rt(p6plus) {
-        font-size: 36px;
-        margin: 0 0 20px 0;
-        line-height: 48px;
+        font-size: 30px;
+        margin: 0 0 30px 0;
+        line-height: 1.33;
       }
     }
     p {
@@ -92,7 +91,7 @@
       @include rt(p6plus) {
         font-size: 18px;
         line-height: 25px;
-        margin-bottom: 50px;
+        margin-bottom: 58px;
       }
     }
   }
@@ -147,7 +146,7 @@
         }
       }
       &:first-of-type {
-        @include rt(p6plus){
+        @include rt(p6plus) {
           margin-bottom: 170px;
         }
         .arrow-item {
@@ -242,7 +241,6 @@
     }
   }
   --container-footer-color: rgb(74, 74, 74);
-
 }
 
 .reduces-test-block {
@@ -251,7 +249,6 @@
   --right-quote-top-pos: 25px;
   --text-letter-spacing: 0.6px;
   padding-top: 70px;
-  //padding-bottom: 20px;
   background-color: rgb(51, 51, 51);
   @include rt(p6plus) {
     --left-quote-left-pos: 0;
@@ -297,9 +294,10 @@
         padding-right: 40px;
         @include rt(p6plus) {
           padding: 0;
+
         }
         h3 {
-          margin: 0 0 35px 10px;
+          margin: 0 0 30px 10px;
           font-size: 24px;
           font-weight: 400;
           letter-spacing: 0.5px;
@@ -310,24 +308,24 @@
             font-size: 20px;
             padding: 0 10px;
             letter-spacing: 0.4px;
-            margin: 0 0 35px 0;
+            margin: 0 0 30px 0;
           }
         }
         .reduces-list {
-          margin-bottom: 60px;
-          padding: 0;
-          @include rt(p6plus){
-            padding: 0 10px;
+          margin-bottom: 40px;
+          padding: 0 0 0 15px;
+          @include rt(p6plus) {
+            padding: 0 10px 0 25px;
           }
           li {
-            list-style: none;
             font-size: 16px;
             line-height: 24px;
             letter-spacing: 0.3px;
             text-align: left;
             color: rgb(155, 155, 155);
             &:last-of-type {
-              margin-top: 20px;
+              margin-top: 25px;
+              margin-left: -15px;
               display: inline-block;
               position: relative;
               padding-bottom: 5px;
@@ -381,7 +379,7 @@
         width: 100%;
         border-radius: 10px;
         background-color: rgba(163, 163, 163, 0.3);
-        padding: 25px 50px;
+        padding: 23px 50px;
         margin-top: 50px;
         margin-bottom: 5px;
         @include rt(p6plus) {
@@ -397,13 +395,15 @@
           text-align: left;
           color: rgb(238, 108, 77);
         }
+        li {
+          list-style: none;
+        }
       }
       ul {
         margin: 0;
         padding: 0;
       }
       li {
-        list-style: none;
         font-size: 16px;
         line-height: 24px;
         letter-spacing: 0.3px;
@@ -428,7 +428,7 @@
   }
   --container-footer-color: rgb(238, 108, 77);
   .container-footer {
-    @include rt(p6plus){
+    @include rt(p6plus) {
       padding: 30px 20px;
     }
     p {
@@ -452,7 +452,7 @@
     }
     .btn {
       margin-left: 30px;
-      @include rt(p6plus){
+      @include rt(p6plus) {
         margin: 0;
       }
     }
@@ -593,7 +593,7 @@
         text-align: center;
         color: rgb(155, 155, 155);
         margin-bottom: 25px;
-        @include rt(p6plus){
+        @include rt(p6plus) {
           margin-bottom: 20px;
         }
       }
@@ -612,7 +612,7 @@
         font-weight: 400;
         letter-spacing: 0.2px;
         @include transition();
-        @include rt(p6plus){
+        @include rt(p6plus) {
           margin-top: 30px;
         }
         &:hover {
@@ -710,6 +710,10 @@
       }
       .block-try {
         margin: 0;
+        @include rt(p6plus) {
+          margin: auto;
+          width: 280px;
+        }
       }
     }
 

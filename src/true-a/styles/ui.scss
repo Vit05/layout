@@ -48,11 +48,9 @@ button {
   max-width: 960px;
   width: 100%;
   margin: auto;
-  //background-color: rgba(#afa, 0.2);
   @include rt(tp){
     padding-left: 20px;
     padding-right: 20px;
-    //outline: 1px solid blue;
   }
 
 }
@@ -132,7 +130,7 @@ button {
       width: 54px;
       height: 35px;
       transform: rotate(180deg);
-      z-index: 25;
+      z-index: -1;
       left: var(--left-quote-left-pos, 0);
       top: var(--left-quote-top-pos, 0);
     }
@@ -142,6 +140,7 @@ button {
       position: absolute;
       width: 54px;
       height: 35px;
+      z-index: -1;
       right: var(--right-quote-right-pos, 0);
       top: var(--right-quote-top-pos, 0);
 
