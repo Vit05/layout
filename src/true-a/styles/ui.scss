@@ -33,7 +33,7 @@ button {
   justify-content: center;
 
   @include rt(tp){
-   padding: 30px 20px;
+   padding: 25px 20px;
     flex-direction: column;
   }
 
@@ -167,7 +167,7 @@ button {
   padding: 19px 39px 21px 27px;
   @include rt(p6plus){
     flex-wrap: wrap;
-    padding: 20px 14px;
+    padding: 20px 10px;
   }
   .input-field {
     flex-basis: 350px;
@@ -199,7 +199,7 @@ button {
     }
 
     @include rt(p6plus){
-      margin-left: 20px;
+      margin-left: 19px;
       -webkit-appearance: none;
     }
   }
@@ -230,7 +230,7 @@ button {
     }
 
     @include rt(p6plus){
-      margin-right: 20px;
+      margin-right: 19px;
     }
 
   }
