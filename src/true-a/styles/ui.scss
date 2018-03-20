@@ -4,6 +4,7 @@ $ff: 'Montserrat', sans-serif;
 $white: #fff;
 body {
   font-family: $ff;
+  font-kerning: normal;
   * {
     box-sizing: border-box;
   }
@@ -79,6 +80,7 @@ button {
     }
     @include rt(p6plus){
       font-size: 16px;
+      letter-spacing: 0.3px;
     }
 
   }
@@ -171,7 +173,9 @@ button {
   .input-field {
     flex-basis: 350px;
     height: 50px;
+    margin-right: 10px;
     @include rt(p6plus){
+      margin-right: 0;
       flex-basis: 100%;
       margin-bottom: 30px;
 
@@ -203,8 +207,8 @@ button {
     }
   }
   span {
-    font-size: 18px;
-    letter-spacing: 0.4px;
+    font-size: 14px;
+    letter-spacing: 0.3px;
     text-align: center;
     color: $white;
   }
