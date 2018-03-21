@@ -1,0 +1,844 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900');
+@import "normalize.css";
+@import "mixin";
+@import "ui";
+
+.header-block {
+  z-index: 100;
+  padding: 20px 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      width: 150px;
+
+      @include rt(p6plus) {
+        width: 120px;
+      }
+    }
+  }
+  .navigation {
+    cursor: pointer;
+    padding: 0;
+    svg {
+      width: 30px;
+      @include rt(p6plus) {
+        width: 25px;
+      }
+    }
+
+  }
+}
+
+.main-block {
+  @include bg-img-retina('../img/jpg/main_bg', 'jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  @include rt(p6plus) {
+    @include bg-img-retina('../img/jpg/main_bg_mob', 'jpg');
+  }
+  .container {
+    min-height: 760px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    @include rt(p6plus) {
+      min-height: 600px;
+      padding-top: 100px;
+      justify-content: flex-start;
+    }
+  }
+  .main-block-description {
+    position: relative;
+    @include rt(p6plus) {
+      max-width: 280px;
+    }
+    .arrow {
+      position: absolute;
+      top: calc(100% + 25px);
+      right: 80px;
+      @include rt(p6plus) {
+        display: none;
+      }
+    }
+    h1 {
+      text-transform: uppercase;
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+      text-align: center;
+      color: $white;
+      margin: 0 0 -3px 0;
+      @include rt(p6plus) {
+        font-size: 30px;
+        margin: 0 0 30px 0;
+        line-height: 1.33;
+      }
+    }
+    p {
+      font-size: 20px;
+      letter-spacing: 0.4px;
+      text-align: center;
+      color: $white;
+      margin-bottom: 87px;
+      font-weight: 400;
+      @include rt(p6plus) {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 58px;
+      }
+    }
+  }
+  .to-bottom {
+    margin: 190px 0 45px 0;
+    @include rt(p6plus) {
+      display: none;
+    }
+  }
+
+}
+
+.concentrate-block {
+  padding-top: 70px;
+  --left-quote-left-pos: -45px;
+  --right-quote-right-pos: -30px;
+  --right-quote-top-pos: 25px;
+  @include rt(p6plus) {
+    --left-quote-left-pos: 0;
+    --left-quote-top-pos: -34px;
+    --right-quote-right-pos: 0;
+    --right-quote-top-pos: 100%;
+    padding-top: 85px;
+  }
+  .concentrate-list-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-bottom: 55px;
+    padding-left: 5px;
+    padding-right: 5px;
+    @include rt(p6plus) {
+      margin-top: 85px;
+      padding-left: 0;
+      padding-right: 0;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+    .description-item {
+      position: relative;
+      width: 220px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      @include rt(p6plus) {
+        margin-bottom: 180px;
+        &:last-of-type {
+          margin-bottom: 50px;
+        }
+      }
+      &:first-of-type {
+        @include rt(p6plus) {
+          margin-bottom: 170px;
+        }
+        .arrow-item {
+          top: 50px;
+          @include rt(p6plus) {
+            top: calc(100% + 110px);
+            left: calc(50% - 35px);
+            transform: rotate(90deg) translateX(-50%);
+          }
+        }
+
+      }
+      &:nth-of-type(2) {
+        @include rt(p6plus) {
+          margin-bottom: 170px;
+        }
+        .arrow-item {
+          top: 65px;
+          @include rt(p6plus) {
+            top: calc(100% + 110px);
+            left: calc(50% - 35px);
+            transform: rotate(90deg) translateX(-50%);
+          }
+        }
+      }
+
+      .arrow-item {
+        position: absolute;
+        left: calc(100% - 25px);
+        top: 25px;
+        @include rt(p6plus) {
+          top: calc(100% + 50px);
+          left: calc(50%);
+          transform: translateX(-50%);
+        }
+
+      }
+      h3 {
+        white-space: pre-line;
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-align: center;
+        color: rgb(238, 108, 77);
+        margin: 25px 0 20px 0;
+        @include rt(p6plus) {
+          font-size: 18px;
+          letter-spacing: 0.8px;
+          margin: 30px 0 20px 0;
+          line-height: 1.33;
+        }
+      }
+      p {
+        white-space: pre-line;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: rgb(155, 155, 155);
+        @include rt(p6plus) {
+          margin: 0;
+        }
+      }
+    }
+
+  }
+  .concentrate-sub-desc{
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: .4px;
+    color: rgb(74, 74, 74);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 120px;
+    @include rt(p6plus){
+      line-height: 1.39;
+      margin-bottom: 135px;
+    }
+    p{
+      margin: 0;
+    }
+  }
+  .to-bottom-arrow {
+    position: absolute;
+    bottom: calc(100% - 20px);
+    left: 50%;
+    transform: translateX(-50%);
+    @include rt(p6plus) {
+      bottom: calc(100% - 15px);
+    }
+  }
+  .footer-btn {
+    background-color: rgb(238, 108, 77);
+    max-width: 300px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 500; //------- ?
+    line-height: 50px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+    @include transition();
+    &:hover {
+      color: rgb(238, 108, 77);
+      background-color: $white;
+    }
+  }
+  --container-footer-color: rgb(74, 74, 74);
+}
+
+.reduces-test-block {
+  --left-quote-left-pos: -40px;
+  --right-quote-right-pos: -40px;
+  --right-quote-top-pos: 25px;
+  --text-letter-spacing: 0.6px;
+  padding-top: 70px;
+  background-color: rgb(51, 51, 51);
+  @include rt(p6plus) {
+    --left-quote-left-pos: 0;
+    --left-quote-top-pos: -34px;
+    --right-quote-right-pos: 0;
+    --right-quote-top-pos: calc(100% - 20px);
+    padding-top: 85px;
+    .to-bottom {
+      display: none;
+    }
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  .reduces-main-img {
+    width: 370px;
+    @include rt(tp) {
+      width: 100%;
+      margin-bottom: 80px;
+    }
+  }
+  .reduces-test-list-item {
+    margin-top: 70px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @include rt(p6plus) {
+      flex-direction: column;
+      margin-bottom: 65px;
+    }
+    .reduces-test-item {
+      width: 50%;
+      @include rt(p6plus) {
+        width: 100%;
+
+      }
+      &:nth-of-type(2) {
+        padding-right: 40px;
+        @include rt(p6plus) {
+          padding: 0;
+        }
+        h3 {
+          margin: 0 0 30px 0;
+          font-size: 24px;
+          font-weight: 400;
+          letter-spacing: 0.5px;
+          text-align: left;
+          color: $white;
+          text-transform: uppercase;
+          @include rt(p6plus) {
+            font-size: 20px;
+            padding: 0 10px;
+            letter-spacing: 0.4px;
+            margin: 0 0 30px 5px;
+          }
+        }
+        .reduces-list {
+          margin-bottom: 40px;
+          padding: 0 0 0 20px;
+          @include rt(p6plus) {
+            padding: 0 10px 0 35px;
+          }
+          li {
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.3px;
+            text-align: left;
+            color: rgb(155, 155, 155);
+            &:last-of-type {
+              margin-top: 25px;
+              margin-left: -15px;
+              display: inline-block;
+              position: relative;
+              padding-bottom: 5px;
+              margin-bottom: 5px;
+              border-bottom: 3px solid rgb(238, 108, 77);
+              &:before {
+                content: '';
+                display: block;
+                width: 38px;
+                height: 62px;
+                position: absolute;
+                right: calc(100% + 5px);
+                bottom: 12px;
+                background-image: url("../img/svg/reducers_arrow.svg");
+                background-repeat: no-repeat;
+                @include rt(p6plus) {
+                  width: 29px;
+                  height: 51px;
+                  top: -38px;
+                  left: -35px;
+                  background-size: cover;
+                }
+              }
+              &:after {
+                content: '';
+                display: block;
+                width: 15px;
+                height: 25px;
+                position: absolute;
+                right: 65px;
+                bottom: 25px;
+                background-image: url("../img/svg/reducers_arrow_02.svg");
+                background-repeat: no-repeat;
+                @include rt(p6plus) {
+                  top: -23px;
+                  right: 35px;
+                }
+
+              }
+            }
+          }
+        }
+        p {
+          max-width: 450px;
+          width: 100%;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.3px;
+          text-align: left;
+          color: $white;
+        }
+      }
+      &:nth-of-type(3) {
+        max-width: 500px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: rgba(163, 163, 163, 0.3);
+        padding: 23px 36px 28px 36px;
+        margin-top: 30px;
+        margin-bottom: 10px ;
+        @include rt(p6plus) {
+          padding: 20px 20px 30px 20px;
+          margin-top: 53px;
+          margin-bottom: 0;
+        }
+        h4 {
+          margin: 0 0 22px 0;
+          text-transform: uppercase;
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: 0.4px;
+          text-align: left;
+          color: rgb(238, 108, 77);
+          @include rt(p6plus){
+            margin: 0 0 22px 10px;
+          }
+        }
+        ul{
+          padding: 0 0 0 15px;
+          margin: 0;
+        }
+        li {
+          font-family: $ff;
+          font-size: 16px;
+          line-height: 1.69;
+          letter-spacing: 0.3px;
+          text-align: left;
+          font-weight: 400;
+          color: $white;
+          @include rt(p6plus){
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+  .to-bottom {
+    margin-bottom: 43px;
+  }
+  --container-footer-color: rgb(238, 108, 77);
+  .container-footer {
+    @include rt(p6plus) {
+      padding: 30px 20px;
+    }
+    p {
+      //margin: 0;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 42px;
+      letter-spacing: 1.6px;
+      text-align: left;
+      color: $white;
+      margin: 0;
+      //margin: 0 35px 0 35px;
+      @include rt(p6plus) {
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 1.2px;
+        line-height: 1.39;
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+    .btn {
+      margin-left: 30px;
+      @include rt(p6plus) {
+        margin: 0;
+      }
+    }
+
+  }
+
+}
+
+.piplines-block {
+  --left-quote-left-pos: -75px;
+  --right-quote-right-pos: -75px;
+  --right-quote-top-pos: 15px;
+  max-width: 1020px;
+  margin: auto;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  @include rt(p6plus) {
+    padding-top: 85px;
+    padding-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    --left-quote-left-pos: 0;
+    --left-quote-top-pos: -34px;
+    --right-quote-right-pos: 0;
+    --right-quote-top-pos: 100%;
+  }
+  .pipline-img {
+    margin-top: 70px;
+    margin-bottom: 5px;
+
+      max-width: 100%;
+
+    @include rt(p6plus) {
+      display: none;
+    }
+  }
+  .pipline-list-item {
+    display: flex;
+    padding-left: 30px;
+    margin-bottom: 10px;
+
+    @include rt(p6plus) {
+      background: url('../img/svg/pipline_img_mob.svg');
+      background-repeat: no-repeat;
+      background-position: left top;
+      min-height: 1030px;
+      flex-direction: column;
+      padding-top: 25px;
+      max-width: 280px;
+      margin-top: 50px;
+      margin-bottom: 85px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .pipline-item {
+      width: 165px;
+      margin-left: 65px;
+      &:nth-of-type(1) {
+        margin-left: 120px;
+      }
+
+      @include rt(p6plus) {
+        margin-top: 125px;
+        margin-left: 75px;
+        width: 175px;
+        &:nth-of-type(1) {
+          margin-top: 140px;
+          margin-left: 75px;
+
+        }
+        &:nth-of-type(3) {
+          margin-top: 140px;
+        }
+        &:nth-of-type(4) {
+          margin-top: 140px;
+        }
+      }
+      h3 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        line-height: 1.3;
+        font-weight: 500;
+        letter-spacing: 0.4px;
+        text-align: left;
+        color: rgb(74, 74, 74);
+      }
+      p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        text-align: left;
+        color: rgb(155, 155, 155);
+        white-space: pre-line;
+        @include rt(p6plus){
+          white-space: normal;
+          font-size: 14px;
+          line-height: 1.43;
+          letter-spacing: 0.3px;
+        }
+      }
+    }
+  }
+}
+
+.what-we-done-block {
+  --left-quote-left-pos: -80px;
+  --right-quote-right-pos: -75px;
+  --right-quote-top-pos: 25px;
+  --text-letter-spacing: 0.6px;
+  padding-top: 70px;
+  background-color: rgb(51, 51, 51);
+  padding-bottom: 130px;
+  @include rt(p6plus) {
+    --left-quote-left-pos: 0;
+    --left-quote-top-pos: -34px;
+    --right-quote-right-pos: 0;
+    --right-quote-top-pos: 100%;
+    padding-bottom: 105px;
+    padding-top: 85px;
+  }
+  .what-we-do-list-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 70px;
+    @include rt(p6plus) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 55px;
+    }
+    .what-we-do-item {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      flex-basis: 250px;
+      @include rt(p6plus) {
+        flex-basis: auto;
+        max-width: 250px;
+        margin: 50px 0;
+      }
+      h3 {
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        text-align: center;
+        color: $white;
+        margin: 0 0 35px 0;
+        padding-bottom: 5px;
+        border-bottom: 3px solid rgb(238, 108, 77);
+      }
+      p {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.3px;
+        text-align: center;
+        color: rgb(155, 155, 155);
+        margin-bottom: 25px;
+        @include rt(p6plus) {
+          margin-bottom: 20px;
+        }
+      }
+      .btn-what-we-do {
+        margin-top: 20px;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        display: block;
+        color: $white;
+        text-decoration: none;
+        border-radius: 10px;
+        border: solid 2px $white;
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 0.2px;
+        @include transition();
+        @include rt(p6plus) {
+          margin-top: 30px;
+        }
+        &:hover {
+          background-color: $white;
+          color: rgb(51, 51, 51);
+        }
+      }
+
+    }
+  }
+}
+
+.wanna-try-block {
+  --left-quote-left-pos: -75px;
+  --right-quote-right-pos: -80px;
+  --right-quote-top-pos: 5px;
+  background-color: $white;
+  @include rt(p6plus) {
+    --left-quote-left-pos: 0;
+    --left-quote-top-pos: -34px;
+    --right-quote-right-pos: 0;
+    --right-quote-top-pos: 100%;
+  }
+  > .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 70px 0 50px 0;
+    @include rt(p6plus) {
+      padding: 105px 20px 195px 20px;
+    }
+    .block-quote {
+      position: relative;
+      h2 {
+        margin-left: 200px;
+        @include rt(p6plus) {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+      .img-layer {
+        position: absolute;
+        left: calc(50% - 10px);
+        transform: translateX(50%);
+        bottom: calc(100% + 30px);
+        @include rt(p6plus) {
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: calc(100% + 70px);
+        }
+      }
+    }
+  }
+  .sub-footer-use {
+    background-color: rgb(51, 51, 51);
+    .container {
+      padding-top: 50px;
+      min-height: 300px;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      @include rt(p6plus) {
+        min-height: 550px;
+        padding-top: 320px;
+        padding-bottom: 60px;
+      }
+      .img-layer {
+        position: absolute;
+        bottom: 33px;
+        left: -200px;
+        width: 545px;
+        height: 411px;
+        @include bg-img-retina('../img/png/laptop', 'png');
+        background-position: center center;
+        @include rt(p6plus) {
+          width: 100%;
+          bottom: auto;
+          top: -142px;
+          left: 0;
+          right: 0;
+          background-position: -180px 50%;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+      .arrow-layer {
+        position: absolute;
+        right: 120px;
+        bottom: 35px;
+        @include rt(p6plus) {
+          display: none;
+        }
+      }
+      .block-try {
+        margin: 0;
+        @include rt(p6plus) {
+          margin: auto;
+          width: 280px;
+        }
+      }
+    }
+
+  }
+
+}
+
+.footer {
+  background-color: rgb(74, 74, 74);
+  padding: 42px 0;
+  @include rt(p6plus){
+    padding: 50px 0 15px 0;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include rt(p6plus) {
+      align-items: center;
+      flex-direction: column;
+    }
+    .footer-item {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.86;
+      letter-spacing: 0.7px;
+      text-align: left;
+      color: rgb(187, 187, 187);
+      @include rt(p6plus) {
+
+        width: 100%;
+        &:first-of-type {
+          order: 2;
+          text-align: center;
+          white-space: pre-line;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 1.44;
+          letter-spacing: 0.8px;
+        }
+        &:last-of-type {
+          order: 1;
+          text-align: center;
+          margin-bottom: 5px;
+        }
+      }
+      .footer-info {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        &.mail-info {
+          padding: 20px 30px;
+          width: 310px;
+          height: 95px;
+          border: solid 1px rgb(187, 187, 187);
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.31;
+          letter-spacing: 0.2px;
+          text-align: left;
+          color: rgb(238, 108, 77);
+          @include rt(p6plus){
+            padding: 20px 16px;
+            text-align: center;
+            max-width: 280px;
+            width: 100%;
+            margin: 0 auto 3px auto;
+          }
+          .mail-to {
+            cursor: pointer;
+            margin-top:13px;
+            display: flex;
+            text-decoration: none;
+            justify-content: space-between;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 0.4px;
+            text-align: left;
+            color: $white;
+            img {
+              display: block;
+            }
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
+  background-color: $white;
+}
