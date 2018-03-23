@@ -39,6 +39,9 @@
       li{
         margin-left: 50px;
         display: block;
+        &:last-of-type{
+          display: none;
+        }
         @include rt(p6plus){
           overflow: hidden;
           margin-left: 30px;
@@ -109,18 +112,12 @@
         width: 25px;
         height: 25px;
         border: 0;
-        outline: 1px solid red !important;
-
-
       }
-
-
     }
     .nav-btn{
       box-sizing: border-box;
       padding: 0;
       margin: 0;
-      //outline: 1px solid red;
       height: 30px;
       width: 30px;
       @include rt(p6plus) {
