@@ -203,6 +203,7 @@
     }
   }
   .to-bottom {
+    visibility: hidden;
     margin: 190px 0 45px 0;
     @include rt(p6plus) {
       display: none;
@@ -546,6 +547,7 @@
     }
   }
   .to-bottom {
+    visibility: hidden;
     margin-bottom: 43px;
   }
   --container-footer-color: rgb(238, 108, 77);
