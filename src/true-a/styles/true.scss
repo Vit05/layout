@@ -140,14 +140,14 @@
 }
 
 .main-block {
-  @include bg-img-retina('../img/jpg/main_bg', 'jpg', linear-gradient(rgba(74,74,74,.8)));
+  @include bg-img-retina('../img/jpg/main_bg', 'jpg', linear-gradient(rgba(74,74,74,.3)));
   background-repeat: no-repeat;
   background-position: center center;
   @media screen and (min-width: 1440px) {
     background-size: cover;
   }
   @include rt(p6plus) {
-    @include bg-img-retina('../img/jpg/main_bg_mob', 'jpg', linear-gradient(rgba(74,74,74,.8)));
+    @include bg-img-retina('../img/jpg/main_bg_mob', 'jpg', linear-gradient(rgba(74,74,74,.3)));
   }
   .container {
     min-height: 760px;
