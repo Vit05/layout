@@ -78,7 +78,7 @@ button {
     padding: 15px 20px;
     background-color: transparent;
     outline: 0;
-    box-shadow: 0;
+    font-weight: 400;
     &:focus {
       outline: 0;
     }
@@ -236,7 +236,8 @@ button {
     }
     &:hover {
       background-color: transparent;
-      border-color:$white;
+      border:2px solid $white;
+
       .github__btn {
         fill: rgb(255, 255, 255);
       }

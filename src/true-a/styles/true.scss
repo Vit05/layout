@@ -61,7 +61,7 @@
               z-index: -1;
               left: 50%;
               right: 50%;
-              bottom: -3px;
+              bottom: -6px;
               background: rgb(255, 255, 255);
               height: 2px;
               transition-property: left, right;
@@ -98,7 +98,7 @@
       font-size: 18px;
       font-weight: 400;
       letter-spacing: 0.4px;
-      padding: 4px 0;
+      padding: 3px 0;
       @include transition();
       &:hover{
         background-color: rgb(238, 108, 77);
@@ -294,7 +294,7 @@
       h3 {
         white-space: pre-line;
         font-size: 24px;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: 1px;
         text-align: center;
         color: rgb(238, 108, 77);
@@ -309,7 +309,7 @@
       p {
         white-space: pre-line;
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 22px;
         letter-spacing: 0.4px;
         text-align: center;
@@ -352,7 +352,7 @@
     width: 100%;
     font-size: 18px;
     font-weight: 500; //------- ?
-    line-height: 50px;
+    padding: 15px 0;
     letter-spacing: 0.2px;
     text-align: center;
     color: $white;
@@ -669,6 +669,7 @@
         text-align: left;
         color: rgb(155, 155, 155);
         white-space: pre-line;
+        font-weight: 300;
         @include rt(p6plus){
           white-space: normal;
           font-size: 14px;
