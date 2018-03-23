@@ -12,35 +12,142 @@
   top: 0;
   .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    .logo {
-      width: 150px;
+    @include rt(p6plus){
+      align-items: center;
+    }
 
-      @include rt(p6plus) {
-        width: 120px;
-      }
+  }
+  .logo {
+    width: 150px;
+    @include rt(p6plus) {
+      width: 94px;
+      height: 20px;
     }
   }
   .navigation {
     cursor: pointer;
-    padding: 0;
-    svg {
+    ul{
+
+      display: flex;
+      list-style-type: none;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0;
+      margin: 0;
+      li{
+        margin-left: 50px;
+        display: block;
+        @include rt(p6plus){
+          overflow: hidden;
+          margin-left: 30px;
+        }
+        a{
+          color: $white;
+          text-decoration: none;
+          display: block;
+          @include rt(p6plus){
+            text-indent: -1000px;
+          }
+          &.link{
+            position: relative;
+            font-size: 18px;
+            letter-spacing: 0.4px;
+
+            &:before{
+              content: "";
+              position: absolute;
+              z-index: -1;
+              left: 50%;
+              right: 50%;
+              bottom: -3px;
+              background: rgb(255, 255, 255);
+              height: 2px;
+              transition-property: left, right;
+              transition-duration: 0.3s;
+              transition-timing-function: ease-out;
+            }
+            &:hover{
+              &:before{
+                left: 0;
+                right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .documentation-btn{
+      @include rt(p6plus){
+        background-image: url(../img/svg/doc-mob.svg);
+        width: 25px;
+        height: 25px;
+        border: 0;
+        outline: 1px solid red !important;
+      }
+    }
+    .login-btn{
+      width: 100px;
+      height: 30px;
+      border-radius: 10px;
+      border: 2px solid  rgb(238, 108, 77);
+      color: rgb(238, 108, 77);
+      display: block;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 0.4px;
+      padding: 4px 0;
+      @include transition();
+      &:hover{
+        background-color: rgb(238, 108, 77);
+        color: $white;
+      }
+      @include rt(p6plus){
+        background-image: url(../img/svg/login-mob.svg);
+        width: 25px;
+        height: 25px;
+        border: 0;
+        outline: 1px solid red !important;
+
+
+      }
+
+
+    }
+    .nav-btn{
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      //outline: 1px solid red;
+      height: 30px;
       width: 30px;
       @include rt(p6plus) {
         width: 25px;
+        height: 25px;
+      }
+      svg {
+        width: 30px;
+        @include rt(p6plus) {
+          width: 25px;
+        }
       }
     }
+
 
   }
 }
 
 .main-block {
-  @include bg-img-retina('../img/jpg/main_bg', 'jpg');
+  @include bg-img-retina('../img/jpg/main_bg', 'jpg', linear-gradient(rgba(74,74,74,.8)));
   background-repeat: no-repeat;
   background-position: center center;
+  @media screen and (min-width: 1440px) {
+    background-size: cover;
+  }
   @include rt(p6plus) {
-    @include bg-img-retina('../img/jpg/main_bg_mob', 'jpg');
+    @include bg-img-retina('../img/jpg/main_bg_mob', 'jpg', linear-gradient(rgba(74,74,74,.8)));
   }
   .container {
     min-height: 760px;
