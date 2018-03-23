@@ -87,7 +87,6 @@
         width: 25px;
         height: 25px;
         border: 0;
-        outline: 1px solid red !important;
       }
     }
     .login-btn{
@@ -371,6 +370,12 @@
   --text-letter-spacing: 0.6px;
   padding-top: 70px;
   background-color: rgb(51, 51, 51);
+  .block-quote{
+    h2{
+      max-width: 520px;
+      width: 100%;
+    }
+  }
   @include rt(p6plus) {
     --left-quote-left-pos: 0;
     --left-quote-top-pos: -34px;
@@ -475,7 +480,7 @@
                 width: 15px;
                 height: 25px;
                 position: absolute;
-                right: 65px;
+                right: 90px;
                 bottom: 25px;
                 background-image: url("../img/svg/reducers_arrow_02.svg");
                 background-repeat: no-repeat;
