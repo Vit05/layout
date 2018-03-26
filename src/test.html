@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // var array = new Array
+    // var a = "a,b".split(',')
+
+
+    function getExtension(str) {
+        var fragment = str.split('.')
+        var file = fragment[fragment.length - 1]
+        console.log(file)
+        return file
+    }
+
+
+    // console.log(+new Date())
+    // console.log(Date.now())
+    // getExtension('hello.tar.zip')
+    // console.log(a)
+    // alert(NaN === NaN)
+    // console.log()
+    // console.log()
+    // console.log("hello red hot by".split("").reverse().join(""))
+
+    /*
+
+        var foo="Hello foo";
+
+        (function () {
+           var bar = "Hello bar";
+            alert(foo+bar)
+        })();
+
+        alert(foo+bar)
+    */
+
+    /*
+        function foo() {
+            a=2
+            b=3
+            console.log(a+b)
+            return a+b
+        }
+        // alert(a)
+        a="sasasasas"
+        alert(a)
+
+        foo()
+        alert(a)*/
+/*
+    var el = ["apple", "cherry", "lemon"]
+    var fruit
+    var i
+
+    function showFruit(val) {
+        console.log(val)
+    }
+
+    for(var i=0 ; i<el.length; i++){
+        fruit=el[i]
+        setTimeout( showFruit(fruit)
+        )
+
+    }
+*/
+
+
+var myObj={
+    foo: "Bar",
+    func:function () {
+        var self = this;
+        console.log("Outer func: this.foo = "+this.foo);
+        console.log("Outer func: self.foo = "+self.foo);
+        (function () {
+            console.log("Inner func: this.foo = "+this.foo)
+            console.log("Inner func: self.foo = "+self.foo)
+        }())
+    }
+}
+
+myObj.func()
+</script>
+</body>
+</html>
