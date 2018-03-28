@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 
 //CURRENT PATH
-var currentPath = 'landing-last';
+var currentPath = 'global';
 
 var path = {
     build: {
@@ -28,7 +28,7 @@ var path = {
     },
     src: { //Пути откуда брать исходники
         html: 'src/' + currentPath + '/*.html',
-        js: 'src/' + currentPath + '/js/common/*.js',
+        js: 'src/' + currentPath + '/js/*.js',
         styles: 'src/' + currentPath + '/styles/**/*.scss',
         img: 'src/' + currentPath + '/img/**/*.*'
     },
@@ -75,7 +75,7 @@ var serverConfig = {
     },
     tunnel: true,
     host: 'localhost',
-    port: 5000
+    port: 7000
 };
 gulp.task('webserver', function () {
     browserSync(serverConfig);
@@ -85,9 +85,7 @@ gulp.task('webserver', function () {
 gulp.task('styles:build', function () {
     gulp.src(path.src.styles)
         .pipe(plumber())
-        .pipe(sass({
-            includePaths: require('node-reset-scss').includePath,
-        })) //Скомпилируем
+        .pipe(sass()) //Скомпилируем
         .pipe(prefixer()) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
         .pipe(rename({suffix: '.min'})).pipe(gulp.dest(path.build.css)) //И в build
@@ -102,18 +100,15 @@ gulp.task('clean', function (cb) {
 //IMAGES
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
-        .pipe(imagemin({
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            interlaced: true,
-        })).pipe(gulp.dest(path.build.img))
+        .pipe(imagemin())
+        .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });
 
 //JAVASCRIPT
 gulp.task('js:build', function () {
     gulp.src(path.src.js)
-        .pipe(concat('common.js'))
+    // .pipe(concat())
         .pipe(uglify())
         .pipe(minifyjs())
         .pipe(rename({suffix: '.min'}))

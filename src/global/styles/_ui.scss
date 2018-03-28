@@ -1,0 +1,95 @@
+@import "reset";
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Arsenal:400,700&subset=cyrillic');
+
+$Rubik: 'Rubik', sans-serif;
+$Arsenal: 'Arsenal', sans-serif;
+/* Color palette */
+$greyish-brown: #434343;
+$greyish-brown-two: #484848;
+$black: #1f1f1f;
+$greyish: #aeaeae;
+$white-two: #e8e8e8;
+$white: #fefefe;
+$greyish-brown-three: #434242;
+$medium-green: #43ac3c;
+$white-three: #f9f9f9;
+$kelly-green: #00ae2c;
+$black-two: #292929;
+$warm-grey: #878787;
+
+
+$min_width: 320px;
+$max_width: 1920px;
+$min_font: 16px;
+$max_font: 100px;
+
+$base-font: 16px;
+
+body{
+  //@include fluid-type($min_width, $max_width, $min_font, $max_font);
+  //font-size: calc(12px + (100px - 12px) * ((100vw - 320px) / (1920px - 320px)));
+  font-size: $base-font;
+  -webkit-font-smoothing: antialiased;
+  *{
+    box-sizing: border-box;
+  }
+}
+.container-full{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  //background-color: rgba(#faf, 0.3);
+
+}
+.container{
+  display: flex;
+  max-width: 1140px;
+  width: 100%;
+  margin: auto;
+  background-color: rgba(#afa, 0.3);
+}
+
+
+.title-block{
+  padding: 100px 0 35px 0;
+  background-color: $greyish;
+  text-align: center;
+  font-family: $Rubik;
+  h2{
+    font-size: 48px;
+    font-weight: 500;
+    color: $greyish-brown-three;
+    margin-bottom: 10px;
+  }
+  p{
+    font-size: 18px;
+    color: $greyish-brown-three;
+    white-space: pre-line;
+  }
+}
+
+.btn{
+  text-decoration: none;
+  &.green-btn{
+    font-family: $Rubik;
+    max-width: 320px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 23px;
+    background-color: $medium-green;
+    box-shadow: 0px 5px 4.7px 0.4px rgba(0, 1, 2, 0.33);
+    color: $white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    display: block;
+
+  }
+
+
+}
