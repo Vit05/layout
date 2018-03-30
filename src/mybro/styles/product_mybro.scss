@@ -703,7 +703,6 @@
 }
 
 .desc-block-1 {
-  //background-color: rgba(#dd0, 0.5);
   padding: 20px 0;
   @include rt(p7p){
     padding: 20px;
@@ -779,40 +778,53 @@
     }
     .block-item {
       &:first-of-type {
-        width: 65%;
+        margin-right: -100px;
+        //outline: 1px solid blue;
+        width: 60%;
+        position: relative;
+        z-index: 100;
+        background-image: url("../img/product/png/621_2.png");
+        background-size: contain;
+        background-position: center right;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
         @include rt(p7p){
+          margin-right: 0;
           width: 100%;
           order: 2;
+          background: none;
         }
 
       }
       &:last-of-type {
-        width: 35%;
+        //outline: 1px solid red;
+
+        width: 40%;
+        @include rt(tp){
+          width: 60%;
+        }
         @include rt(p7p){
           width: 100%;
         }
       }
       .description {
-        background-image: url("../img/product/png/621_2.png");
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
+        //background-color: rgba(#faf, 0.3);
         box-sizing: border-box;
+        width: 80%;
         padding: 10px 150px;
-        margin: auto;
-        flex-direction: column;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        height: 100%;
         @include rt(ls) {
           padding: 10px 100px;
         }
         @include rt(tp) {
-          padding: 10px 30px;
+          padding: 10px 20px;
+
         }
         @include rt(p7p){
-          background: none;
+          width: 100%;
         }
         h2 {
           font-size: 40px;
@@ -842,7 +854,6 @@
 }
 
 .desc-block-3 {
-  //background-color: rgba(#aff, 0.5);
   padding: 20px 0;
   .container-block {
     margin: auto;
@@ -852,32 +863,39 @@
     @include rt(tp) {
       flex-direction: column;
     }
+    //background-color: rgba(#faf, 0.5);
     .block-item {
       &:first-of-type {
         width: 60%;
+        //outline: 1px solid red;
         @include rt(tp) {
           width: 100%;
         }
       }
       &:last-of-type {
-        width: 40%;
-
+        width: 50%;
+        margin-left: -150px;
         display: flex;
         align-items: center;
         justify-content: center;
+        background-image: url("../img/product/png/621_3.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+
         @include rt(tp) {
+          background: none;
           width: 100%;
+          margin-left: 0;
         }
       }
       .description {
-        background-image: url("../img/product/png/621_2.png");
-        background-size: contain;
-        background-repeat: no-repeat;
+        //outline: 1px solid green;
         box-sizing: border-box;
-        background-position: center center;
-        padding: 10px 100px;
-        margin-left: -100px;
-        height: 100%;
+        padding: 20px 100px;
+        //margin-left: -200px;
+        //height: 100%;
+        //width: 100%;
         display: flex;
         align-items: flex-start;
         flex-direction: column;
