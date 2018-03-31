@@ -1,24 +1,46 @@
 @import "mixines";
 @import "ui";
 
-.service-block {
+img {
+  max-width: 100%;
+}
 
+.main-block {
+
+}
+.service-block {
   .service-container {
     display: flex;
+    @include rt(tl) {
+      flex-wrap: wrap;
+      //flex-direction: column;
+    }
     .service-item {
       min-height: 544px;
+      @include rt(p7p) {
+        min-height: 280px;
+      }
       &.logistic-item {
         padding: 0 30px 175px 30px;
         max-width: 764px;
         width: 100%;
         height: 100%;
-        background-size: cover;
-        background-position: center center;
+
         display: flex;
         align-items: center;
         justify-content: flex-end;
         flex-direction: column;
         @include bg-rt('../img/jpeg/service_02', 'jpg');
+        background-size: cover;
+        background-position: center center;
+        @include rt(tl) {
+          max-width: none;
+          background-size: cover;
+
+        }
+        @include rt(p7p) {
+          padding: 0 20px 50px 20px;
+        }
         h3 {
           margin-bottom: 45px;
           text-align: center;
@@ -31,6 +53,7 @@
           //line-height: 110px;
           font-weight: 500;
           color: $white;
+
         }
       }
       &.trade-consalting-item {
@@ -44,8 +67,20 @@
         align-items: flex-start;
         flex-direction: column;
         justify-content: space-between;
+        @include rt(tl) {
+          flex-direction: row;
+          min-height: auto;
+          width: 100%;
+          max-width: none;
+        }
+        @include rt(p7p) {
+          flex-direction: column;
+        }
         &:nth-of-type(3) {
           align-items: flex-end;
+          @include rt(p7p) {
+            order: 4;
+          }
         }
         .icon-item {
           max-width: 193px;
@@ -55,15 +90,29 @@
           box-shadow: 0px 4px 5.6px 0.4px rgba(0, 1, 2, 0.16);
           background-color: #ffffff;
           border: solid 1px $white-two;
-          padding-top: 15px;
-          padding-left: 15px;
-          padding-right: 15px;
+          padding: 15px 15px 0 15px;
+          @include rt(tl) {
+            width: 25%;
+            max-width: none;
+          }
+          @include rt(p7p) {
+            width: 100%;
+            display: flex;
+            padding: 5px 20px;
+            min-height: 70px;
+            justify-content: flex-start;
+            align-items: center;
+          }
+
           .icon-cont {
             width: 88px;
             height: 62px;
             outline: 1px solid blue;
             margin: auto;
-
+            @include rt(p7p) {
+              margin: 0 30px 0 0;
+              flex-shrink: 0;
+            }
           }
           p {
             padding-top: 15px;
@@ -73,6 +122,10 @@
             font-weight: bold;
             text-align: center;
             color: $medium-green;
+            @include rt(p7p) {
+              padding: 0;
+              text-align: left;
+            }
           }
         }
       }
@@ -85,6 +138,14 @@
   .advantages-container{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    .swiper-wrapper {
+      flex-direction: column;
+      @include rt(tp) {
+        flex-direction: row;
+
+      }
+    }
     .adv-item{
       max-width: 650px;
       width: 100%;
@@ -92,16 +153,29 @@
       border-bottom: 1px solid $medium-green;
       display: flex;
       font-family: $Arsenal;
-      //padding-bottom: 25px;
+      @include rt(tp) {
+        max-width: none;
+        flex-direction: column;
+        min-height: 375px;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+        border-bottom: 0;
+      }
       &:nth-of-type(even){
         align-self: flex-end;
+        @include rt(tp) {
+          align-self: stretch;
+        }
       }
       .icon-cont{
         width: 100px;
         height: 100px;
         margin: 0 70px 40px 25px;
+        @include rt(tp) {
+          margin: 30px 0;
+        }
       }
-
       h4{
         font-size: 30px;
         font-weight: bold;
@@ -112,8 +186,106 @@
         padding-bottom: 25px;
         font-size: 18px;
         line-height: 1.5;
-        color: $greyish-brown-three
+        color: $greyish-brown-three;
+        @include rt(p7p) {
+          font-size: 20px;
+        }
       }
     }
   }
+}
+
+.team-block {
+  //background-color: rgba(#0af, 0.5);
+  .team-item {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include rt(tp) {
+      padding: 0 20px;
+      width: 50%;
+    }
+    img {
+      max-width: 100%;
+    }
+    .team-description {
+      color: $greyish-brown-three;
+      text-align: center;
+      font-family: $Arsenal;
+      p {
+        padding: 30px 0 10px 0;
+        font-size: 24px;
+        font-weight: 700;
+      }
+      span {
+        font-size: 18px;
+      }
+    }
+    .team-call-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 15px;
+      li {
+        margin: 0 10px;
+      }
+      a {
+        width: 18px;
+        height: 18px;
+        display: block;
+        outline: 1px solid red;
+        color: #000;
+        text-decoration: none;
+
+      }
+    }
+  }
+}
+
+.contact-block {
+  font-family: $Arsenal;
+  .tab-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    .tab-nav-list {
+      display: flex;
+      li {
+        span{
+          text-decoration: underline;
+          cursor: pointer;
+          font-size: 24px;
+          font-weight: 700;
+          color: $greyish-brown-three;
+        }
+        &:not(:first-of-type){
+        &:before{
+          content: '/';
+          margin: 0 5px;
+          text-decoration: none;
+        }
+
+      }
+        &.active-tab-link {
+          span{
+            font-weight: 700;
+            color: $medium-green;
+            text-decoration: none;
+          }
+          &:before{
+            color: $greyish-brown-three;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+#g_map{
+  height: 400px;
+  width: 100%;
 }

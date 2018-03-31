@@ -100,7 +100,7 @@ gulp.task('clean', function (cb) {
 //IMAGES
 gulp.task('image:build', function () {
     gulp.src(path.src.img)
-        .pipe(imagemin())
+        // .pipe(imagemin())
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({stream: true}));
 });

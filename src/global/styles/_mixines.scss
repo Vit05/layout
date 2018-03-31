@@ -34,28 +34,30 @@
   transition: $property $duration $ease;
 }
 
-@mixin font-size($font-size){
+/*@mixin font-size($font-size){
   font-size: $font-size;
   font-size: ($font-size/$base-font)*1rem;
-}
+}*/
+
+$tl: 1024px;
 $tp: 768px;
-$p6plus: 414px;
-$p6: 375px;
+$p7p: 425px;
+$p7: 375px;
 $p5: 320px;
 
-$p_land: 736px;
+$p7pl: 736px;
 $landscape: landscape;
 @mixin rt($media) {
   @if $media == p5 {
-    @media only screen and (max-width: $p5) {
+    @media only screen and (max-device-width: $p5) {
       @content;
     }
-  } @else if $media == p6 {
-    @media only screen and (max-width: $p6) {
+  } @else if $media == p7 {
+    @media only screen and (max-device-width: $p7) {
       @content;
     }
-  } @else if $media == p6plus {
-    @media only screen and (max-device-width: $p_land) {
+  } @else if $media == p7p {
+    @media only screen and (max-device-width: $p7p) {
       @content;
     }
 
@@ -64,10 +66,14 @@ $landscape: landscape;
     @media only screen and (max-width: $tp) {
       @content;
     }
+  } @else if $media == tl {
+    @media only screen and (max-width: $tl) {
+      @content;
+    }
   }
 
   @if $media == landscape_orient {
-    @media only screen and (max-width: $p_land) and (orientation: $landscape) {
+    @media only screen and (max-device-width: $p7pl) and (orientation: $landscape) {
       @content;
     }
   }

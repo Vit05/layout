@@ -21,7 +21,7 @@ $warm-grey: #878787;
 
 $min_width: 320px;
 $max_width: 1920px;
-$min_font: 16px;
+$min_font: 42px;
 $max_font: 100px;
 
 $base-font: 16px;
@@ -50,7 +50,7 @@ body{
   max-width: 1140px;
   width: 100%;
   margin: auto;
-  background-color: rgba(#afa, 0.3);
+  //background-color: rgba(#afa, 0.3);
 }
 
 
@@ -64,6 +64,9 @@ body{
     font-weight: 500;
     color: $greyish-brown-three;
     margin-bottom: 10px;
+    @include rt(p7p){
+      font-size: 35px;
+    }
   }
   p{
     font-size: 18px;
