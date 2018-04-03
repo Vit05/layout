@@ -16,13 +16,15 @@
   }
 }
 
-@mixin bg-rt($file, $type, $width:100%, $height:100%) {
+@mixin bg-rt($file, $type, $bgs: cover) {
   background-image:  url($file + '.' + $type);
-  background-size: $width $height;
+  //background-size: $width $height;
+  background-size: $bgs;
   @media (-webkit-min-device-pixel-ratio: 2) {
     & {
       background-image:  url($file + '@2x.' + $type);
-      -webkit-background-size: $width $height;
+      //-webkit-background-size: $width $height;
+      -webkit-background-size: $bgs;
     }
   }
 }
@@ -39,6 +41,7 @@
   font-size: ($font-size/$base-font)*1rem;
 }*/
 
+$df: 1440px;
 $tl: 1024px;
 $tp: 768px;
 $p7p: 425px;
@@ -68,6 +71,10 @@ $landscape: landscape;
     }
   } @else if $media == tl {
     @media only screen and (max-width: $tl) {
+      @content;
+    }
+  }@else if $media == df {
+    @media only screen and (max-width: $df) {
       @content;
     }
   }
