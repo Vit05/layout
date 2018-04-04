@@ -95,7 +95,7 @@
 
 }*/
 
-
+$tl: 1024px;
 $tp: 768px;
 $p6plus: 414px;
 $p6: 375px;
@@ -120,6 +120,11 @@ $landscape: landscape;
 
   } @else if $media == tp {
     @media only screen and (max-width: $tp) {
+      @content;
+    }
+  }
+  @else if $media == tl {
+    @media only screen and (max-width: $tl) {
       @content;
     }
   }

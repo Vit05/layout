@@ -984,3 +984,152 @@
 input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
   background-color: $white;
 }
+
+
+//SUCCESS block
+.success-block {
+  @include bg-img-retina('../img/jpg/success_bg_blur', 'jpg');
+  height: 100vh;
+  min-height: 760px;
+  @include rt(p6plus){
+    @include bg-img-retina('../img/jpg/success_bg_blur_mob', 'jpg');
+  }
+  .container {
+    height: 100%;
+    position: relative;
+    padding-top: 150px;
+    @include rt(tp){
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include rt(p5){
+      padding-top: 130px;
+    }
+
+  }
+  .back-btn {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    @include rt(tl){
+      left: 20px;
+      top: 20px;
+    }
+    span {
+      margin-left: 20px;
+      font-size: 18px;
+      line-height: 2.33;
+      letter-spacing: 1.2px;
+      text-align: left;
+      color: $white;
+    }
+  }
+  .logo {
+    width: 176px;
+    margin-bottom: 40px;
+    @include rt(p6plus){
+      margin-bottom: 25px;
+    }
+  }
+  .success-content {
+    padding: 0 10px;
+    margin: auto;
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    @include rt(p6plus){
+      padding: 0;
+    }
+    .arrow{
+      position: absolute;
+      left: calc(100% + 20px);
+      top:160px;
+      @include rt(tp){
+        display: none;
+      }
+    }
+  }
+  .success-title {
+    margin-bottom: 100px;
+    text-align: center;
+    @include rt(p6plus){
+      margin-bottom: 35px;
+    }
+    span{
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.50;
+      letter-spacing: 0.4px;
+      text-align: center;
+      color: $white;
+      display: inline-block;
+
+      @include rt(p6plus){
+        font-size: 18px;
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: $white;
+        margin-bottom: 30px;
+      }
+    }
+
+  }
+  .success-subtitle {
+    margin-bottom: 180px;
+    position: relative;
+    padding-left: 25px;
+    width: 100%;
+    color: #ee6c4d;
+    font-size: 16px;
+    line-height: 1.69;
+    @include rt(p6plus){
+      margin-bottom: 25px;
+    }
+    span {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.69;
+      letter-spacing: 1.1px;
+      text-align: left;
+      margin: 0;
+      @include rt(p6plus){
+        margin-bottom: 30px;
+      }
+    }
+
+  }
+  .mail-to {
+    cursor: pointer;
+    margin-top: 13px;
+    display: flex;
+    text-decoration: none;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-align: left;
+    color: $white;
+    max-width: 250px;
+    width: 100%;
+    @include rt(p6plus){
+      margin-bottom: 55px;
+    }
+    img {
+      display: block;
+    }
+    span {
+      display: block;
+    }
+  }
+
+}
