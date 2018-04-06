@@ -14,7 +14,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    @include rt(p6plus){
+    @include rt(p6plus) {
       align-items: center;
     }
 
@@ -28,7 +28,7 @@
   }
   .navigation {
     cursor: pointer;
-    ul{
+    ul {
 
       display: flex;
       list-style-type: none;
@@ -36,29 +36,29 @@
       justify-content: flex-end;
       padding: 0;
       margin: 0;
-      li{
+      li {
         margin-left: 50px;
         display: block;
-        &:last-of-type{
+        &:last-of-type {
           display: none;
         }
-        @include rt(p6plus){
+        @include rt(p6plus) {
           overflow: hidden;
           margin-left: 30px;
         }
-        a{
+        a {
           color: $white;
           text-decoration: none;
           display: block;
-          @include rt(p6plus){
+          @include rt(p6plus) {
             text-indent: -1000px;
           }
-          &.link{
+          &.link {
             position: relative;
             font-size: 18px;
             letter-spacing: 0.4px;
 
-            &:before{
+            &:before {
               content: "";
               position: absolute;
               z-index: -1;
@@ -71,8 +71,8 @@
               transition-duration: 0.3s;
               transition-timing-function: ease-out;
             }
-            &:hover{
-              &:before{
+            &:hover {
+              &:before {
                 left: 0;
                 right: 0;
               }
@@ -81,19 +81,19 @@
         }
       }
     }
-    .documentation-btn{
-      @include rt(p6plus){
+    .documentation-btn {
+      @include rt(p6plus) {
         background-image: url(../img/svg/doc-mob.svg);
         width: 25px;
         height: 25px;
         border: 0;
       }
     }
-    .login-btn{
+    .login-btn {
       width: 100px;
       height: 30px;
       border-radius: 10px;
-      border: 2px solid  rgb(238, 108, 77);
+      border: 2px solid rgb(238, 108, 77);
       color: rgb(238, 108, 77);
       display: block;
       text-align: center;
@@ -102,18 +102,18 @@
       letter-spacing: 0.4px;
       padding: 3px 0;
       @include transition();
-      &:hover{
+      &:hover {
         background-color: rgb(238, 108, 77);
         color: $white;
       }
-      @include rt(p6plus){
+      @include rt(p6plus) {
         background-image: url(../img/svg/login-mob.svg);
         width: 25px;
         height: 25px;
         border: 0;
       }
     }
-    .nav-btn{
+    .nav-btn {
       box-sizing: border-box;
       padding: 0;
       margin: 0;
@@ -131,19 +131,18 @@
       }
     }
 
-
   }
 }
 
 .main-block {
-  @include bg-img-retina('../img/jpg/main_bg', 'jpg', linear-gradient(rgba(74,74,74,.3)));
+  @include bg-img-retina('../img/jpg/main_bg', 'jpg', linear-gradient(rgba(74, 74, 74, .3)));
   background-repeat: no-repeat;
   background-position: center center;
   @media screen and (min-width: 1440px) {
     background-size: cover;
   }
   @include rt(p6plus) {
-    @include bg-img-retina('../img/jpg/main_bg_mob', 'jpg', linear-gradient(rgba(74,74,74,.3)));
+    @include bg-img-retina('../img/jpg/main_bg_mob', 'jpg', linear-gradient(rgba(74, 74, 74, .3)));
   }
   .container {
     min-height: 760px;
@@ -318,7 +317,7 @@
     }
 
   }
-  .concentrate-sub-desc{
+  .concentrate-sub-desc {
     font-size: 18px;
     line-height: 1.22;
     letter-spacing: .4px;
@@ -326,11 +325,11 @@
     width: 100%;
     text-align: center;
     margin-bottom: 120px;
-    @include rt(p6plus){
+    @include rt(p6plus) {
       line-height: 1.39;
       margin-bottom: 135px;
     }
-    p{
+    p {
       margin: 0;
     }
   }
@@ -370,8 +369,8 @@
   --text-letter-spacing: 0.6px;
   padding-top: 70px;
   background-color: rgb(51, 51, 51);
-  .block-quote{
-    h2{
+  .block-quote {
+    h2 {
       max-width: 520px;
       width: 100%;
     }
@@ -514,7 +513,7 @@
         background-color: rgba(163, 163, 163, 0.3);
         padding: 23px 36px 28px 36px;
         margin-top: 30px;
-        margin-bottom: 10px ;
+        margin-bottom: 10px;
         @include rt(p6plus) {
           padding: 20px 20px 30px 20px;
           margin-top: 53px;
@@ -528,15 +527,15 @@
           letter-spacing: 0.4px;
           text-align: left;
           color: rgb(238, 108, 77);
-          @include rt(p6plus){
+          @include rt(p6plus) {
             margin: 0 0 22px 10px;
           }
         }
-        ul{
+        ul {
           padding: 0 0 0 10px;
           margin: 0;
-          @include rt(p6plus){
-            padding:0 0 0 10px ;
+          @include rt(p6plus) {
+            padding: 0 0 0 10px;
           }
         }
         li {
@@ -549,7 +548,7 @@
           color: $white;
           list-style: none;
           position: relative;
-          &:before{
+          &:before {
             display: block;
             content: '';
             width: 5px;
@@ -560,9 +559,9 @@
             left: -11px;
             top: 11px;
           }
-          @include rt(p6plus){
+          @include rt(p6plus) {
             line-height: 1.5;
-            &:before{
+            &:before {
               display: block;
               content: '';
               width: 5px;
@@ -639,7 +638,7 @@
     margin-top: 70px;
     margin-bottom: 5px;
 
-      max-width: 100%;
+    max-width: 100%;
 
     @include rt(p6plus) {
       display: none;
@@ -704,7 +703,7 @@
         color: rgb(155, 155, 155);
         white-space: pre-line;
         font-weight: 300;
-        @include rt(p6plus){
+        @include rt(p6plus) {
           white-space: normal;
           font-size: 14px;
           line-height: 1.43;
@@ -900,7 +899,7 @@
 .footer {
   background-color: rgb(74, 74, 74);
   padding: 42px 0;
-  @include rt(p6plus){
+  @include rt(p6plus) {
     padding: 50px 0 15px 0;
   }
   .container {
@@ -951,7 +950,7 @@
           letter-spacing: 0.2px;
           text-align: left;
           color: rgb(238, 108, 77);
-          @include rt(p6plus){
+          @include rt(p6plus) {
             padding: 20px 16px;
             text-align: center;
             max-width: 280px;
@@ -960,7 +959,7 @@
           }
           .mail-to {
             cursor: pointer;
-            margin-top:13px;
+            margin-top: 13px;
             display: flex;
             text-decoration: none;
             justify-content: space-between;
@@ -981,9 +980,7 @@
     }
   }
 }
-input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
-  background-color: $white;
-}
+
 
 
 //SUCCESS block
@@ -991,18 +988,18 @@ input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
   @include bg-img-retina('../img/jpg/success_bg_blur', 'jpg');
   height: 100vh;
   min-height: 760px;
-  @include rt(p6plus){
+  @include rt(p6plus) {
     @include bg-img-retina('../img/jpg/success_bg_blur_mob', 'jpg');
   }
   .container {
     height: 100%;
     position: relative;
     padding-top: 150px;
-    @include rt(tp){
+    @include rt(tp) {
       padding-left: 20px;
       padding-right: 20px;
     }
-    @include rt(p5){
+    @include rt(p5) {
       padding-top: 130px;
     }
 
@@ -1014,7 +1011,7 @@ input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
     display: flex;
     align-items: center;
     text-decoration: none;
-    @include rt(tl){
+    @include rt(tl) {
       left: 20px;
       top: 20px;
     }
@@ -1030,7 +1027,7 @@ input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
   .logo {
     width: 176px;
     margin-bottom: 40px;
-    @include rt(p6plus){
+    @include rt(p6plus) {
       margin-bottom: 25px;
     }
   }
@@ -1043,14 +1040,14 @@ input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
     align-items: center;
     flex-direction: column;
     position: relative;
-    @include rt(p6plus){
+    @include rt(p6plus) {
       padding: 0;
     }
-    .arrow{
+    .arrow {
       position: absolute;
       left: calc(100% + 20px);
-      top:160px;
-      @include rt(tp){
+      top: 160px;
+      @include rt(tp) {
         display: none;
       }
     }
@@ -1058,10 +1055,10 @@ input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
   .success-title {
     margin-bottom: 100px;
     text-align: center;
-    @include rt(p6plus){
+    @include rt(p6plus) {
       margin-bottom: 35px;
     }
-    span{
+    span {
       font-weight: 400;
       font-size: 20px;
       line-height: 1.50;
@@ -1070,7 +1067,7 @@ input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
       color: $white;
       display: inline-block;
 
-      @include rt(p6plus){
+      @include rt(p6plus) {
         font-size: 18px;
         letter-spacing: 0.4px;
         text-align: center;
@@ -1088,7 +1085,7 @@ input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
     color: #ee6c4d;
     font-size: 16px;
     line-height: 1.69;
-    @include rt(p6plus){
+    @include rt(p6plus) {
       margin-bottom: 25px;
     }
     span {
@@ -1102,7 +1099,7 @@ input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
       letter-spacing: 1.1px;
       text-align: left;
       margin: 0;
-      @include rt(p6plus){
+      @include rt(p6plus) {
         margin-bottom: 30px;
       }
     }
@@ -1121,7 +1118,7 @@ input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
     color: $white;
     max-width: 250px;
     width: 100%;
-    @include rt(p6plus){
+    @include rt(p6plus) {
       margin-bottom: 55px;
     }
     img {
@@ -1132,4 +1129,231 @@ input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
     }
   }
 
+}
+
+//LOGIN block
+.login-block {
+  @include bg-img-retina('../img/jpg/success_bg_blur', 'jpg');
+  height: 100vh;
+  min-height: 760px;
+  @include rt(p6plus) {
+
+    padding-bottom: 70px;
+    @include bg-img-retina('../img/jpg/success_bg_blur_mob', 'jpg');
+  }
+
+  .login-header {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include rt(p6plus) {
+      height: auto;
+      padding-top: 20px;
+    }
+    .back-btn {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      span {
+        margin-left: 20px;
+        font-size: 18px;
+        line-height: 2.33;
+        letter-spacing: 1.2px;
+        text-align: left;
+        color: $white;
+        @include rt(p6plus) {
+          display: none;
+        }
+      }
+    }
+    .sign-up-container {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 18px;
+        line-height: 2.33;
+        letter-spacing: 1.2px;
+        color: $white;
+        @include rt(p6plus) {
+          display: none;
+        }
+      }
+      a {
+        margin-left: 20px;
+        width: 120px;
+        height: 50px;
+        border-radius: 10px;
+        border: solid 2px #ee6c4d;
+        text-decoration: none;
+        color: #ee6c4d;
+        text-align: center;
+        letter-spacing: 0.4px;
+        font-size: 18px;
+        padding: 13px 0;
+        @include transition();
+        &:hover {
+          background-color: #ee6c4d;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .logo {
+    width: 176px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @include rt(p6plus) {
+      margin-top: 80px;
+    }
+  }
+  .login-title {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include rt(p6plus) {
+      padding: 0 20px;
+    }
+  }
+  .login-form-container {
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    height: 382px;
+    border-radius: 10px;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    background-color: rgba(163, 163, 163, 0.3);
+    padding: 30px 0 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include rt(p6plus) {
+      padding: 0 20px;
+    }
+    .arrow {
+      position: absolute;
+      left: calc(100% - 65px);
+      top: 200px;
+      @include rt(tp) {
+        display: none;
+      }
+    }
+    .input-field {
+      max-width: 350px;
+      width: 100%;
+      margin-bottom: 10px;
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+      &.password-field {
+        position: relative;
+        .togglePassword {
+          position: absolute;
+          width: 20px;
+          height: 15px;
+          right: 20px;
+          top: 18px;
+        }
+        #togglePasswordCheckBox {
+          visibility: hidden;
+          //display: none;
+        }
+      }
+      input {
+        text-align: center;
+        font-weight: 400;
+        @include rt(p6plus){
+          font-size: 18px;
+          font-weight: 400;
+          letter-spacing: 0.4px;
+        }
+      }
+    }
+  }
+
+  .login-btn {
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: $white;
+    max-width: 350px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(238, 108, 77);
+    margin-bottom: 10px;
+    @include transition();
+    &:hover {
+      background-color: #fff;
+      color: rgb(238, 108, 77);
+    }
+  }
+  .forgot-pass {
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    text-align: center;
+    color: rgb(238, 108, 77);
+    margin-bottom: 50px;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .login-github-btn {
+    display: flex;
+    max-width: 350px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: rgb(74, 74, 74);
+    @include transition();
+    @include rt(p6plus){
+      font-size: 16px;
+      letter-spacing: 0.3px;
+    }
+    &:hover {
+      background-color: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      .login_github_svg {
+        fill: #fff;
+      }
+    }
+    .icon {
+      margin-right: 20px;
+    }
+    span{
+      font-weight: 600;
+    }
+    .login_github_svg {
+      @include transition();
+      fill: #4A4A4A;
+    }
+  }
+
+}
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+input:not(input:-webkit-autofill)::-webkit-contacts-auto-fill-button {
+  background-color: $white;
 }
