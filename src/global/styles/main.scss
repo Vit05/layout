@@ -300,10 +300,9 @@ img {
         background: linear-gradient(rgba($greyish-brown-two, 0.5),
                 rgba($greyish-brown-two, 0.5)),
         url('../img/jpeg/service_02@2x.jpg') no-repeat;
-        background-size: 200%;
-        @include rt(tl) {
+        background-size: 250%;
+        @include rt(note) {
           max-width: none;
-          background-size: 150%;
 
         }
         @include rt(p7p) {
@@ -327,7 +326,7 @@ img {
         background: linear-gradient(rgba($greyish-brown-two, 0.5),
                 rgba($greyish-brown-two, 0.5)),
         url('../img/jpeg/service_01@2x.jpg') no-repeat;
-        background-size: 200%;
+        background-size: 250%;
       }
       &.service-icon-item {
         max-width: 195px;
@@ -624,7 +623,7 @@ img {
     background: linear-gradient(rgba($greyish-brown-two, 0.5),
             rgba($greyish-brown-two, 0.5)),
     url('../img/jpeg/contacts_bg.jpg') no-repeat;
-    background-size: 100%;
+    background-size: 150%;
     width: 100%;
     color: $white;
     align-items: center;

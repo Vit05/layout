@@ -42,6 +42,7 @@
 }*/
 
 $df: 1440px;
+$note: 1330px;
 $tl: 1024px;
 $tp: 768px;
 $p7p: 425px;
@@ -75,6 +76,11 @@ $landscape: landscape;
     }
   }@else if $media == df {
     @media only screen and (max-width: $df) {
+      @content;
+    }
+  }
+  @else if $media == note {
+    @media only screen and (max-width: $note) {
       @content;
     }
   }
