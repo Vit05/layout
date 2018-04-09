@@ -188,6 +188,9 @@ img {
 
   .main-description {
     display: flex;
+    @include rt(p7p){
+      flex-direction: column;
+    }
     h1 {
       margin-top: 100px;
       max-width: 900px;
@@ -199,12 +202,16 @@ img {
       font-weight: bold;
       line-height: 1.5;
       color: $white;
+      @include rt(tp) {
+        font-size: 36px;
+        //font-weight: bold;
+        line-height: 1.33;
+      }
       @include rt(p7p) {
         margin-top: 30px;
-        font-size: 36px;
-        line-height: 1.33;
+        margin-bottom: 60px;
         text-align: center;
-        color: $white;
+        //color: $white;
       }
     }
     .form-item {
@@ -296,7 +303,7 @@ img {
         background-size: 200%;
         @include rt(tl) {
           max-width: none;
-          background-size: cover;
+          background-size: 150%;
 
         }
         @include rt(p7p) {
@@ -446,11 +453,13 @@ img {
       @include rt(tp) {
         max-width: none;
         flex-direction: column;
-        min-height: 375px;
+        //min-height: 375px;
         align-items: center;
         text-align: center;
         padding: 0 20px;
         border-bottom: 0;
+        min-height: auto;
+        max-height: 500px;
       }
       &:nth-of-type(even){
         align-self: flex-end;
@@ -620,8 +629,8 @@ img {
     color: $white;
     align-items: center;
     display: flex;
-    @include rt(tp) {
-      background-size: cover;
+    @include rt(tl) {
+      background-size: 200%;
     }
     @include rt(p7p) {
       background: none;
@@ -884,6 +893,12 @@ img {
     justify-content: center;
     background-color: #e8e8e8;
     cursor: pointer;
+    @include rt(tl){
+      min-height: 200px;
+    }
+    @include rt(p7p){
+      display: none;
+    }
     &.odd {
       background-color: #f1f1f1;
     }
@@ -904,6 +919,9 @@ img {
     -moz-transition: max-height 0.8s;
     transition: max-height 0.8s;
     width: 100%;
+    @include rt(p7p){
+      max-height: 800px;
+    }
     &.setHeightSlider {
       max-height: 1000px;
     }
@@ -913,6 +931,11 @@ img {
       align-items: center;
       justify-content: center;
       background-color: $white;
+      @include rt(p7p){
+        flex-direction: column;
+        padding: 20px 0;
+        justify-content: flex-start;
+      }
       .company-item {
         width: 380px;
         min-height: 380px;
@@ -920,6 +943,11 @@ img {
         align-items: center;
         justify-content: center;
         background-color: #e8e8e8;
+        @include rt(tl){
+          max-width: 200px;
+          width: 100%;
+          min-height: 200px;
+        }
         img{
           max-width: 50%;
         }
@@ -929,6 +957,9 @@ img {
         width: 100%;
         font-family: $Arsenal;
         padding: 10px 30px 10px 80px;
+        @include rt(p7p){
+          padding: 20px;
+        }
         h2{
           font-size: 30px;
           font-weight: 500;
@@ -950,12 +981,28 @@ img {
     right: 110px;
     background: none;
     width: 50px;
+    @include rt(tl){
+      right: 20px;
+    }
+    @include rt(p7p){
+      top: 100px;
+    }
     .cls-1 {
       fill: #43ac3c;
     }
   }
   .swiper-review-prev {
     left: 110px;
-    @extend .swiper-review-next
+    background: none;
+    width: 50px;
+    @include rt(tl){
+      left: 20px;
+    }
+    @include rt(p7p){
+      top: 100px;
+    }
+    .cls-1 {
+      fill: #43ac3c;
+    }
   }
 }

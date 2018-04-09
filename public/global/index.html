@@ -673,7 +673,7 @@
                     <span class="arrow">&#9660;</span>
                 </div>
                 <ul id="tab_nav" class="tab-nav-list">
-                    <li class="active-tab-link" data-lat="46.484003" data-lng="30.748630"><span>Набережная Челны</span>
+                    <li class="active-tab-link" data-lat="55.7453675" data-lng="52.38485820000005"><span>Набережная Челны</span>
                     </li>
                     <li data-lat="50.446289" data-lng="30.352708"><span>Минск</span></li>
                     <li data-lat="49.987002" data-lng="36.307791"><span>Чендао</span></li>
@@ -870,6 +870,7 @@
             console.log("tablet viewport")
             var advantagesSlider = new Swiper('.advantages-container', {
                 slidesPerView: 2,
+                // autoHeight:true,
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -907,7 +908,12 @@
             $(window).bind('scroll', function (e) {
                 parallaxScroll();
             });
-
+            var bg_3_scroll
+            if ($(window).width() <= 1024) {
+                bg_3_scroll = 600
+            } else {
+                bg_3_scroll = 300
+            }
             function parallaxScroll() {
                 var scrolled = $(window).scrollTop();
                 $('#parallax-bg1').css('background-position', 'center ' + (-100 - (scrolled * .1)) + 'px');
@@ -1146,8 +1152,8 @@
     function initMap(lt ,ln) {
 
         var uluru = {
-            lat: lt || 46.484003,
-            lng: ln || 30.748630
+            lat: lt || 55.7453675,
+            lng: ln || 52.38485820000005
         };
         var map = new google.maps.Map(document.getElementById('g_map'), {
             zoom: 12,
@@ -1166,6 +1172,7 @@
     var slideReviews = new Swiper('.slider-reviews', {
         slidesPerView: 1,
         loop: true,
+        autoHeight:true,
         loopedSlides: slideCount,
         effect: 'fade',
         navigation: {
