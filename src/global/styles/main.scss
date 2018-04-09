@@ -7,7 +7,8 @@ img {
 
 .main-block {
   min-height: 840px;
-  background: url("../img/jpeg/main_img.jpg") center center no-repeat;
+  background: linear-gradient(rgba($greyish-brown-two, 0.5),
+          rgba($greyish-brown-two, 0.5)), url("../img/jpeg/main_img.jpg") center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
   justify-content: flex-start;
@@ -171,6 +172,7 @@ img {
     }
   }
   .logo {
+    margin-bottom: 20px;
     margin-top: -100px;
     width: 217px;
     height: 214px;
@@ -183,25 +185,89 @@ img {
       height: 170px;
     }
   }
-  h1{
-    margin-top: 100px;
-    max-width: 900px;
-    white-space: pre-line;
-    width: 100%;
-    text-align: left;
-    font-family: $Arsenal;
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 1.5;
-    color: $white;
-    @include rt(p7p){
-      margin-top: 30px;
-      font-size: 36px;
-      line-height: 1.33;
-      text-align: center;
+
+  .main-description {
+    display: flex;
+    h1 {
+      margin-top: 100px;
+      max-width: 900px;
+      white-space: pre-line;
+      width: 100%;
+      text-align: left;
+      font-family: $Arsenal;
+      font-size: 60px;
+      font-weight: bold;
+      line-height: 1.5;
       color: $white;
+      @include rt(p7p) {
+        margin-top: 30px;
+        font-size: 36px;
+        line-height: 1.33;
+        text-align: center;
+        color: $white;
+      }
+    }
+    .form-item {
+      font-family: $Arsenal;
+      align-self: flex-end;
+      position: relative;
+      z-index: 10;
+      max-width: 376px;
+      width: 100%;
+      border-radius: 5px;
+      background-color: $white;
+      box-shadow: 0 10px 22.3px 1.7px rgba(0, 1, 2, 0.33);
+      .form-header {
+        background-color: $white-two;
+        padding: 15px 35px;
+        p {
+          color: $medium-green;
+          font-size: 24px;
+          font-weight: 700;
+          margin-bottom: 10px;
+        }
+        span {
+          font-size: 18px;
+          color: $greyish-brown-three;
+        }
+      }
+      .form-main {
+        padding: 30px 35px;
+        .to-arrow {
+          width: 16px;
+          margin: 8px 0;
+        }
+        p {
+
+          margin-bottom: 20px;
+          &:last-of-type{
+            font-size: 14px;
+            color: $medium-green;
+            margin: 0;
+          }
+          .desc {
+            width: 40%;
+            font-size: 16px;
+            font-weight: 700;
+            color: $medium-green;
+          }
+          .form-sub-title {
+            width: 50%;
+            font-size: 16px;
+            color: $warm-grey;
+            display: inline-block;
+          }
+        }
+        .input-group {
+          margin-bottom: 20px;
+        }
+        .submit-group {
+          margin-top: 40px;
+        }
+      }
     }
   }
+
 }
 
 .service-block {
