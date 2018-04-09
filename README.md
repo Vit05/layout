@@ -5,4 +5,4 @@
 
 [MAin](https://rawgit.com/Vit05/layout/global/public/global/index.html)
 
-[MAin-prd](https://rawgit.com/Vit05/layout/global/public/global/index.html)
+[MAin-prd](https://cdn.rawgit.com/Vit05/layout/global/public/global/index.html)
