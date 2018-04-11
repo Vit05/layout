@@ -1134,8 +1134,9 @@
 //LOGIN block
 .login-block {
   @include bg-img-retina('../img/jpg/success_bg_blur', 'jpg');
-  height: 100vh;
-  min-height: 760px;
+
+  min-height: 100vh;
+  padding-bottom: 100px;
   @include rt(p6plus) {
     height: auto;
     min-height: auto;
