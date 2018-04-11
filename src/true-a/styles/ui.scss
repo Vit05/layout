@@ -162,7 +162,8 @@ button {
 }
 
 .block-try {
-  max-width: 666px;
+  //max-width: 666px;
+  max-width: 520px;
   margin: auto;
   width: 100%;
   border-radius: 10px;
@@ -179,6 +180,7 @@ button {
     @include rt(p6plus){
       flex-wrap: wrap;
       padding: 20px 10px;
+      justify-content: center;
     }
   }
   .input-field {
@@ -213,7 +215,8 @@ button {
     }
 
     @include rt(p6plus){
-      margin-left: 19px;
+      //margin-left: 19px;
+      width: 100px;
       -webkit-appearance: none;
     }
   }

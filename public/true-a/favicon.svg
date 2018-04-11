@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128px" height="128px" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>favicon </title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Copy-6" transform="translate(-359.000000, -77.000000)" fill="#EE6C4D">
+            <g id="favicon-" transform="translate(359.000000, 77.000000)">
+                <path d="M0,0 L128,0 L128,128 L0,128 L0,0 Z M12,12 L12,116 L116,116 L116,12 L12,12 Z" id="Combined-Shape"></path>
+                <path d="M97.3280488,94.8320031 L81.7760488,94.8320031 L77.8400488,83.9840031 L50.3840488,83.9840031 L46.3520488,94.8320031 L30.8000488,94.8320031 L55.5680488,30.8000031 L72.6560488,30.8000031 L97.3280488,94.8320031 Z M74.0960488,71.9840031 L64.1120488,44.4320031 L54.1280488,71.9840031 L74.0960488,71.9840031 Z" id="A"></path>
+            </g>
+        </g>
+    </g>
+</svg>
