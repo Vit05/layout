@@ -41,10 +41,10 @@
                 <img src="img/svg/main_arrow.svg" class="Page-1">
             </div>
 
-            <div class="input-field">
+            <div class="input-field error">
                 <input type="email" required placeholder="Email">
             </div>
-            <div class="input-field password-field">
+            <div class="input-field password-field error">
                 <input type="password" id="login_password" required placeholder="Password">
                 <label for="togglePasswordCheckBox" class="togglePassword" id="togglePassword">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12">
@@ -56,6 +56,17 @@
                 </label>
 
             </div>
+
+            <div class="error-message-container">
+                <p>Please enter a valid email.</p>
+            </div>
+
+            <div class="error-message-container error">
+                <p>Email and password you’ve used don’t match. If you forgot your password - please reset it and follow instruction.</p>
+            </div>
+
+
+
             <button class="btn login-btn">Login</button>
             <a href="" class="forgot-pass">Forgot password?</a>
             <button class="btn login-github-btn">

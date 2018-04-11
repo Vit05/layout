@@ -1137,7 +1137,8 @@
   height: 100vh;
   min-height: 760px;
   @include rt(p6plus) {
-
+    height: auto;
+    min-height: auto;
     padding-bottom: 70px;
     @include bg-img-retina('../img/jpg/success_bg_blur_mob', 'jpg');
   }
@@ -1228,7 +1229,7 @@
     position: relative;
     max-width: 600px;
     width: 100%;
-    height: 382px;
+    //height: 382px;
     border-radius: 10px;
     -webkit-backdrop-filter: blur(3px);
     backdrop-filter: blur(3px);
@@ -1239,12 +1240,12 @@
     justify-content: center;
     flex-direction: column;
     @include rt(p6plus) {
-      padding: 0 20px;
+      padding: 30px 20px 38px 20px;
     }
     .arrow {
       position: absolute;
       left: calc(100% - 65px);
-      top: 200px;
+      bottom: 35px;
       @include rt(tp) {
         display: none;
       }
@@ -1253,6 +1254,20 @@
       max-width: 350px;
       width: 100%;
       margin-bottom: 10px;
+      &.error{
+        input{
+          border-color:#ff5656;
+          color: #ff7171;
+          background-color: rgba(255, 86, 86, 0.1);
+
+        }
+        @include placeholder{
+          color: #ff7171;
+        }
+        path{
+          fill: rgb(255, 113, 113);;
+        }
+      }
       &:last-of-type {
         margin-bottom: 30px;
       }
@@ -1278,6 +1293,24 @@
           font-weight: 400;
           letter-spacing: 0.4px;
         }
+      }
+    }
+    .error-message-container{
+      display: none;
+      margin-bottom: 12px;
+      max-width: 350px;
+      width: 100%;
+      padding: 0 5px;
+      &.error{
+        display: block;
+      }
+      p{
+        font-size: 14px;
+        line-height: 1.5;
+        letter-spacing: 0.3px;
+        text-align: center;
+        font-weight: 400;
+        color: rgb(255, 86, 86);
       }
     }
   }
