@@ -445,231 +445,6 @@ img {
     }
   }
 }
-
-//
-//
-//
-.element-animation{
-
-}
-
-@keyframes animationFrames{
-  0% {
-    transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-  9% {
-    transform:  rotate(3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  17% {
-    transform:  rotate(6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  26% {
-    transform:  rotate(9deg) scaleX(1.30) scaleY(1.30) ;
-  }
-  34% {
-    transform:  rotate(6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  43% {
-    transform:  rotate(3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  50% {
-    transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-  59% {
-    transform:  rotate(-3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  67% {
-    transform:  rotate(-6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  75% {
-    transform:  rotate(-9deg) scaleX(1.30) scaleY(1.30) ;
-  }
-  83% {
-    transform:  scaleX(1.24) scaleY(1.24) ;
-  }
-  92% {
-    transform:  scaleX(1.06) scaleY(1.06) ;
-  }
-  100% {
-    transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-}
-
-@-moz-keyframes animationFrames{
-  0% {
-    -moz-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-  9% {
-    -moz-transform:  rotate(3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  17% {
-    -moz-transform:  rotate(6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  26% {
-    -moz-transform:  rotate(9deg) scaleX(1.30) scaleY(1.30) ;
-  }
-  34% {
-    -moz-transform:  rotate(6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  43% {
-    -moz-transform:  rotate(3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  50% {
-    -moz-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-  59% {
-    -moz-transform:  rotate(-3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  67% {
-    -moz-transform:  rotate(-6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  75% {
-    -moz-transform:  rotate(-9deg) scaleX(1.30) scaleY(1.30) ;
-  }
-  83% {
-    -moz-transform:  scaleX(1.24) scaleY(1.24) ;
-  }
-  92% {
-    -moz-transform:  scaleX(1.06) scaleY(1.06) ;
-  }
-  100% {
-    -moz-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-}
-
-@-webkit-keyframes animationFrames {
-  0% {
-    -webkit-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-  9% {
-    -webkit-transform:  rotate(3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  17% {
-    -webkit-transform:  rotate(6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  26% {
-    -webkit-transform:  rotate(9deg) scaleX(1.30) scaleY(1.30) ;
-  }
-  34% {
-    -webkit-transform:  rotate(6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  43% {
-    -webkit-transform:  rotate(3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  50% {
-    -webkit-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-  59% {
-    -webkit-transform:  rotate(-3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  67% {
-    -webkit-transform:  rotate(-6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  75% {
-    -webkit-transform:  rotate(-9deg) scaleX(1.30) scaleY(1.30) ;
-  }
-  83% {
-    -webkit-transform:  scaleX(1.24) scaleY(1.24) ;
-  }
-  92% {
-    -webkit-transform:  scaleX(1.06) scaleY(1.06) ;
-  }
-  100% {
-    -webkit-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-}
-
-@-o-keyframes animationFrames {
-  0% {
-    -o-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-  9% {
-    -o-transform:  rotate(3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  17% {
-    -o-transform:  rotate(6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  26% {
-    -o-transform:  rotate(9deg) scaleX(1.30) scaleY(1.30) ;
-  }
-  34% {
-    -o-transform:  rotate(6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  43% {
-    -o-transform:  rotate(3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  50% {
-    -o-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-  59% {
-    -o-transform:  rotate(-3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  67% {
-    -o-transform:  rotate(-6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  75% {
-    -o-transform:  rotate(-9deg) scaleX(1.30) scaleY(1.30) ;
-  }
-  83% {
-    -o-transform:  scaleX(1.24) scaleY(1.24) ;
-  }
-  92% {
-    -o-transform:  scaleX(1.06) scaleY(1.06) ;
-  }
-  100% {
-    -o-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-}
-
-@-ms-keyframes animationFrames {
-  0% {
-    -ms-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-  9% {
-    -ms-transform:  rotate(3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  17% {
-    -ms-transform:  rotate(6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  26% {
-    -ms-transform:  rotate(9deg) scaleX(1.30) scaleY(1.30) ;
-  }
-  34% {
-    -ms-transform:  rotate(6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  43% {
-    -ms-transform:  rotate(3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  50% {
-    -ms-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-  59% {
-    -ms-transform:  rotate(-3deg) scaleX(1.10) scaleY(1.10) ;
-  }
-  67% {
-    -ms-transform:  rotate(-6deg) scaleX(1.20) scaleY(1.20) ;
-  }
-  75% {
-    -ms-transform:  rotate(-9deg) scaleX(1.30) scaleY(1.30) ;
-  }
-  83% {
-    -ms-transform:  scaleX(1.24) scaleY(1.24) ;
-  }
-  92% {
-    -ms-transform:  scaleX(1.06) scaleY(1.06) ;
-  }
-  100% {
-    -ms-transform:  rotate(0deg) scaleX(1.00) scaleY(1.00) ;
-  }
-}
-
-
-//
-//
-//
-
-
-
 .advantages-block{
   .advantages-container{
     display: flex;
@@ -1248,5 +1023,49 @@ img {
     .cls-1 {
       fill: #43ac3c;
     }
+  }
+}
+
+
+
+@keyframes animationFrames{
+  0% {
+    transform: rotate(0deg);
+  }
+  9% {
+    transform: rotate(3deg);
+  }
+  17% {
+    transform: rotate(6deg);
+  }
+  26% {
+    transform: rotate(9deg);
+  }
+  34% {
+    transform: rotate(6deg);
+  }
+  43% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  59% {
+    transform: rotate(-3deg);
+  }
+  67% {
+    transform: rotate(-6deg);
+  }
+  75% {
+    transform: rotate(-9deg);
+  }
+  83% {
+    transform: rotate(-6deg);
+  }
+  92% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
