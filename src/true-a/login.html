@@ -43,10 +43,24 @@
                 <img src="img/svg/main_arrow.svg" class="Page-1">
             </div>
 
-            <div class="input-field error">
+            <div class="input-field">
                 <input type="email" required placeholder="Email">
             </div>
-            <div class="input-field password-field error">
+
+            <div class="select-field">
+                <select id="name" required name="Position">
+                    <option value="" disabled selected hidden>Your position</option>
+                    <option>QA Automation engineer</option>
+                    <option>QA Automation team lead</option>
+                    <option>Head of QA</option>
+                    <option>Software development engineer</option>
+                    <option>Software development team lead</option>
+                    <option>Head of software development</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="input-field password-field">
                 <input type="password" id="login_password" required placeholder="Password">
                 <label for="togglePasswordCheckBox" class="togglePassword" id="togglePassword">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 20 12">
@@ -58,14 +72,14 @@
                 </label>
 
             </div>
-
+<!--
             <div class="error-message-container">
                 <p>Please enter a valid email.</p>
             </div>
 
             <div class="error-message-container error">
                 <p>Email and password you’ve used don’t match. If you forgot your password - please reset it and follow instruction.</p>
-            </div>
+            </div>-->
 
 
 
