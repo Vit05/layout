@@ -88,7 +88,9 @@ gulp.task('styles:build', function () {
         .pipe(sass({
             includePaths: require('node-reset-scss').includePath,
         })) //Скомпилируем
-        .pipe(prefixer()) //Добавим вендорные префиксы
+        .pipe(prefixer({
+            browsers: ['last 6 versions']
+        })) //Добавим вендорные префиксы
         .pipe(cssmin()) //Сожмем
         .pipe(rename({suffix: '.min'})).pipe(gulp.dest(path.build.css)) //И в build
         .pipe(reload({stream: true}));
