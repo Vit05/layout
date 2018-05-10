@@ -65,7 +65,7 @@
               left: 50%;
               right: 50%;
               bottom: -6px;
-              background: rgb(255, 255, 255);
+              background: #ee6c4d;
               height: 2px;
               transition-property: left, right;
               transition-duration: 0.3s;
@@ -1603,26 +1603,13 @@
   @include bg-img-retina('../img/jpg/product_main_bg', 'jpg', linear-gradient(rgba(74, 74, 74, .3)));
   background-repeat: no-repeat;
   background-position: center center;
-
-  /*@media screen and (min-width: 1440px) {
-    background-size: cover;
-  }
-  @include rt(p6plus) {
-    @include bg-img-retina('../img/jpg/main_bg_mob', 'jpg', linear-gradient(rgba(74, 74, 74, .3)));
-  }*/
   .container {
     min-height: 620px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    outline: 1px solid red;
-    //justify-content: flex-end;
-    /*@include rt(p6plus) {
-      min-height: 600px;
-      padding-top: 100px;
-      justify-content: flex-start;
-    }*/
+
   }
   .prd-main-block-description {
     padding-top: 155px;
@@ -1632,7 +1619,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    outline: 1px solid red;
     width: 100%;
     @include rt(p6plus) {
       max-width: 280px;
@@ -1647,11 +1633,6 @@
       letter-spacing: 0.8px;
       text-align: center;
       color: $white;
-      /*@include rt(p6plus) {
-        font-size: 30px;
-        margin: 0 0 30px 0;
-        line-height: 1.33;
-      }*/
     }
     p {
       font-size: 20px;
@@ -1660,8 +1641,6 @@
       text-align: center;
       color: $white;
       margin: 0 0 30px 0;
-      //margin-bottom: 87px;
-      //font-weight: 400;
       @include rt(p6plus) {
         font-size: 18px;
         line-height: 25px;
@@ -1670,7 +1649,7 @@
     }
 
   .prd-block-try {
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1781,7 +1760,6 @@
   }
 }
 
-
 .prd-things-done-block{
   padding: 100px 0;
   background-color: rgb(74, 74, 74);
@@ -1797,6 +1775,7 @@
     }
   }
 }
+
 .prd-consant-elements-{
   padding: 100px 0 80px 0;
   background-color: #fff;
@@ -1816,8 +1795,32 @@
   }
 }
 
-
-
+.prd-cool-stuff{
+  border-bottom: 10px solid #fff;
+  padding: 100px 0 70px 0;
+  background-color: rgb(74, 74, 74);
+  .prd-block-title{
+    padding-left: 60px;
+    img{
+      margin-left: 15px;
+    }
+  }
+  .prd-flex-item{
+    &.prd-flex-video-item{
+      padding: 50px 0 20px 0;
+    }
+  }
+  .prd-video-arrow{
+    &:first-of-type{
+      left: -100px;
+      bottom: 30px;
+    }
+    &:last-of-type{
+      left: calc(100% - 145px);
+      bottom: 10px;
+    }
+  }
+}
 
 input::-webkit-credentials-auto-fill-button {
   visibility: hidden;
