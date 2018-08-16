@@ -1,106 +1,88 @@
-.g_container-full{
-  max-width: 100%;
-  outline: 3px solid red;
-  *{
-    box-sizing: border-box;
-  }
-}
+@import 'common';
 
-.g_container{
-  display: flex;
-  max-width: 960px;
-  margin: auto;
-  outline: 1px solid blue;
-  *{
-    box-sizing: border-box;
-  }
-}
-.g_nav-cont{
-  width: 100%;
-}
-.g_header-row{
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  @media screen and (max-width: 736px)  {
-    //flex-direction: column;
-    width: 150px;
-    justify-content: space-between;
-    flex-direction: column-reverse;
-  }
-  .g_col-itm{
-    display: flex;
-    align-items: center;
-    background-color: #fa0;
-    @media screen and (max-width: 736px)  {
-      display: none;
-    }
-    &.g_service{
+.g-- {
+
+  &top-header {
+    background-color: $black;
+    .g--cont {
+      padding: 15px 0;
       display: flex;
-      .g_service_btn{
-        display: block;
-        width: 100%;
-        height: 35px;
-        line-height: 35px;
-        text-align: center;
-        padding: 0 20px;
+      justify-content: space-between;
+      font-size: 18px;
+      .g--header-itm {
+        display: flex;
+        align-items: center;
+      }
+      .g--mail {
         color: #fff;
-        background-color: #be202e;
-      }
-    }
-    &.g_contact-info{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      .g_title{
-        font-size: 18px;
-        color: #be202e;
-        @media screen and (max-width: 736px)  {
-          display: none;
-        }
-      }
-      .g_worktime{
-        font-size: 18px;
-        color: #000;
-        @media screen and (max-width: 736px)  {
-          display: none;
-        }
-      }
-      .g_phone{
-        display: block;
-        margin: 5px 0;
-        color: #000;
-        font-size: 24px;
         text-decoration: none;
-        @media screen and (max-width: 736px)  {
-          font-size: 16px;
+        display: flex;
+        align-items: center;
+        width: auto;
+        font-weight: 300;
+
+        .g--icon {
+          margin-right: 10px;
+          width: 30px;
+          height: 30px;
+          display: block;
+          background-color: #cdcdcd;
         }
       }
+      .g--call-back {
+        @extend .g--mail;
+        margin-left: 30px;
+      }
+      .g--phone {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .g--work-time {
+        color: #fff;
+      }
     }
-    a {
+  }
+  &bottom-header {
+    background-color: #ffffff;
+    .g--main-nav {
       display: flex;
       align-items: center;
-      text-decoration: none;
-      .g_icon{
+      justify-content: space-between;
+      .g--itm {
         display: block;
-        width: 25px;
-        height: 25px;
-        margin-right: 10px;
-        svg{
-          width: 100%;
+        a{
+          font-size: 22px;
+          line-height: 1.59;
+          letter-spacing: 0.1px;
+          text-align: center;
+          color: $black-five;
+          text-decoration: none;
+          text-transform: uppercase;
         }
-      }
-      span{
-        font-size: 14px;
-        text-transform: uppercase;
-        color: #000;
-        @media screen and (max-width: 736px)  {
-          display: none;
+        .g--logo {
+          width: 85px;
+          height: 85px;
+          background-color: #000077;
+          display: block;
+        }
+        .g--order-service {
+          max-width: 260px;
+          padding: 0 40px;
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          text-transform: uppercase;
+          border-radius: 10px;
+          background-color: $rusty-red;
+          font-size: 20px;
+          letter-spacing: 0.1px;
+          text-align: center;
+          color: #fff;
+          display: block;
         }
       }
     }
-    
+
   }
-
 }
-

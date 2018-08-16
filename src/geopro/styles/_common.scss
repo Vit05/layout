@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&subset=cyrillic,cyrillic-ext,latin-ext');
+@import 'var';
+@import 'reset.scss';
+
+
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+b{
+  font-weight: 700;
+}
+.g--cont-full{
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  background-color: #555555;
+}
+.g--cont{
+  max-width: 1180px;
+  width: 100%;
+  margin: auto;
+  //background-color: #b4b4b4;
+}
