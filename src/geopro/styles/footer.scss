@@ -1,0 +1,118 @@
+@import 'common';
+
+.g--top-footer {
+  background-color: #363636;
+  padding: 30px 0;
+  .g--cont{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and(max-width: 880px){
+      flex-direction: column;
+
+    }
+    .g--footer-itm{
+      width: 25%;
+      @media screen and(max-width: 880px){
+        flex-basis: auto;
+        margin-bottom: 30px;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+      }
+      &:nth-of-type(3){
+        width: 25%;
+        align-self: right;
+      }
+      &:nth-of-type(2){
+        width: 45%;
+        text-align: center;
+      }
+    }
+    li{
+
+      a{
+        color: #fff;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-size: 18px;
+        text-decoration: none;
+
+      }
+
+    }
+    p{
+      color: #fff;
+      font-size: 18px;
+    }
+    .g--icon{
+      width: 40px;
+      height: 40px;
+      display: block;
+      background-color: #0000dd;
+      @media screen and(max-width: 880px) {
+        margin-bottom: 10px;
+      }
+
+      }
+    .g--footer-nav{
+      li{
+        margin-bottom: 20px;
+        width: auto;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+        @media screen and(max-width: 880px){
+          a{
+            justify-content: center;
+          }
+        }
+      }
+      @media screen and(max-width: 880px){
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .g--contact-nav{
+      li{
+        margin-bottom: 20px;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+        @media screen and(max-width: 880px) {
+          a{
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+        }
+        }
+    }
+    .g--footer-location{
+      flex-direction: column;
+      align-items: center;
+      display: flex;
+      .g--icon{
+        margin-bottom: 20px;
+      }
+      p{
+        white-space: pre-line;
+      }
+    }
+  }
+}
+
+.g--copyr{
+  background-color: #a92415;
+  padding: 30px 0;
+  color: #fff;
+  p{
+    font-size: 18px;
+    line-height: 1.94;
+    letter-spacing: 0.1px;
+    text-align: center;
+  }
+
+}

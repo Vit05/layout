@@ -1,10 +1,12 @@
 @import 'common';
 
 .g-- {
-
   &top-header {
     background-color: $black;
-    .g--cont {
+    @media screen and (max-width: 840px) {
+      display: none;
+    }
+      .g--cont {
       padding: 15px 0;
       display: flex;
       justify-content: space-between;
@@ -45,13 +47,16 @@
   }
   &bottom-header {
     background-color: #ffffff;
+    .g--nav{
+      display: block;
+    }
     .g--main-nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
       .g--itm {
         display: block;
-        a{
+        a {
           font-size: 22px;
           line-height: 1.59;
           letter-spacing: 0.1px;
@@ -59,6 +64,10 @@
           color: $black-five;
           text-decoration: none;
           text-transform: uppercase;
+          transition: color ease-in-out .3s;
+          &:hover {
+            color: $rusty-red;
+          }
         }
         .g--logo {
           width: 85px;
@@ -75,14 +84,52 @@
           text-transform: uppercase;
           border-radius: 10px;
           background-color: $rusty-red;
-          font-size: 20px;
+          border: 1px solid $rusty-red;
+          font-size: 18px;
           letter-spacing: 0.1px;
           text-align: center;
           color: #fff;
           display: block;
+          transition: all ease-in-out .3s;
+          &:hover {
+            background-color: #fff;
+            color: $rusty-red;
+          }
         }
       }
     }
-
+    .g--mob-nav {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      .g--mob-logo{
+        width: 35px;
+        height: 35px;
+        background-color: #000077;
+        display: block;
+      }
+      .g--mob-btns{
+        display: flex;
+        align-items: center;
+        li{
+          margin-left: 15px;
+        }
+        .g--icon{
+          width: 35px;
+          height: 35px;
+          display: block;
+          background-color: #0000dd;
+        }
+      }
+    }
+    @media screen and (max-width: 840px) {
+      .g--nav{
+        display: none;
+      }
+      .g--mob-nav{
+        display: flex;
+      }
+    }
   }
 }
