@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 
 //CURRENT PATH
-var currentPath = 'geopro';
+var currentPath = 'artelaw';
 
 var path = {
     build: {
@@ -82,6 +82,7 @@ gulp.task('webserver', function () {
 });
 
 //STYLES
+/*
 gulp.task('styles:build', function () {
     gulp.src(path.src.styles)
         .pipe(plumber())
@@ -93,6 +94,17 @@ gulp.task('styles:build', function () {
         .pipe(rename({suffix: '.min'})).pipe(gulp.dest(path.build.css)) //И в build
         .pipe(reload({stream: true}));
 });
+*/
+gulp.task('styles:build', function () {
+    gulp.src(path.src.styles)
+        .pipe(plumber())
+        .pipe(sass()) //Скомпилируем
+        .pipe(prefixer()) //Добавим вендорные префиксы
+        .pipe(cssmin()) //Сожмем
+        .pipe(rename({suffix: '.min'})).pipe(gulp.dest(path.build.css)) //И в build
+        .pipe(reload({stream: true}));
+});
+
 
 //CLEAN
 gulp.task('clean', function (cb) {

@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&subset=cyrillic,cyrillic-ext');
+@import "reset";
+@import "header";
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+$white: #ffffff;
+
+.cnt {
+  max-width: 1170px;
+  margin: auto;
+  outline: 1px solid red;
+  @include screen(1170px){
+    padding: 0 rem(20px);
+  }
+
+}
+
+.cnt_full {
+  width: 100%;
+}
+
+.icc{
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 1px solid pink;
+}
+
+.main_blk{
+  height: 500px;
+  background-color: #000000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(../img/png/kendowarior.png);
+}
