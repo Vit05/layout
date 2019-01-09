@@ -1,18 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&subset=cyrillic,cyrillic-ext');
 @import "reset";
 @import "header";
-body{
+
+body {
+  position: relative;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+
+  * {
+    box-sizing: border-box;
+  }
 }
 
 $white: #ffffff;
 
 .cnt {
   max-width: 1170px;
+  width: 100%;
   margin: auto;
   outline: 1px solid red;
-  @include screen(1170px){
+  @include screen(1170px) {
     padding: 0 rem(20px);
   }
 
@@ -22,7 +29,44 @@ $white: #ffffff;
   width: 100%;
 }
 
-.icc{
+.row {
+  display: flex;
+}
+
+b {
+  font-weight: 700;
+}
+
+.ttl {
+  font-size: rem(23px);
+  font-weight: 700;
+  color: #555555;
+  text-transform: uppercase;
+  padding: 0 rem(20px);
+  background-color: #fff;
+  position: relative;
+  z-index: 5;
+
+}
+
+.line__cnt {
+  position: relative;
+  padding: rem(50px) 0;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: $red;
+    z-index: 1;
+  }
+}
+
+.icc {
   width: 40px;
   height: 40px;
   display: flex;
@@ -31,11 +75,465 @@ $white: #ffffff;
   outline: 1px solid pink;
 }
 
-.main_blk{
-  height: 500px;
+.main_blk {
+  height: 650px;
   background-color: #000000;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   background-image: url(../img/png/kendowarior.png);
+  display: flex;
+  align-items: flex-end;
+
+  .descr_blk {
+    margin-bottom: rem(30px);
+    width: 100%;
+    background-color: rgba(188, 50, 44, 0.7);
+    padding: rem(20px);
+
+    .cnt {
+      display: flex;
+
+      .main__ttl {
+        width: 43%;
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        color: #f0f0f0;
+        font-size: 39px;
+        text-align: right;
+        padding-right: rem(10px);
+
+        span {
+          font-weight: 500;
+        }
+      }
+
+      .main__txt {
+        width: 57%;
+        font-size: rem(19px);
+        font-weight: 300;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.58;
+        letter-spacing: normal;
+        color: #f0f0f0;
+      }
+    }
+  }
+}
+
+.about_blk {
+  overflow: hidden;
+  padding: rem(50px) 0;
+
+  .line__cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .list__blk {
+      outline: 1px solid green;
+      display: flex;
+
+      li {
+        padding: rem(10px) rem(20px);
+        font-size: rem(17px);
+        position: relative;
+        z-index: 5;
+        margin-right: rem(30px);
+        background-color: #8c5e28;
+        color: #ffffff;
+
+        &:first-of-type {
+          background-color: #8c2856;
+        }
+
+        &:nth-of-type(2) {
+          background-color: #28888c;
+        }
+
+        &:nth-of-type(3) {
+          background-color: #8c2c28;
+        }
+      }
+    }
+  }
+
+  .pic__about {
+    width: 35%;
+    position: relative;
+    //outline: 1px solid green;
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      //outline: 1px solid red;
+      width: 250%;
+
+    }
+  }
+
+  .txt__about {
+    width: 65%;
+    padding-left: rem(50px);
+    //outline: 1px solid green;
+    //padding-right: ;
+    h3 {
+      font-size: rem(33px);
+      font-weight: 300;
+      color: #555555;
+    }
+
+    p {
+      font-size: rem(19px);
+      font-weight: 300;
+      line-height: 1.58;
+      color: #16222a;
+      margin-bottom: rem(10px);
+    }
+  }
+}
+
+.practice_blk {
+  .line__cnt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .bg__blk {
+    background-image: url(../img/png/jap-min.png);
+    background-color: #f3ebea;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 170% 50%;
+  }
+
+  .list__blk {
+    margin: 0 -10px 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .item {
+      width: calc(100% / 3);
+      cursor: pointer;
+      height: 370px;
+      position: relative;
+      border: 10px solid #fff;
+      text-align: center;
+
+      &:hover {
+        .item__l_one {
+          opacity: 0;
+        }
+
+        .item__l_two {
+          opacity: 1;
+          background-color: rgba($red, .8);
+        }
+      }
+
+      .item__l_one {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: rem(20px);
+        color: #16222a;
+        transition: background-color, opacity ease-in-out .4s;
+      }
+
+      .item__l_two {
+        @extend .item__l_one;
+        color: #fff;
+        opacity: 0;
+      }
+    }
+  }
+}
+
+
+.team_blk {
+  .line__cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .list__blk {
+      outline: 1px solid green;
+      display: flex;
+
+      li {
+        padding: rem(10px) rem(20px);
+        font-size: rem(17px);
+        position: relative;
+        z-index: 5;
+        margin-left: rem(30px);
+        background-color: #8c5e28;
+        color: #ffffff;
+
+        &:first-of-type {
+          background-color: #8c2c28;
+        }
+
+        &:nth-of-type(2) {
+          background-color: #28888c;
+        }
+
+        &:nth-of-type(3) {
+          background-color: #8c2856;
+        }
+      }
+    }
+  }
+
+  .bg__blk {
+    padding: rem(20px) 0;
+    background-image: url(../img/png/boat-min.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    .cnt {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .txt__team {
+      padding: rem(30px) rem(50px);
+      width: 65%;
+      background-color: $red;
+      color: #fff;
+
+      h3 {
+        font-size: rem(33px);
+        margin-bottom: rem(20px);
+        font-weight: 300;
+        color: #f0f0f0;
+      }
+
+      p {
+        font-size: rem(19px);
+        font-weight: 300;
+        margin-bottom: rem(15px);
+        line-height: 1.58;
+        color: #f0f0f0;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .slider__blk {
+    //background-color: #cdcdcd;
+    position: relative;
+    padding: rem(50px) 0;
+
+    .swiper-container {
+      width: 80%;
+      //outline: 2px dashed red;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .slide__pic {
+      width: 20%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .slide__desc {
+      width: 78%;
+      display: flex;
+      align-items: center;
+      background-color: #f3ebea;
+      padding: rem(25px) rem(15px);
+
+      .txt {
+        width: 55%;
+        position: relative;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 40%;
+          height: 3px;
+          background-color: #8c2856;
+          position: absolute;
+          bottom: -25px;
+          left: 0;
+        }
+
+        h4 {
+
+          font-size: rem(29px);
+          line-height: 0.93;
+          color: #8c2856;
+          margin-bottom: rem(20px);
+        }
+
+        p {
+          white-space: pre-line;
+          font-size: rem(19px);
+        }
+      }
+
+      .contact {
+        width: 45%;
+
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: #16222a;
+          font-size: rem(19px);
+          font-weight: 300;
+
+          &:nth-of-type(1) {
+            margin: rem(15px) 0;
+          }
+
+          i {
+            width: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //outline: 1px solid green;
+          }
+        }
+      }
+    }
+
+    .swiper-button-next2 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    }
+
+    .swiper-button-prev2 {
+      @extend .swiper-button-next2;
+      right: auto;
+      left: 0;
+    }
+  }
+}
+
+
+.prescenter_blk {
+  background:linear-gradient(
+                  rgba(#fff, .7),
+                  rgba(#fff, .7)
+  ), url(../img/png/press_center-min.png);
+  background-size: cover;
+  .line__cnt_bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: rem(50px) 0;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: auto;
+      width: 40%;
+      height: 2px;
+      background-color: $red;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: auto;
+      right: 0;
+      width: 40%;
+      height: 2px;
+      background-color: $red;
+      z-index: 1;
+    }
+
+    .ttl_bg {
+      display: block;
+      font-size: rem(23px);
+      font-weight: 700;
+      color: #555555;
+      text-transform: uppercase;
+      padding: 0 rem(20px);
+    }
+  }
+
+  .article__list{
+    display: flex;
+    flex-wrap: wrap;
+    .item{
+      width: 50%;
+      padding: rem(70px);
+      position: relative;
+      &:first-of-type{
+        &:before{
+          content: '';
+          display: block;
+          width: 2px;
+          height: 50%;
+          position: absolute;
+          top: 50px;
+          right: 0;
+          background-color: #bc322c;
+        }
+      }
+      p{
+        font-size: rem(19px);
+        line-height: 1.42;
+
+        color: #16222a;
+        &:first-of-type{
+          margin-bottom: rem(10px);
+          font-weight: 300;
+        }
+      }
+    }
+    .foot{
+      width: 100%;
+      text-align: center;
+      padding-bottom: rem(50px);
+      a{
+        font-size: rem(21px);
+        text-decoration: none;
+        font-weight: 300;
+        color: #0070c9;
+      };
+    }
+  }
+
 }
