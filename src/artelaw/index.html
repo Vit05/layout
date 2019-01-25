@@ -8,17 +8,50 @@
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-<header class="cnt_full header">
+<div class="cnt_full fixed_header fade">
+    <div class="cnt">
+        <div class="left">
+
+            <div class="logo">ARTE LAW GROUP.</div>
+            <p> <b>Юридическая защита</b>, как искусство борьбы за право </p>
+        </div>
+        <div class="right">
+            <ul class="lang_nav">
+                <li><a href="" class="active">EN</a></li>
+                <li><a href="">UA</a></li>
+                <li><a href="">RU</a></li>
+            </ul>
+            <div class="nav_button" id="mobNavBtn">
+                    <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="60" >
+                        <path
+                                class="line top"
+                                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"/>
+                        <path
+                                class="line middle"
+                                d="m 30,50 h 40"/>
+                        <path
+                                class="line bottom"
+                                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"/>
+                    </svg>
+                <span>Меню</span></div>
+        </div>
+    </div>
+</div>
+<header class="cnt_full header ">
     <div class="cnt">
         <nav class="top_nav">
             <ul class="left">
-                <li><a href="tel:380445555555">
+                <li class="no_open"><a href="tel:380445555555">
                     <i class="icc">
                         <img src="/img/svg/Group.svg" alt="">
                     </i>+38 (044) 555-55-55</a></li>
-                <li><a href=""><i class="icc">
+                <li class="no_open"><a href=""><i class="icc">
                     <img src="/img/svg/contact.svg" alt="">
                 </i>Связаться с нами</a></li>
+                <li class="full_open"><span>Связаться с нами</span></li>
+                <li class="full_open"><a href="tel:+380509033661">+38 (050) 903-36-61</a></li>
+                <li class="full_open"><a href="mailto:info@artelaw.com">info@artelaw.com</a></li>
+                <li class="full_open"><a href="">Privacy center</a></li>
             </ul>
 
             <ul class="right">
@@ -362,6 +395,7 @@
         </div>
     </div>
 </div>
+
 <div class="cnt_full prescenter_blk">
     <div class="cnt line__cnt_bg">
         <h2 class="ttl_bg">Пресс-центр</h2>
@@ -388,6 +422,64 @@
         </div>
     </div>
 </div>
+
+<div class="cnt_full contacts_blk">
+    <div class="cnt line__cnt_bg">
+        <h2 class="ttl_bg">Контакты</h2>
+    </div>
+    <div class="cnt article__list">
+        <div class="item">
+            <div class="logo">
+                <img src="/img/svg/logo.svg" alt="">
+            </div>
+        </div>
+        <div class="item">
+            <ul class="contact">
+                <li><a href="tel:+380509033661"><i><img src="img/svg/iconPhoneWhite.svg"
+                                                        alt="Phone"></i><span>+3 8(050) 903 36 61</span></a>
+                </li>
+                <li><a href=""><i><img src="img/svg/iconMapWhite.svg" alt="Location"></i><span>бул. Тараса Шевченко, 48 А,<br> оф. 2, Киев, Украина, 01032</span></a>
+                </li>
+
+                <li><a href="mailto:androsov@artelaw.com"><i><img src="img/svg/iconEmailWhite.svg" alt="Mail"></i><span>androsov@artelaw.com</span></a>
+                </li>
+            </ul>
+
+            <a href="" class=""></a>
+        </div>
+
+    </div>
+</div>
+
+<footer class="cnt_full footer">
+    <div class="cnt_full footer__top">
+        <div class="cnt">
+            <nav class="foot_nav">
+                <ul class="left">
+                    <li><a href="">О КОМПАНИИ</a></li>
+                    <li><a href="">ПРАКТИКИ</a></li>
+                    <li><a href="">КОМАНДА</a></li>
+                    <li><a href="">ПРЕСС-ЦЕНТР</a></li>
+                    <li><a href="">КОНТАКТЫ</a></li>
+                </ul>
+
+                <ul class="right">
+                    <li><a href=""><img src="img/svg/facebook.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/svg/twitter.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/svg/linkedin.svg" alt=""></a></li>
+                    <li><a href=""><img src="img/svg/youtube.svg" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="cnt footer__bottom">
+        <div class="cnt">
+            <p>© 2018 Arte Law Group, All rights reserved </p>
+            <p><a href="">Privacy Center</a><a href="">Supported by uaGDPR</a></p>
+        </div>
+    </div>
+</footer>
 
 </body>
 <script src="libs/jquery-3.3.1.min.js"></script>
