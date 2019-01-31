@@ -7,19 +7,33 @@ var swiper = new Swiper('.swiper-container', {
 
 
 $(window).scroll(function () {
+   detectHeader()
+
+
+
+});
+function detectHeader() {
     var scroll = $(window).scrollTop();
+    var vievportWidth = $(window).innerWidth();
+    console.log(vievportWidth);
     var fixedHeader = $('.fixed_header.fade');
     var fixedScrollHeader = $('.header');
 
-    if (scroll >= 200) {
+    if(vievportWidth > 1023){
+        if (scroll >= 200 ) {
+            fixedHeader.addClass("in");
+            fixedScrollHeader.addClass("fade");
+        } else {
+            fixedHeader.removeClass("in");
+            fixedScrollHeader.removeClass("fade")
+
+        }
+    }else{
         fixedHeader.addClass("in");
         fixedScrollHeader.addClass("fade");
-    } else {
-        fixedHeader.removeClass("in");
-        fixedScrollHeader.removeClass("fade")
     }
-});
-
+}
+detectHeader()
 
 //  MOBILE NAVIGATION
 var mobNavBtn = $('#mobNavBtn');

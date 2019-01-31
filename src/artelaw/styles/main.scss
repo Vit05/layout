@@ -7,6 +7,9 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
 
+  @include screen(500px){
+    font-size: 14px;
+  }
   * {
     box-sizing: border-box;
   }
@@ -47,6 +50,10 @@ b {
   position: relative;
   z-index: 5;
 
+  @include screen(980px) {
+    margin-bottom: rem(20px);
+  }
+
 }
 
 .line__cnt {
@@ -61,8 +68,16 @@ b {
     left: 0;
     right: 0;
     height: 2px;
-    background-color: $red;
     z-index: 1;
+    @include screen(980px) {
+      left: 20px;
+      right: 20px;
+      top: calc(50% + 20px);
+    }
+
+    @include screen(700px){
+      display: none;
+    }
   }
 }
 
@@ -85,6 +100,9 @@ b {
   display: flex;
   align-items: flex-end;
 
+  @include screen(700px){
+    height: 500px;
+  }
   .descr_blk {
     margin-bottom: rem(30px);
     width: 100%;
@@ -93,6 +111,10 @@ b {
 
     .cnt {
       display: flex;
+
+      @include screen(700px){
+        flex-direction: column;
+      }
 
       .main__ttl {
         width: 43%;
@@ -105,6 +127,16 @@ b {
         text-align: right;
         padding-right: rem(10px);
 
+
+        @include screen(768px) {
+          font-size: 24px;
+        }
+
+        @include screen(700px){
+          width: 100%;
+          text-align: left;
+          font-size: 20px;
+        }
         span {
           font-weight: 500;
         }
@@ -119,6 +151,11 @@ b {
         line-height: 1.58;
         letter-spacing: normal;
         color: #f0f0f0;
+        @include screen(700px){
+          width: 100%;
+          font-size: rem(16px);
+          line-height: 1.2;
+        }
       }
     }
   }
@@ -132,11 +169,21 @@ b {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include screen(980px) {
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+    }
+
+
 
     .list__blk {
-      //outline: 1px solid green;
       display: flex;
 
+
+      @include screen(700px){
+        flex-wrap: wrap;
+        justify-content: center;
+      }
       li {
         padding: rem(10px) rem(20px);
         font-size: rem(17px);
@@ -145,6 +192,17 @@ b {
         margin-right: rem(30px);
         background-color: #8c5e28;
         color: #ffffff;
+
+        @include screen(980px) {
+          margin: 0 rem(5px);
+        }
+        @include screen(700px){
+          margin: rem(5px);
+          max-width: 200px;
+          width: 100%;
+          text-align: center;
+        }
+
 
         &:first-of-type {
           background-color: #8c2856;
@@ -161,10 +219,20 @@ b {
     }
   }
 
+  @include screen(768px) {
+    .cnt {
+      flex-direction: column-reverse;
+    }
+  }
+
   .pic__about {
     width: 35%;
     position: relative;
     //outline: 1px solid green;
+
+    @include screen(768px) {
+      width: 100%;
+    }
 
     img {
       position: absolute;
@@ -173,6 +241,12 @@ b {
       transform: translateY(-50%);
       //outline: 1px solid red;
       width: 250%;
+      @include screen(768px) {
+        position: static;
+        max-width: 700px;
+        width: 100%;
+        transform: none;
+      }
 
     }
   }
@@ -182,6 +256,11 @@ b {
     padding-left: rem(50px);
     //outline: 1px solid green;
     //padding-right: ;
+    @include screen(768px) {
+      width: 100%;
+      padding-left: 0;
+    }
+
     h3 {
       font-size: rem(33px);
       font-weight: 300;
@@ -194,6 +273,11 @@ b {
       line-height: 1.58;
       color: #16222a;
       margin-bottom: rem(10px);
+
+      @include screen(500px){
+       font-size: rem(16px);
+        line-height: 1.2;
+      }
     }
   }
 }
@@ -203,6 +287,12 @@ b {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include screen(768px) {
+      &:before {
+        display: none;
+      }
+    }
   }
 
 
@@ -212,6 +302,15 @@ b {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 170% 50%;
+    @include screen(700px){
+      background-size: 200% ;
+      background-position: bottom left;
+    }
+
+    @include screen(768px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   .list__blk {
@@ -220,6 +319,11 @@ b {
     flex-wrap: wrap;
     justify-content: space-between;
 
+
+    @include screen(768px) {
+      margin: 0;
+    }
+
     .item {
       width: calc(100% / 3);
       cursor: pointer;
@@ -227,6 +331,20 @@ b {
       position: relative;
       border: 10px solid #fff;
       text-align: center;
+
+
+      @include screen(768px) {
+        height: 300px;
+        border-width: 1px;
+      }
+
+      @include screen(700px){
+        width: 50%;
+      }
+
+      @include screen(375px){
+        width: 100%;
+      }
 
       &:hover {
         .item__l_one {
@@ -272,9 +390,19 @@ b {
     justify-content: space-between;
     align-items: center;
 
+    @include screen(980px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
     .list__blk {
       //outline: 1px solid green;
       display: flex;
+
+      @include screen(700px){
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
       li {
         padding: rem(10px) rem(20px);
@@ -284,6 +412,16 @@ b {
         margin-left: rem(30px);
         background-color: #8c5e28;
         color: #ffffff;
+        @include screen(980px) {
+          margin: 0 rem(5px);
+        }
+
+        @include screen(700px){
+          margin: rem(5px);
+          max-width: 200px;
+          width: 100%;
+          text-align: center;
+        }
 
         &:first-of-type {
           background-color: #8c2c28;
@@ -307,6 +445,12 @@ b {
     background-repeat: no-repeat;
     background-position: center center;
 
+    @include screen(768px) {
+      background-image: none;
+      background-color: #000;
+    }
+
+
     .cnt {
       display: flex;
       align-items: center;
@@ -319,11 +463,25 @@ b {
       background-color: $red;
       color: #fff;
 
+      @include screen(768px) {
+        width: 100%;
+      }
+
+      @include screen(500px){
+        padding: rem(20px);
+      }
+
+
+
       h3 {
         font-size: rem(33px);
         margin-bottom: rem(20px);
         font-weight: 300;
         color: #f0f0f0;
+
+        @include screen(500px){
+          font-size: rem(26px);
+        }
       }
 
       p {
@@ -332,7 +490,10 @@ b {
         margin-bottom: rem(15px);
         line-height: 1.58;
         color: #f0f0f0;
-
+        @include screen(500px){
+          font-size: 16px;
+          line-height: 1.2;
+        }
         &:last-of-type {
           margin-bottom: 0;
         }
@@ -361,6 +522,9 @@ b {
       align-items: center;
       justify-content: center;
 
+      @include screen(500px){
+        display: none;
+      }
       img {
         max-width: 100%;
       }
@@ -373,9 +537,21 @@ b {
       background-color: #f3ebea;
       padding: rem(25px) rem(15px);
 
+      @include screen(768px) {
+        flex-direction: column;
+        padding: rem(15px) rem(10px);
+      }
+
+      @include screen(500px){
+        width: 100%;
+      }
+
       .txt {
         width: 55%;
         position: relative;
+        @include screen(768px) {
+          width: 100%;
+        }
 
         &:after {
           content: '';
@@ -386,6 +562,11 @@ b {
           position: absolute;
           bottom: -25px;
           left: 0;
+
+          @include screen(768px) {
+
+            bottom: -10px;
+          }
         }
 
         h4 {
@@ -399,11 +580,17 @@ b {
         p {
           white-space: pre-line;
           font-size: rem(19px);
+
         }
       }
 
       .contact {
         width: 45%;
+
+
+        @include screen(768px) {
+          width: 100%;
+        }
 
         a {
           display: flex;
@@ -423,6 +610,7 @@ b {
             align-items: center;
             justify-content: center;
             //outline: 1px solid green;
+
           }
         }
       }
@@ -434,12 +622,22 @@ b {
       transform: translateY(-50%);
       right: 0;
       cursor: pointer;
+      &:focus{
+        outline: 0;
+      }
+
+      @include screen(768px) {
+        right: 10px;
+      }
     }
 
     .swiper-button-prev2 {
       @extend .swiper-button-next2;
       right: auto;
       left: 0;
+      @include screen(768px) {
+        left: 10px;
+      }
     }
   }
 }
@@ -470,6 +668,12 @@ b {
       height: 2px;
       background-color: $red;
       z-index: 1;
+      @include screen(768px){
+        width: 35%;
+      }
+      @include screen(500px){
+        width: 25%;
+      }
     }
 
     &:after {
@@ -483,6 +687,12 @@ b {
       height: 2px;
       background-color: $red;
       z-index: 1;
+      @include screen(768px){
+        width: 35%;
+      }
+      @include screen(500px){
+        width: 25%;
+      }
     }
 
     .ttl_bg {
@@ -498,11 +708,25 @@ b {
   .article__list {
     display: flex;
     flex-wrap: wrap;
+    @include screen(500px){
+      flex-direction: column;
 
+    }
     .item {
       width: 50%;
       padding: rem(20px) rem(70px);
       position: relative;
+
+      @include screen(768px) {
+        padding: rem(10px) rem(30px);
+
+      }
+
+      @include screen(500px){
+        width: 100%;
+        padding: rem(10px);
+      }
+
 
       &:first-of-type {
         &:before {
@@ -514,6 +738,9 @@ b {
           top: 0;
           right: 0;
           background-color: #bc322c;
+          @include screen(500px){
+            display: none;
+          }
         }
       }
 
@@ -570,6 +797,9 @@ b {
       height: 2px;
       background-color: $red;
       z-index: 1;
+      @include screen(700px){
+        width: 30%;
+      }
     }
 
     &:after {
@@ -583,6 +813,9 @@ b {
       height: 2px;
       background-color: $red;
       z-index: 1;
+      @include screen(700px){
+        width: 30%;
+      }
     }
 
     .ttl_bg {
@@ -607,7 +840,22 @@ b {
       justify-content: center;
       position: relative;
 
+      @include screen(768px) {
+        width: 100%;
+        .logo {
+          display: none;
+
+        }
+      }
+
+      @include screen(500px){
+        padding: rem(20px) 0;
+      }
       &:first-of-type {
+        @include screen(768px) {
+          display: none;
+        }
+
         &:before {
           content: '';
           display: block;
@@ -626,6 +874,9 @@ b {
           a {
             font-size: rem(39px);
             line-height: 0.92;
+            @include screen(500px){
+              font-size: rem(25px);
+            }
           }
         }
 
@@ -641,6 +892,9 @@ b {
           font-size: rem(23px);
           line-height: 1.35;
 
+          @include screen(500px){
+            font-size: 18px;
+          }
 
           i {
             width: 70px;
@@ -650,9 +904,15 @@ b {
             justify-content: center;
             margin-right: rem(20px);
 
+            @include screen(500px){
+              width: 35px;
+            }
             img {
               height: 100%;
               max-height: 70px;
+              @include screen(500px){
+                max-width: 35px;
+              }
             }
           }
         }
@@ -671,10 +931,25 @@ b {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      @include screen(980px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
 
       ul {
         display: flex;
         align-items: center;
+        @include screen(768px) {
+          margin: rem(20px) 0;
+        }
+
+        &:first-of-type{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
         &.left {
           li {
@@ -685,6 +960,9 @@ b {
         &.right {
           li {
             margin-left: rem(30px);
+            @include screen(500px){
+              margin: 0 rem(10px);
+            }
           }
         }
 
@@ -711,13 +989,22 @@ b {
       display: flex;
       justify-content: space-between;
       align-items: center;
-
+      @include screen(700px){
+        flex-direction: column;
+      }
       a {
         color: #000;
         display: inline-block;
         padding: rem(10px);
         font-weight: 500;
-        &:last-of-type{
+        @include screen(700px){
+          margin: rem(20px);
+        }
+        @include screen(700px){
+          margin: rem(10px) rem(5px);
+        }
+
+        &:last-of-type {
           margin-left: rem(20px);
           text-decoration: none;
           background-color: rgba(188, 50, 44, 0.7);;
