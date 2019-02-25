@@ -8,29 +8,27 @@ var swiper = new Swiper('.swiper-container', {
 
 $(window).scroll(function () {
    detectHeader()
-
-
-
 });
+
 function detectHeader() {
     var scroll = $(window).scrollTop();
     var vievportWidth = $(window).innerWidth();
     console.log(vievportWidth);
-    var fixedHeader = $('.fixed_header.fade');
-    var fixedScrollHeader = $('.header');
+    var fixedHeader = $('.header');
+    // var fixedScrollHeader = $('.header');
 
-    if(vievportWidth > 1023){
-        if (scroll >= 200 ) {
-            fixedHeader.addClass("in");
-            fixedScrollHeader.addClass("fade");
+    if(vievportWidth > 767){
+        if (scroll >= 300 ) {
+            fixedHeader.addClass("fixed_header");
+            // fixedScrollHeader.addClass("fade");
         } else {
-            fixedHeader.removeClass("in");
-            fixedScrollHeader.removeClass("fade")
+            fixedHeader.removeClass("fixed_header");
+            // fixedScrollHeader.removeClass("fade")
 
         }
     }else{
         fixedHeader.addClass("in");
-        fixedScrollHeader.addClass("fade");
+        // fixedScrollHeader.addClass("fade");
     }
 }
 detectHeader()
@@ -40,8 +38,8 @@ var mobNavBtn = $('#mobNavBtn');
 
 mobNavBtn.on('click', function () {
     // $('.main-nav').toggleClass('show')
-    var fixedScrollHeader = $('.header');
+    var toggleMobileNav = $('.header_bottom');
 
-    fixedScrollHeader.toggleClass("in")
+    toggleMobileNav.toggleClass("in")
     mobNavBtn.children().toggleClass('active')
 })

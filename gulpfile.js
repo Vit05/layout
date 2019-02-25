@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 
 //CURRENT PATH
-var currentPath = 'artelaw';
+var currentPath = 'spectra';
 
 var path = {
     build: {

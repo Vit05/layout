@@ -10,6 +10,7 @@ body {
   @include screen(500px){
     font-size: 14px;
   }
+
   * {
     box-sizing: border-box;
   }
@@ -34,6 +35,21 @@ $white: #ffffff;
 
 .row {
   display: flex;
+  .column_4{
+    //outline: 1px solid yellow;
+    width: calc(100% / 3);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    @include screen(767px) {
+      //align-items: stretch;
+    //outline: 1px solid red;
+
+
+    }
+  }
+
 }
 
 b {
@@ -921,97 +937,3 @@ b {
   }
 }
 
-
-.footer {
-  .footer__top {
-    background-color: #000;
-    padding: rem(30px) 0;
-
-    .foot_nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      @include screen(980px) {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-      }
-
-      ul {
-        display: flex;
-        align-items: center;
-        @include screen(768px) {
-          margin: rem(20px) 0;
-        }
-
-        &:first-of-type{
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        &.left {
-          li {
-            margin-right: rem(30px);
-          }
-        }
-
-        &.right {
-          li {
-            margin-left: rem(30px);
-            @include screen(500px){
-              margin: 0 rem(10px);
-            }
-          }
-        }
-
-        a {
-          font-size: rem(19px);
-          text-decoration: none;
-          line-height: 1.89;
-          color: #ffffff;
-        }
-
-        img {
-          display: block;
-        }
-      }
-
-    }
-
-  }
-
-  .footer__bottom {
-    padding: rem(30px) 0;
-
-    .cnt {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      @include screen(700px){
-        flex-direction: column;
-      }
-      a {
-        color: #000;
-        display: inline-block;
-        padding: rem(10px);
-        font-weight: 500;
-        @include screen(700px){
-          margin: rem(20px);
-        }
-        @include screen(700px){
-          margin: rem(10px) rem(5px);
-        }
-
-        &:last-of-type {
-          margin-left: rem(20px);
-          text-decoration: none;
-          background-color: rgba(188, 50, 44, 0.7);;
-          color: #fff;
-        }
-      }
-    }
-
-  }
-}
