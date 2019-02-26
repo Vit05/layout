@@ -3,7 +3,7 @@
 
 .header {
   position: fixed;
-  bottom: calc(100% - 188px);
+  bottom: calc(100% - 154px);
   transition: all ease-in-out .3s;
   padding-top: 188px;
   left: 0;
@@ -42,7 +42,7 @@
   .header_top {
     background-color: #000;
     color: #ffffff;
-    padding: 10px 0;
+    padding: rem(5px) 0;
 
     @include screen(767px) {
       display: none;
@@ -61,7 +61,7 @@
 
   .header_middle {
     position: relative;
-    padding: rem(20px) 0;
+    padding: rem(10px) 0;
 
     @include screen(767px) {
       padding: rem(7px) 0;
@@ -196,7 +196,7 @@
 
   .header_bottom {
     background-color: #88b04b;
-    padding: rem(10px) 0;
+    padding: rem(8px) 0;
     @include screen(767px) {
       width: 100%;
       position: fixed;
