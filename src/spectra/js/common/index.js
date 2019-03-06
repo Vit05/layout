@@ -51,7 +51,7 @@ var mobNavBtn = $('#mobNavBtn');
 
 mobNavBtn.on('click', function () {
     // $('.main-nav').toggleClass('show')
-    var toggleMobileNav = $('.header_bottom');
+    var toggleMobileNav = $('.main_navigation');
 
     toggleMobileNav.toggleClass("in")
     mobNavBtn.children().toggleClass('active')
