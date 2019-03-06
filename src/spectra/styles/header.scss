@@ -18,7 +18,7 @@
 
   &.fixed_header {
     z-index: 300;
-    bottom: calc(100% - 55px);
+    bottom: calc(100% - 50px);
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .1);
 
 
@@ -215,9 +215,9 @@
       &.in {
         transition: all .3s ease-in-out;
         opacity: 1;
-        height: calc(100% - 50px);
+        height: calc(100% - 55px);
         position: fixed;
-        top: 50px;
+        top: 55px;
         bottom: 0;
         left: 0;
         right: 0;
