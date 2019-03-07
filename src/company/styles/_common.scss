@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+@import "mixines";
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+
+.cnt {
+  max-width: 1640px;
+  width: 100%;
+  margin: auto;
+
+  @include screen(1680px) {
+    padding: 0 20px;
+  }
+
+  @include screen(767px) {
+    padding: 0 10px;
+  }
+}
+
+.cnt_full {
+  width: 100%;
+}
+
+b {
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  overflow: hidden;
+}

@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 
 //CURRENT PATH
-var currentPath = 'spectra';
+var currentPath = 'company';
 
 var path = {
     build: {
@@ -82,19 +82,7 @@ gulp.task('webserver', function () {
 });
 
 //STYLES
-/*
-gulp.task('styles:build', function () {
-    gulp.src(path.src.styles)
-        .pipe(plumber())
-        .pipe(sass({
-            includePaths: require('node-reset-scss').includePath,
-        })) //Скомпилируем
-        .pipe(prefixer()) //Добавим вендорные префиксы
-        .pipe(cssmin()) //Сожмем
-        .pipe(rename({suffix: '.min'})).pipe(gulp.dest(path.build.css)) //И в build
-        .pipe(reload({stream: true}));
-});
-*/
+
 gulp.task('styles:build', function () {
     gulp.src(path.src.styles)
         .pipe(plumber())

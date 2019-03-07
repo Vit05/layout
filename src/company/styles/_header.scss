@@ -1,0 +1,198 @@
+@import "mixines";
+
+.main_header {
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  overflow: hidden;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+
+  .cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+
+    @include screen(1024px) {
+      height: 75px;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3.82px;
+  }
+
+  .main_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      color: #1b242b;
+      font-size: 35px;
+      font-weight: 700;
+
+      @include screen(1300px) {
+        font-size: 28px;
+      }
+
+      @include screen(480px) {
+        display: none;
+      }
+    }
+  }
+
+  .main_navigation {
+    display: flex;
+    align-items: center;
+
+    @include screen(1023px) {
+      display: none;
+    }
+
+    @include screen(1023px) {
+      width: 100%;
+      position: fixed;
+      top: 75px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ffffff;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      z-index: -1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 50px 0;
+
+      &.in {
+        transition: all .3s ease-in-out;
+        opacity: 1;
+        height: calc(100% - 75px);
+        position: fixed;
+        top: 75px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+      }
+    }
+
+    a {
+      position: relative;
+      padding: 0 17%;
+      text-transform: uppercase;
+      display: block;
+
+      @include screen(1023px) {
+        padding: 0;
+      }
+
+      &.active {
+        &:after {
+          height: 20px;
+        }
+      }
+
+      &:after {
+        transition: height ease-in-out .3s;
+        content: '';
+        display: block;
+        width: 5px;
+        position: absolute;
+        bottom: -43px;
+        height: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #9013fe;
+
+        @include screen(1023px) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        &:after {
+          height: 20px;
+        }
+      }
+    }
+  }
+
+  .main_phone {
+    @include screen(1300px) {
+      display: none;
+    }
+
+    @include screen(1023px) {
+      display: block;
+      font-size: 10px;
+    }
+  }
+}
+
+//MOBILE NAV BTN
+.nav_button{
+  display: none;
+
+
+  @include screen(1023px) {
+    display: block;
+  }
+}
+.ham {
+  cursor: pointer;
+  transition: transform 400ms;
+  user-select: none;
+
+
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000000;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+  }
+
+  .top {
+    stroke-dasharray: 40 160;
+  }
+
+  .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms;
+  }
+
+  .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms;
+  }
+
+  &.active {
+    transform: rotate(45deg);
+
+    .top {
+      stroke-dashoffset: -64px;
+    }
+
+    .middle {
+      transform: rotate(90deg);
+    }
+
+    .bottom {
+      stroke-dashoffset: -64px;
+    }
+  }
+}
+

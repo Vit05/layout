@@ -1,0 +1,8 @@
+
+@mixin trans($prop: all){
+  transition: $prop ease-in-out .3s;
+}
+
+@mixin screen($width: 767px) {
+  @media screen and (max-width: $width){@content}
+}
