@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 
 //CURRENT PATH
-var currentPath = 'spectra';
+var currentPath = 'agro';
 
 var path = {
     build: {
