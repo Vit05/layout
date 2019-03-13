@@ -1,21 +1,19 @@
 var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 2,
-    spaceBetween: 15,
-    slidesPerGroup: 2,
+    slidesPerView: 1,
     loop: true,
-    // autoHeight: true,
-    loopFillGroupWithBlank: true,
+    autoplay:true,
+    // effect: 'fade',
     navigation: {
         nextEl: '.swiper-button-next2',
         prevEl: '.swiper-button-prev2',
     },
-    breakpoints: {
+    /*breakpoints: {
         768: {
             slidesPerView: 1,
             slidesPerGroup: 2,
             spaceBetween: 5,
         }
-    }
+    }*/
 });
 
 
