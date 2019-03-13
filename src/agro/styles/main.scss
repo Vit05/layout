@@ -34,7 +34,6 @@ $white: #ffffff;
   max-width: 1170px;
   width: 100%;
   margin: auto;
-  //outline: 1px solid red;
   @include screen(1170px) {
     padding: 0 rem(20px);
   }
@@ -49,7 +48,6 @@ $white: #ffffff;
   display: flex;
 
   .column_2 {
-    //outline: 1px solid yellow;
     width: calc(100% / 2);
     display: flex;
     justify-content: center;
@@ -60,18 +58,13 @@ $white: #ffffff;
   }
 
   .column_3 {
-    //outline: 1px solid yellow;
     width: calc(100% / 3);
     display: flex;
-    //justify-content: center;
-    //flex-direction: column;
-    //align-items: flex-end;
     @include screen(767px) {
     }
   }
 
   .column_4 {
-    //outline: 1px solid yellow;
     width: calc(100% / 4);
     display: flex;
     justify-content: center;
@@ -86,19 +79,12 @@ $white: #ffffff;
   }
 
   .column_5 {
-    //outline: 1px solid yellow;
     width: calc(100% / 5);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: flex-end;
-
-    @include screen(1000px) {
-    }
-
   }
-
-
 }
 
 b {
@@ -110,62 +96,7 @@ img {
   display: block;
 }
 
-/*.cnt_bttn {
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  padding: rem(20px) 0;
 
-  &.cnt_bttn_center {
-    justify-content: center;
-    padding: 0;
-
-    .bttn {
-      margin-right: 0;
-    }
-  }
-
-  .bttn {
-    outline: 0;
-    border: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: rem(12px) rem(20px);
-    //background-color: #0070c9;
-    margin-right: rem(40px);
-    color: #fff;
-    text-decoration: none;
-    transition: background-color ease-in-out .3s;
-
-    &.bttn_green {
-      background-color: #88b04b;
-    }
-
-    &.bttn_red {
-      background-color: #fa7268;
-    }
-
-    &.bttn_call_back {
-      text-transform: uppercase;
-      border: 2px solid #fa7268;
-      background-color: transparent;
-
-      &:hover {
-        background-color: #fa7268;
-        color: #fff;
-      }
-    }
-
-    span {
-      font-size: rem(16px);
-    }
-
-    img {
-      margin-right: rem(10px);
-    }
-  }
-}*/
 .txt {
   position: relative;
 
@@ -220,12 +151,11 @@ img {
       background-color: $active_c;
 
       @include screen(768px) {
-        bottom: -5PX;
+        bottom: -15px;
       }
     }
   }
 }
-
 
 .cnt_subtitle {
   h3 {
@@ -292,6 +222,7 @@ img {
         width: 0;
         position: static;
       }
+
       .txt {
         padding: rem(50px);
         position: absolute;
@@ -310,10 +241,10 @@ img {
         @include screen(620px) {
           left: 0;
           bottom: 0;
-          //padding: rem(100px);
           padding: rem(50px);
           text-align: center;
         }
+
         &:before {
           content: '';
           display: block;
@@ -367,7 +298,6 @@ img {
 
     .ben_item {
       display: flex;
-      outline: 1px solid red;
       align-items: center;
       justify-content: flex-start;
       @include screen(900px) {
@@ -392,26 +322,58 @@ img {
 
 .cnt_about {
   padding: rem(50px) 0;
+  @include screen(1200px) {
+    padding: rem(25px) 0;
+  }
+  @include screen(620px) {
+    .row{
+      flex-direction: column;
+    }
+  }
 
   .cnt_ttl {
     width: 50%;
     margin-bottom: rem(50px);
+
+    @include screen(768px) {
+      width: 100%;
+    }
   }
 
   .blk_pic {
     width: 60%;
     position: relative;
     padding-left: 20%;
-
+    @include screen(1200px) {
+      padding-left: 0;
+      width: 40%;
+    }
+    @include screen(768px) {
+      width: 50%;
+    }
+    @include screen(620px) {
+      width: 100%;
+    }
     .pic {
       position: absolute;
       height: 100%;
       left: -60%;
+      @include screen(1200px) {
+        display: none;
+      }
     }
 
     .txt {
       min-height: 530px;
       padding: rem(50px) rem(20px);
+      @include screen(1200px) {
+        min-height: 400px;
+      }
+      @include screen(620px) {
+        padding: 0;
+        min-height: auto;
+        margin-bottom: rem(50px);
+      }
 
       h3 {
         color: #008ddd;
@@ -432,7 +394,12 @@ img {
 
   .blk_list {
     position: relative;
-
+    @include screen(768px) {
+      width: 50%;
+    }
+    @include screen(620px) {
+      width: 100%;
+    }
     .txt {
       padding: rem(100px) rem(100px) rem(100px) rem(40px);
       position: absolute;
@@ -441,8 +408,19 @@ img {
       bottom: 30%;
       right: 100px;
       width: 600px;
-
       background-color: #2a2e3a;
+      @include screen(1200px) {
+        right: 0;
+        position: static;
+      }
+      @include screen(768px) {
+        padding-right: rem(30px);
+      max-width: 600px;
+        width: 100%;
+      }
+      @include screen(620px) {
+        padding: rem(40px) rem(20px);
+      }
 
       li {
         font-size: 19px;
@@ -459,7 +437,6 @@ img {
   }
 }
 
-
 .cnt_infrastructure {
   padding: rem(50px) 0;
 
@@ -471,14 +448,29 @@ img {
   .content_infra {
     padding-top: rem(30px);
     padding-bottom: rem(30px);
+    @include screen(768px) {
+      flex-direction: column;
+      padding-top: rem(10px);
+      padding-bottom: rem(10px);
+    }
 
     &:last-of-type {
-      border-bottom: 3px solid red;
+      border-bottom: 3px solid #cdcdcd;
       padding-bottom: rem(70px);
+      @include screen(768px) {
+        border: 0;
+      }
     }
 
     .column_3 {
       padding-right: rem(50px);
+      @include screen(768px) {
+        width: 100%;
+        margin-bottom: rem(30px);
+      }
+      @include screen(620px) {
+        padding-right: 0;
+      }
     }
 
     h3 {
@@ -496,18 +488,35 @@ img {
       color: $txt_c_2;
     }
   }
-
+  @include screen(620px) {
+   .row{
+     flex-direction: column;
+   }
+  }
   .blk_pic {
     width: 80%;
     position: relative;
     padding-left: 27%;
     padding-top: rem(50px);
     padding-bottom: rem(170px);
-
+    @include screen(1024px){
+      width: 100%;
+      padding-left: 40%;
+    }
+    @include screen(620px) {
+      width: 100%;
+      background-color: #afa;
+      padding: 0;
+    }
     .pic {
       position: absolute;
       left: -25%;
-      outline: 1px solid red;
+
+      @include screen(620px) {
+        width: 100%;
+        position: static;
+
+      }
     }
 
     .txt {
@@ -516,7 +525,9 @@ img {
       z-index: 100;
       min-height: 330px;
       padding: rem(70px);
-
+      @include screen(620px) {
+        padding: rem(70px) rem(10px);
+      }
       h3 {
         color: #008ddd;
         @include rfs(20);
@@ -536,9 +547,10 @@ img {
 
   .blk_list {
     position: relative;
-    outline: 1px solid green;
     width: 20%;
-
+    @include screen(1024px){
+      display: none;
+    }
     .pic {
       position: absolute;
       left: 0;
@@ -549,25 +561,37 @@ img {
   }
 }
 
-
 .cnt_services {
   padding: rem(50px) 0;
 
   .cnt_ttl {
     width: 50%;
     margin-bottom: rem(50px);
+    @include screen(768px) {
+      width: 100%;
+    }
   }
 
   .content_services {
     padding-top: rem(50px);
     padding-bottom: rem(50px);
 
+    @include screen(620px) {
+      padding-top: rem(10px);
+      padding-bottom: rem(10px);
+      flex-direction: column;
+    }
     &.service_2 {
-      //background-color: #fe3;
       flex-wrap: wrap-reverse;
       display: flex;
       padding-top: rem(100px);
       padding-bottom: rem(100px);
+
+      @include screen(620px) {
+        flex-direction: column-reverse;
+        padding-top: rem(30px);
+        padding-bottom: rem(30px);
+      }
 
       .blk_txt {
         width: 60%;
@@ -575,12 +599,19 @@ img {
         align-items: center;
         justify-content: flex-end;
 
+        @include screen(768px) {
+          width: 45%;
+        }
+        @include screen(620px) {
+          width: 100%;
+        }
 
         .txt {
           width: 100%;
-          //outline: 1px solid blue;
           padding: rem(50px) rem(80px);
-
+          @include screen(768px) {
+            padding: rem(50px) rem(20px);
+          }
           h3 {
             color: #008ddd;
             @include rfs(20);
@@ -600,14 +631,22 @@ img {
 
       .blk_pic {
         width: 40%;
-
+        @include screen(768px) {
+          width: 55%;
+        }
+        @include screen(620px) {
+          width: 100%;
+        }
         .pic {
           position: absolute;
           left: -200px;
           right: 0;
           top: 50%;
           transform: translateY(-50%);
-
+          @include screen(620px) {
+            position: static;
+            transform: none;
+          }
 
         }
       }
@@ -617,7 +656,13 @@ img {
   .blk_txt {
     width: 60%;
     position: relative;
-    //padding-left: 20%;
+    @include screen(768px) {
+      width: 40%;
+    }
+    @include screen(620px) {
+      width: 100%;
+    }
+
 
     display: flex;
     align-items: center;
@@ -626,10 +671,10 @@ img {
 
     .txt {
       width: 100%;
-      //outline: 1px solid blue;
-      //min-height: 530px;
       padding: rem(50px) rem(80px);
-
+      @include screen(768px) {
+        padding: rem(20px) rem(10px);
+      }
       h3 {
         color: #008ddd;
         @include rfs(20);
@@ -650,22 +695,27 @@ img {
   .blk_pic {
     width: 40%;
     position: relative;
-    //outline: 1px solid red;
 
+    @include screen(620px) {
+      width: 100%;
+    }
     .pic {
       position: absolute;
       left: 0;
       top: 50%;
       transform: translateY(-50%);
       right: -400px;
-
+      @include screen(620px) {
+        position: static;
+        transform: none;
+      }
     }
   }
 }
 
 
 .cnt_product_item {
-  background-image: linear-gradient(to bottom, rgba(42, 46, 58, .1) 50%, rgba(42, 46, 58, 0));
+  background-image: linear-gradient(to bottom, rgba(42, 46, 58, .07) 50%, rgba(42, 46, 58, 0));
   display: block;
 
   .cnt_product_title {
@@ -673,10 +723,10 @@ img {
     font-weight: 700;
     line-height: 1.2;
     color: rgb(0, 141, 221);
-    padding: rem(75px) 0;
+    padding-top: rem(75px);
+    padding-bottom: rem(75px);
     text-align: left;
     width: 100%;
-    //background-color: #faf;
 
     &.inverse {
       text-align: right;
@@ -684,14 +734,12 @@ img {
   }
 
   .cnt_card {
-    //background-color: #afa;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
   .card {
-    //outline: 1px solid red;
     margin-bottom: rem(60px);
 
     .txt {
@@ -701,6 +749,11 @@ img {
       margin-top: -80px;
       background-color: #ebe9f2;
       padding: rem(30px);
+
+      @include screen(620px) {
+        margin-top: -30px;
+        padding: rem(10px);
+      }
 
       h3 {
         @include rfs(30);
@@ -718,7 +771,9 @@ img {
 
   .card_half {
     width: 49%;
-
+    @include screen(620px) {
+      width: 100%;
+    }
     .txt {
       margin-left: auto;
       margin-right: auto;
@@ -737,11 +792,17 @@ img {
       .txt {
         margin-right: 13%;
         margin-left: auto;
+        @include screen(620px) {
+          margin: auto;
+        }
       }
     }
 
     .txt {
       margin-left: 13%;
+      @include screen(620px) {
+        margin: auto;
+      }
     }
 
   }
@@ -751,9 +812,16 @@ img {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    @include screen(768px) {
+      width: 50%;
+    }
+    @include screen(620px) {
+      width: 100%;
+    }
     .txt {
       margin-left: 13%;
+      @include screen(768px) {
+        margin-left: 0;      }
     }
 
   }
@@ -761,7 +829,12 @@ img {
   .footer_txt {
     width: 35%;
     padding: rem(30px);
-
+    @include screen(768px) {
+      width: 50%;
+    }
+    @include screen(620px) {
+      width: 100%;
+    }
     h3 {
       @include rfs(33);
       font-weight: 700;
@@ -788,9 +861,17 @@ img {
   padding-top: rem(200px);
   padding-bottom: rem(50px);
 
+  @include screen(768px) {
+    background-size: cover;
+    padding-top: rem(100px);
+  }
+
   .cnt_ttl {
     width: 50%;
     margin-bottom: rem(70px);
+    @include screen(768px) {
+      width: 100%;
+    }
   }
 
   .cnt {
