@@ -117,6 +117,7 @@
                     О компании
                 </h2>
                 <p>Компания “Agro Deals” известный лидер на рынке агропромышленной продукции. </p>
+                <a href="" class="show__popup">OPEN</a>
 
             </div>
         </div>
@@ -580,8 +581,44 @@
     </footer>
 </div>
 
+<!--POPUP-->
+<div class="popup_overlay ">
+    <div class="cnt_popup">
+        <svg class="close__popup" width="21" height="21" viewBox="0 0 21 21" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+            <line x1="20.6464" y1="20.3536" x2="0.646447" y2="0.353554" stroke="black"/>
+            <line x1="0.646447" y1="20.6464" x2="20.6464" y2="0.646447" stroke="black"/>
+        </svg>
+
+        <form class="form" id="callBackForm" method="" action="">
+            <h4><span>СВЯЖИТЕСЬ</span> с нами</h4>
+            <div class="cnt_input">
+                <input placeholder="Name" id="user_name" name="user_name" minlength="2" type="text" required>
+            </div>
+            <div class="cnt_input">
+                <input placeholder="Email" id="user_email" type="email" name="user_email" required>
+            </div>
+            <div class="cnt_input">
+                <input placeholder="Phone (optional)" id="user_phone" type="text" name="user_phone">
+            </div>
+
+            <div class="cnt_textarea">
+                <textarea placeholder="Message" id="user_message" name="user_message" required></textarea>
+            </div>
+
+            <div class="cnt_input cnt_file">
+                <input id="user_file" type="file" name="user_file">
+            </div>
+
+            <button class="submit" type="submit">Submit</button>
+
+        </form>
+    </div>
+</div>
+
 </body>
 <script src="libs/jquery-3.3.1.min.js"></script>
+<script src="libs/validate.min.js"></script>
 <script src="libs/swiper/js/swiper.min.js"></script>
 <script src="js/common.min.js"></script>
 </html>
