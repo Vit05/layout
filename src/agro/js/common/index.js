@@ -79,6 +79,19 @@ var closePopup = function () {
     })
 }
 closePopup();
+//SCroll
+$('.navigation a[href^="#"]').on('click', function(e) {
+    e.preventDefault();
+    $(document).off('scroll');
 
+    var target = $(this.hash);
+    $('html, body').stop().animate({
+        'scrollTop': target.offset().top - 50,
+    }, 500, 'swing');
+    if ($(window).width() < 768) {
+        $('.navigation').removeClass('in');
+        $('.ham').removeClass('active')
+    }
+});
 
 
