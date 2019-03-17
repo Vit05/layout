@@ -44,7 +44,7 @@ var mobNavBtn = $('#mobNavBtn');
 
 mobNavBtn.on('click', function () {
     // $('.main-nav').toggleClass('show')
-    var toggleMobileNav = $('.navigation');
+    var toggleMobileNav = $('.navv');
 
     toggleMobileNav.toggleClass("in")
     mobNavBtn.children().toggleClass('active')
@@ -80,7 +80,7 @@ var closePopup = function () {
 }
 closePopup();
 //SCroll
-$('.navigation a[href^="#"]').on('click', function(e) {
+$('.navigation a[href^="#"], .foot_nav .left a[href^="#"]').on('click', function(e) {
     e.preventDefault();
     $(document).off('scroll');
 
@@ -89,7 +89,7 @@ $('.navigation a[href^="#"]').on('click', function(e) {
         'scrollTop': target.offset().top - 50,
     }, 500, 'swing');
     if ($(window).width() < 768) {
-        $('.navigation').removeClass('in');
+        $('.navv').removeClass('in');
         $('.ham').removeClass('active')
     }
 });

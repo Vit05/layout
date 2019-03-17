@@ -189,7 +189,9 @@ img {
   background-position: center top;
   background-repeat: no-repeat;
   padding: rem(50px) 0;
-
+  @include screen(768px){
+    background-size: cover ;
+  }
   .slide_item {
     width: 100%;
     display: flex;

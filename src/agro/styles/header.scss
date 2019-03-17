@@ -100,13 +100,20 @@ $active_c: #6cac1a;
         padding-top: 9px;
         padding-bottom: 9px;
       }
-
+.phone_mobile{
+  display: none;
+  @include screen(768px){
+    display: block;
+  }
+}
       .logotype {
         //height: 80px;
         transition: all ease-in-out .3s;
 
         @include screen(768px) {
           height: 50px;
+          display: flex;
+          align-items: center;
         }
 
         img {
@@ -114,14 +121,15 @@ $active_c: #6cac1a;
 
           max-width: 280px;
           @include screen(991px) {
-            height: 50px;
+            height: 40px;
           }
         }
       }
 
-
-      .navigation {
+      .navv {
         display: flex;
+
+
 
         @include screen(768px) {
           width: 100%;
@@ -135,6 +143,9 @@ $active_c: #6cac1a;
           overflow: hidden;
           z-index: -1;
           display: flex;
+          //flex-direction: column;
+          //align-items: center;
+          //justify-content: center;
 
           &.in {
             transition: all .3s ease-in-out;
@@ -157,27 +168,70 @@ $active_c: #6cac1a;
           }
         }
 
-        li {
-          margin-left: rem(20px);
+
+        .mobile_lang {
+          display: none;
+          @include screen(768px) {
+            display: flex;
+            height: 10%;
+            border-top: 1px solid #999999;
+            li{
+              margin: auto;
+              &.current-lang{
+                a{
+                  background-color: $active_c;
+                  color: #fff;
+                }
+              }
+              a {
+                font-size: 16px;
+                color: #000;
+                padding: 5px;
+                text-transform: uppercase;
+
+              }
+            }
+          }
         }
-
-        a {
-          font-weight: 600;
-          color: $txt_c;
-          @include rfs(21);
-          line-height: 26px;
-          transition: all ease-in-out .3s;
-          border-bottom: 2px solid transparent;
-
-          @include screen(991px) {
-            @include rfs(16);
+        .navigation {
+          display: flex;
+          width: 100%;
+          @include screen(768px) {
+            flex-direction: column;
+            height: 65%;
+            align-items: center;
+            justify-content: space-around;
           }
 
-          &:hover {
-            border-bottom-color: $active_c;
-            color: $active_c;
+          li {
+            margin-left: rem(20px);
+            text-align: center;
+            @include screen(768px){
+              margin: 0;
+            }
+
+          }
+
+          a {
+            font-weight: 600;
+            color: $txt_c;
+            @include rfs(21);
+            line-height: 26px;
+            transition: all ease-in-out .3s;
+            border-bottom: 2px solid transparent;
+
+            @include screen(991px) {
+              @include rfs(16);
+            }
+
+            &:hover {
+              border-bottom-color: $active_c;
+              color: $active_c;
+            }
           }
         }
+
+
       }
 
       .nav_button {
@@ -206,6 +260,7 @@ $active_c: #6cac1a;
           }
         }
       }
+
     }
   }
 }
